@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 id="skin.fuse"
-version="0.8.0"
+version="0.0.1"
 name="Fuse"
 provider-name="Butchabay">
 <requires>
 <import addon="xbmc.gui" version="5.10.0"/>
-<!-- <import addon="script.skin.helper.service" version="1.0.0"/>
+<import addon="script.skin.helper.service" version="1.0.0"/>
 <import addon="service.library.data.provider" version="0.0.7"/>
 <import addon="script.grab.fanart" version="0.14.1"/>
 <import addon="script.favourites" version="6.0.3"/>
-<import addon="script.artistslideshow" version="1.8.7"/> -->
+<import addon="script.artistslideshow" version="1.8.7"/>
 </requires>
 <extension
 point="xbmc.gui.skin"
