@@ -1,0 +1,383 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">9000</defaultcontrol>
+					<allowoverlay>no</allowoverlay>
+					<zorder>0</zorder>
+					<controls>
+
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>1080</height>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<texture fallback="kodiwallpaper.jpg" background="true">$INFO[ListItem.Art(fanart)]</texture>
+					<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="125" center="auto" time="300" tween="cubic" easing="out" />
+					</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>1080</height>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<texture colordiffuse="background_diffuse">bg.jpg</texture>
+					<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="125" center="auto" time="300" tween="cubic" easing="out" />
+					</animation>
+					</control>
+
+
+					<control type="group">
+					<posx>0</posx>
+					<posy>-60</posy>
+					
+					<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="125" end="100" center="auto" time="300" tween="cubic" easing="out" />
+					</animation>
+					<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="125" center="auto" time="300" tween="cubic" easing="out" />
+					</animation>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>280</posy>
+					<width>1737</width>
+					<height>750</height>
+					<texture colordiffuse="buttons3" background="true">white.png</texture>
+					</control>
+
+					<control type="image">
+					<posx>90</posx>
+					<posy>280</posy>
+					<width>450</width>
+					<height>750</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+
+					<control type="image">
+					<posx>90</posx>
+					<posy>180</posy>
+					<width>1737</width>
+					<height>100</height>
+					<texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+
+					<!-- ICON -->
+
+					<control type="image">
+					<posx>1333</posx>
+					<posy>300</posy>
+					<width>475</width>
+					<height>475</height>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+
+					<control type="label">
+					<description>Addon Description Label</description>
+					<posx>580</posx>
+					<posy>300</posy>
+					<width>750</width>
+					<height>50</height>
+					<font>Medium6</font>
+					<textcolor>label</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>32238</label>
+					</control>
+
+					<control type="label">
+					<description>Disclaimer Label</description>
+					<posx>580</posx>
+					<posy>750</posy>
+					<width>750</width>
+					<height>50</height>
+					<font>Medium6</font>
+					<textcolor>selectedfocus</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>32239</label>
+					<visible>!IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
+					</control>
+
+					<control type="label">
+					<description>Title Label</description>
+					<posx>130</posx>
+					<posy>180</posy>
+					<width>850</width>
+					<height>100</height>
+					<font>Medium5</font>
+					<textcolor>tiles</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Property(Addon.Name)]</label>
+					</control>
+
+					<control type="panel" id="49">
+					<posx>110</posx>
+					<posy>300</posy>
+					<width>450</width>
+					<height>1000</height>
+					<onleft>noop</onleft>
+					<onright>50</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>horizontal</orientation>
+					<itemlayout height="70" width="450">
+
+					<control type="label">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>380</width>
+					<height>50</height>
+					<font>Title3</font>
+					<textcolor>buttons</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					</control>
+
+					<control type="label">
+					<posx>20</posx>
+					<posy>30</posy>
+					<width>380</width>
+					<height>50</height>
+					<font>Title3</font>
+					<textcolor>buttons2</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label2</info>
+					</control>
+					</itemlayout>
+
+					<focusedlayout height="70" width="450">
+
+					<control type="label">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>380</width>
+					<height>50</height>
+					<font>Title3</font>
+					<textcolor>label</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					</control>
+
+					<control type="label">
+					<posx>20</posx>
+					<posy>30</posy>
+					<width>380</width>
+					<height>50</height>
+					<font>Title3</font>
+					<textcolor>selectedfocus</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label2</info>
+					</control>
+					</focusedlayout>
+					<content>
+
+					<item>
+					<label>$LOCALIZE[32237]</label>
+					<label2>$INFO[ListItem.Property(Addon.Version)]</label2>
+					<onclick>noop</onclick>
+					<visible>!IsEmpty(ListItem.Property(Addon.Version)</visible>
+					</item>
+
+					<item>
+					<label>$INFO[ListItem.Property(Addon.Type)]</label>
+					<label2>$LOCALIZE[32183] $INFO[ListItem.Property(Addon.Creator)]</label2>
+					<onclick>noop</onclick>
+					<visible>!IsEmpty(ListItem.Property(Addon.Type)</visible>
+					</item>
+					</content>
+					</control>
+
+
+					<control type="group">
+
+					<control type="textbox" id="400">
+					<description>Description</description>
+					<posx>580</posx>
+					<posy>380</posy>
+					<width>710</width>
+					<height>500</height>
+					<font>Plot</font>
+					<textcolor>plot</textcolor>
+					<align>left</align>
+					<autoscroll delay="10000" time="3000" repeat="8000">true</autoscroll>
+					<label>$INFO[ListItem.Property(Addon.Description)]</label>
+					</control>
+					
+					<control type="textbox">
+					<description>Disclaimer</description>
+					<posx>580</posx>
+					<posy>830</posy>
+					<width>710</width>
+					<height>300</height>
+					<font>Plot</font>
+					<textcolor>plot</textcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
+					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+					</control>
+					</control>
+
+					<control type="grouplist" id="9000">
+					<posx>910</posx>
+					<posy>197</posy>
+					<width>900</width>
+					<height>65</height>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>60</onup>
+					<ondown>noop</ondown>
+
+					<control type="button" id="9">
+					<description>Configure Addon</description>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<disabledcolor>home</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>24020</label>
+
+					</control>
+					<control type="button" id="8">
+					<description>Update Addon button</description>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<disabledcolor>home</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>24069</label>
+					</control>
+					
+					<control type="radiobutton" id="13">
+					<description>Auto-update button</description>
+					<width>220</width>
+					<height>65</height>
+					<textoffsetx>20</textoffsetx>
+					<textwidth>200</textwidth>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>buttons</font>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<disabledcolor>home</disabledcolor>
+					<radiowidth>-</radiowidth>
+					<radioheight>-</radioheight>
+					<radioposx>180</radioposx>
+					<radioposy>0</radioposy>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>21340</label>
+					</control>
+					
+					<control type="button" id="12">
+					<description>Launch Addon button</description>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<disabledcolor>home</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>518</label>
+					</control>
+					
+					<control type="button" id="6">
+					<description>Install/UnInstall Addon button</description>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<disabledcolor>home</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>24022</label>
+					</control>
+					
+					<control type="button" id="7">
+					<description>Enable/Disable Addon button</description>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<disabledcolor>home</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>24021</label>
+					</control>
+					
+					<control type="button" id="10">
+					<description>Changelog button</description>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<disabledcolor>home</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>24036</label>
+					</control>
+					</control>
+					</control>
+
+					</controls>
+					</window>

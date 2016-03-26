@@ -1,0 +1,19 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">10</defaultcontrol>
+					
+					<allowoverlay>no</allowoverlay>
+					<onload condition="System.HasAddon(script.skin.helper.service)">Skin.SetString(SkinHelper.RandomFanartDelay,15)</onload>
+					<onload condition="System.HasAddon(script.grab.fanart)">RunScript(script.grab.fanart,mode=random,refresh=20)</onload>
+					<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow, daemon=True)</onload>
+					<onload condition="System.HasAddon(script.games.rom.collection.browser)">RunScript(script.games.rom.collection.browser,limit=10)</onload>
+					<controls>
+					
+					<control type="button" id="10">
+					<description>trigger</description>
+					<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					</control>
+					</controls>
+					</window>

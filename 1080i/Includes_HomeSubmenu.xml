@@ -1,0 +1,2215 @@
+					<?xml version="1.0" encoding="utf-8"?>
+					<includes>
+					
+					<defaultcontrol always="false">9010</defaultcontrol>
+					
+					<include name="HomeSubmenu">
+					<control type="group">
+					
+					<include>OpenClose</include>
+					
+					<posx>15</posx>
+					<posy>310</posy>
+					</control>
+					
+					<control type="group" id="9001">
+					<posx>227</posx>
+					<posy>572</posy>
+
+					<include>OpenClose</include>
+					
+					<control type="group">
+					<control type="label">
+					<posx>116</posx>
+					<posy>11</posy>
+					<width>800</width>
+					<height>50</height>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<label>$INFO[Container(9010).ListItem.Label]</label>
+					<animation effect="fade" start="0" end="100" time="300" reversible="false" condition="!ControlGroup(9001).HasFocus">conditional</animation>
+					<animation effect="fade" start="100" end="0" time="200" reversible="true" condition="ControlGroup(9001).HasFocus  | ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					</control>
+					
+					<control type="group">
+					<include>animation_submenu</include>
+					
+					<!-- MOVIES SUBMENU -->
+					
+					<control type="grouplist">
+					<description>Movies</description>
+					<usecontrolcoords>true</usecontrolcoords> 
+					<posx>116</posx>
+					<posy>11</posy>
+					<width>1600</width>
+					<height>50</height>
+					<itemgap>74</itemgap>
+					<orientation>horizontal</orientation>
+					<visible>Container(300).HasFocus(5)</visible>
+					
+					<!-- Item 1 -->
+					
+					<control type="label">
+					<description>Recently Added</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[31328]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(100)</visible>
+					<visible>![Skin.HasSetting(hide100) | Skin.HasSetting(custom100)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[31328]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(100)</visible>
+					<visible>![Skin.HasSetting(hide100) | Skin.HasSetting(custom100)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 1 -->
+					
+					<control type="label">
+					<description>Custom Item1</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom100label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(100)</visible>
+					<visible>Skin.HasSetting(custom100)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom100label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(100)</visible>
+					<visible>Skin.HasSetting(custom100)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 2 -->
+					
+					<control type="label">
+					<description>Unwatched</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>auto</width>
+					<height>50</height>
+					<label>$LOCALIZE[32130]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(101)</visible>
+					<visible>![Skin.HasSetting(hide101) | Skin.HasSetting(custom101)]</visible>
+					</control>
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>auto</width>
+					<height>50</height>
+					<label>$LOCALIZE[32130]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(101)</visible>
+					<visible>![Skin.HasSetting(hide101) | Skin.HasSetting(custom101)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 2 -->
+					
+					<control type="label">
+					<description>Custom Item2</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom101label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(101)</visible>
+					<visible>Skin.HasSetting(custom101)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom101label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(101)</visible>
+					<visible>Skin.HasSetting(custom101)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 3 -->
+					
+					<control type="label">
+					<description>In Progress</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>auto</width>
+					<height>50</height>
+					<label>$LOCALIZE[575]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(102)</visible>
+					<visible>![Skin.HasSetting(hide102) | Skin.HasSetting(custom102)]</visible>
+					</control>
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>auto</width>
+					<height>50</height>
+					<label>$LOCALIZE[575]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(102)</visible>
+					<visible>![Skin.HasSetting(hide102) | Skin.HasSetting(custom102)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 3 -->
+					
+					<control type="label">
+					<description>Custom Item3</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom102label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(102)</visible>
+					<visible>Skin.HasSetting(custom102)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom102label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(102)</visible>
+					<visible>Skin.HasSetting(custom102)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 4 -->
+					
+					<control type="label">
+					<description>Top Rated</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>auto</width>
+					<height>50</height>
+					<label>$LOCALIZE[32074]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(103)</visible>
+					</control>
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>auto</width>
+					<height>50</height>
+					<label>$LOCALIZE[32074]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(103)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 5 -->
+					
+					<control type="label">
+					<description>Kidz</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>auto</width>
+					<height>50</height>
+					<label>$LOCALIZE[32075]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(104)</visible>
+					</control>
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>auto</width>
+					<height>50</height>
+					<label>$LOCALIZE[32075]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(104)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 6 -->
+					
+					<control type="label">
+					<description>Movies Sets</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>auto</width>
+					<height>50</height>
+					<label>$LOCALIZE[32049]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(105)</visible>
+					</control>
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>auto</width>
+					<height>50</height>
+					<label>$LOCALIZE[32049]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(105)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 7 -->
+					
+					<control type="label">
+					<description>Genres</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>auto</width>
+					<height>50</height>
+					<label>135</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(106)</visible>
+					</control>
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>auto</width>
+					<height>50</height>
+					<label>135</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(106)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					</control>
+
+					<!-- Fake Panel Movies -->
+					
+					<control type="panel" id="9010">
+					<posx>116</posx>
+					<posy>-27</posy>
+					<width>1480</width>
+					<height>150</height>
+					<ondown>8000</ondown>
+					<onup>noop</onup>
+					<onleft>300</onleft>
+					<onright>noop</onright>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(300).HasFocus(5)</visible>
+					<itemlayout width="320" height="150">
+					</itemlayout>
+					<focusedlayout width="320" height="150">
+					</focusedlayout>
+					<content>
+					
+					<!-- ITEM 1 -->
+					
+					<item id="100">
+					<description>recently added</description>
+					<label>$LOCALIZE[31328]</label>
+					<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+					<visible>![Skin.HasSetting(hide100) | Skin.HasSetting(custom100)]</visible>
+					</item>
+					
+					<item id="100">
+					<description>custom100</description>
+					<label>$INFO[Skin.String(custom100label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom100playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom100)</visible>
+					</item>
+
+					<!-- ITEM 2 -->
+					
+					<item id="101">
+					<description>unwatched</description>
+					<label>$LOCALIZE[32130]</label>
+					<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Unwatched Movies.xsp,return)</onclick>
+					<visible>![Skin.HasSetting(hide101) | Skin.HasSetting(custom101)]</visible>
+					</item>
+					
+					<item id="101">
+					<description>custom101</description>
+					<label>$INFO[Skin.String(custom101label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom101playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom101)</visible>
+					</item>
+
+					<!-- ITEM 3 -->
+					
+					<item id="102">
+					<description>in progress</description>
+					<label>$LOCALIZE[575]</label>
+					<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Movies in Progress.xsp,return)</onclick>
+					<visible>![Skin.HasSetting(hide102) | Skin.HasSetting(custom102)]</visible>
+					</item>
+					
+					<item id="102">
+					<description>custom102</description>
+					<label>$INFO[Skin.String(custom102label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom102playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom102)</visible>
+					</item>
+
+					<!-- ITEM 4 -->
+					
+					<item id="103">
+					<description>top rated</description>
+					<label>$LOCALIZE[32074]</label>
+					<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Top Rated Movies.xsp,return)</onclick>
+					<visible>![Skin.HasSetting(hide103) | Skin.HasSetting(custom103)]</visible>
+					</item>
+
+					<item id="103">
+					<description>custom103</description>
+					<label>$INFO[Skin.String(custom103label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom103playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom103)</visible>
+					</item>
+					
+					<!-- ITEM 5 -->
+					
+					<item id="104">
+					<description>Kids</description>
+					<label>$LOCALIZE[32075]</label>
+					<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Kids Movies.xsp,return)</onclick>
+					<visible>![Skin.HasSetting(hide104) | Skin.HasSetting(custom104)]</visible>
+					</item>
+					
+					<item id="104">
+					<description>custom104</description>
+					<label>$INFO[Skin.String(custom104label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom104playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom104)</visible>
+					</item>
+
+					<!-- ITEM 6 -->
+					
+					<item id="105">
+					<description>Movies in Sets</description>
+					<label>$LOCALIZE[32049]</label>
+					<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
+					<visible>![Skin.HasSetting(hide105) | Skin.HasSetting(custom105)]</visible>
+					</item>
+					
+					<item id="105">
+					<description>custom105</description>
+					<label>$INFO[Skin.String(custom105label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom105playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom105)</visible>
+					</item>
+
+					<!-- ITEM 7 -->
+					
+					<item id="106">
+					<description>Genres</description>
+					<label>135</label>
+					<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+					<visible>![Skin.HasSetting(hide106) | Skin.HasSetting(custom106)]</visible>
+					</item>
+					
+					<item id="106">
+					<description>custom106</description>
+					<label>$INFO[Skin.String(custom106label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom106playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom106)</visible>
+					</item>
+					</content>
+					</control> 
+
+					<!-- TV SHOWS SUBMENU -->
+					
+					<control type="grouplist">
+					<description>TV</description>
+					<usecontrolcoords>true</usecontrolcoords> 
+					<posx>116</posx>
+					<posy>11</posy>
+					<width>1600</width>
+					<height>50</height>
+					<itemgap>74</itemgap>
+					<orientation>horizontal</orientation>
+					<visible>Container(300).HasFocus(6)</visible>
+					
+					<!-- Item 1 -->
+					
+					<control type="label">
+					<description>Recently Added</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[31328]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(200)</visible>
+					<visible>![Skin.HasSetting(hide200) | Skin.HasSetting(custom200)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[31328]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(200)</visible>
+					<visible>![Skin.HasSetting(hide200) | Skin.HasSetting(custom200)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 1 -->
+					
+					<control type="label">
+					<description>Custom Item1</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom200label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(200)</visible>
+					<visible>Skin.HasSetting(custom200)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom200label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(200)</visible>
+					<visible>Skin.HasSetting(custom200)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 2 -->
+					
+					<control type="label">
+					<description>Unwatched</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32130]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(201)</visible>
+					<visible>![Skin.HasSetting(hide201) | Skin.HasSetting(custom201)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32130]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(201)</visible>
+					<visible>![Skin.HasSetting(hide201) | Skin.HasSetting(custom201)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 2 -->
+					
+					<control type="label">
+					<description>Custom Item2</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom201label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(201)</visible>
+					<visible>Skin.HasSetting(custom201)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom201label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(201)</visible>
+					<visible>Skin.HasSetting(custom201)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 3 -->
+					
+					<control type="label">
+					<description>Next Up</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32094]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(202)</visible>
+					<visible>![Skin.HasSetting(hide202) | Skin.HasSetting(custom202)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32094]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(202)</visible>
+					<visible>![Skin.HasSetting(hide202) | Skin.HasSetting(custom202)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 3 -->
+					
+					<control type="label">
+					<description>Custom Item3</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom202label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(202)</visible>
+					<visible>Skin.HasSetting(custom202)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom202label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(202)</visible>
+					<visible>Skin.HasSetting(custom202)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 4 -->
+					
+					<control type="label">
+					<description>Spotlight</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32044]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(203)</visible>
+					<visible>![Skin.HasSetting(hide203) | Skin.HasSetting(custom203)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32044]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(203)</visible>
+					<visible>![Skin.HasSetting(hide203) | Skin.HasSetting(custom203)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 4 -->
+					
+					<control type="label">
+					<description>Custom Item4</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom203label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(203)</visible>
+					<visible>Skin.HasSetting(custom203)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom203label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(203)</visible>
+					<visible>Skin.HasSetting(custom203)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 5 -->
+					
+					<control type="label">
+					<description>Last Watched</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32194]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(204)</visible>
+					<visible>![Skin.HasSetting(hide204) | Skin.HasSetting(custom204)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32194]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(204)</visible>
+					<visible>![Skin.HasSetting(hide204) | Skin.HasSetting(custom204)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 5 -->
+					
+					<control type="label">
+					<description>Custom Item5</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom204label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(204)</visible>
+					<visible>Skin.HasSetting(custom204)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom204label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(204)</visible>
+					<visible>Skin.HasSetting(custom204)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 6 -->
+					
+					<control type="label">
+					<description>Broadcast</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32083]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(205)</visible>
+					<visible>![Skin.HasSetting(hide205) | Skin.HasSetting(custom205)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32083]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(205)</visible>
+					<visible>![Skin.HasSetting(hide205) | Skin.HasSetting(custom205)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 6 -->
+					
+					<control type="label">
+					<description>Custom Item6</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom205label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(205)</visible>
+					<visible>Skin.HasSetting(custom205)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom205label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(205)</visible>
+					<visible>Skin.HasSetting(custom205)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 7 -->
+					
+					<control type="label">
+					<description>Studios</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[20388]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(206)</visible>
+					<visible>![Skin.HasSetting(hide206) | Skin.HasSetting(custom206)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[20388]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(206)</visible>
+					<visible>![Skin.HasSetting(hide206) | Skin.HasSetting(custom206)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 7 -->
+					
+					<control type="label">
+					<description>Custom Item7</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom206label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(206)</visible>
+					<visible>Skin.HasSetting(custom206)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom206label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(206)</visible>
+					<visible>Skin.HasSetting(custom206)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					</control>
+					
+					<!-- Fake Panel TV -->
+
+					<control type="panel" id="9010">
+					<posx>116</posx>
+					<posy>-27</posy>
+					<width>1480</width>
+					<height>150</height>
+					<ondown>8000</ondown>
+					<onup>noop</onup>
+					<onright>noop</onright>
+					<onleft>300</onleft>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="out">200</scrolltime>
+					<visible>Container(300).HasFocus(6)</visible>
+
+					<itemlayout width="320" height="150">
+					</itemlayout>
+					<focusedlayout width="320" height="150">
+					</focusedlayout>
+					<content>
+
+					<!-- ITEM 1 -->
+					
+					<item id="200">
+					<description>recently added</description>
+					<label>$LOCALIZE[31328]</label>
+					<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
+					<visible>![Skin.HasSetting(hide200) | Skin.HasSetting(custom200)]</visible>
+					</item>
+					
+					<item id="200">
+					<description>custom200</description>
+					<label>$INFO[Skin.String(custom200label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom200playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom200)</visible>
+					</item>
+					
+					<!-- ITEM 2 -->
+					
+					<item id="201">
+					<description>unwatched episodes</description>
+					<label>$LOCALIZE[32130]</label>
+					<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/unwatched episodes.xsp,return)</onclick>
+					<visible>![Skin.HasSetting(hide201) | Skin.HasSetting(custom201)]</visible>
+					</item>
+					
+					<item id="201">
+					<description>custom201</description>
+					<label>$INFO[Skin.String(custom201label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom201playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom201)</visible>
+					</item>
+
+					<!-- ITEM 3 -->
+					
+					<item id="202">
+					<description>in progress</description>
+					<label>$LOCALIZE[32094]</label>
+					<onclick>XBMC.ActivateWindow(10025,plugin://service.library.data.provider?type=recommendedepisodes)</onclick>
+					<visible>![Skin.HasSetting(hide202) | Skin.HasSetting(custom202)]</visible>
+					</item>
+
+					<item id="202">
+					<description>custom202</description>
+					<label>$INFO[Skin.String(custom202label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom202playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom202)</visible>
+					</item>
+					
+					<!-- ITEM 4 -->
+					
+					<item id="203">
+					<description>spotlight</description>
+					<label>$LOCALIZE[32044]</label>
+					<onclick>XBMC.ActivateWindow(10025,plugin://service.library.data.provider?type=randomepisodes)</onclick>
+					<visible>![Skin.HasSetting(hide203) | Skin.HasSetting(custom203)]</visible>
+					</item>
+
+					<item id="203">
+					<description>custom203</description>
+					<label>$INFO[Skin.String(custom203label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom203playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom203)</visible>
+					</item>
+					
+					<!-- ITEM 5 -->
+					
+					<item id="204">
+					<description>last watched</description>
+					<label>$LOCALIZE[32194]</label>
+					<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Last Played Episode.xsp,return)</onclick>
+					<visible>![Skin.HasSetting(hide204) | Skin.HasSetting(custom204)]</visible>
+					</item>
+
+					<item id="204">
+					<description>custom204</description>
+					<label>$INFO[Skin.String(custom204label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom204playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom204)</visible>
+					</item>
+					
+					<!-- ITEM 6 -->
+					
+					<item id="205">
+					<description>documentary</description>
+					<label>$LOCALIZE[32083]</label>
+					<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/TV Documentary.xsp,return)</onclick>
+					<visible>![Skin.HasSetting(hide205) | Skin.HasSetting(custom205)]</visible>
+					</item>
+
+					<item id="205">
+					<description>custom205</description>
+					<label>$INFO[Skin.String(custom205label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom205playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom205)</visible>
+					</item>
+					
+					<!-- ITEM 7 -->
+					
+					<item id="206">
+					<label>$LOCALIZE[20388]</label>
+					<onclick>ActivateWindow(VideoLibrary,TVShowStudios,return)</onclick>
+					<visible>![Skin.HasSetting(hide206) | Skin.HasSetting(custom206)]</visible>
+					</item>
+					
+					<item id="206">
+					<description>custom206</description>
+					<label>$INFO[Skin.String(custom206label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom206playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom206)</visible>
+					</item>
+					</content>
+					</control>
+
+
+					<!-- FAKE LIVE TV SUBMENU -->
+					
+					
+
+					<control type="list" id="9010">
+					<posx>338</posx>
+					<posy>27</posy>
+					<width>1480</width>
+					<height>150</height>
+					<ondown>8001</ondown>
+					<onup>noop</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="out">200</scrolltime>
+					<visible>Container(300).HasFocus(13)</visible>
+
+					<itemlayout width="320" height="150">
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>41</posy>
+					<width>200</width>
+					<height>35</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="320" height="150">
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>41</posy>
+					<width>200</width>
+					<height>35</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					
+					<item id="300">
+					</item>
+
+					</content>
+					</control>
+					
+					<!-- VIDEOS -->
+					
+					<control type="grouplist">
+					<description>Videos</description>
+					<usecontrolcoords>true</usecontrolcoords> 
+					<posx>116</posx>
+					<posy>11</posy>
+					<width>1600</width>
+					<height>50</height>
+					<itemgap>74</itemgap>
+					<orientation>horizontal</orientation>
+					<visible>Container(300).HasFocus(2)</visible>
+					
+					<!-- Item 1 -->
+					
+					<control type="label">
+					<description>Addons</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32052]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(310)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32052]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(310)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 2 -->
+					
+					<control type="label">
+					<description>Podcast</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32208]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(311)</visible>
+					<visible>System.HasAddon(plugin.video.itunes_podcasts)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32208]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(311)</visible>
+					<visible>System.HasAddon(plugin.video.itunes_podcasts)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 3 -->
+					
+					<control type="label">
+					<description>My Videos</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32081]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(312)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32081]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(312)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 4 -->
+					
+					<control type="label">
+					<description>Youtube</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32063]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(313)</visible>
+					<visible>System.HasAddon(plugin.video.youtube)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32063]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(313)</visible>
+					<visible>System.HasAddon(plugin.video.youtube)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 5 -->
+					
+					<control type="label">
+					<description>Trailers</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32048]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(314)</visible>
+					<visible>System.HasAddon(plugin.video.itunes_trailers)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32048]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(314)</visible>
+					<visible>System.HasAddon(plugin.video.itunes_trailers)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 6 -->
+					
+					<control type="label">
+					<description>Clips</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32089]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(315)</visible>
+					<visible>System.HasAddon(plugin.video.youtube)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$LOCALIZE[32089]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(315)</visible>
+					<visible>System.HasAddon(plugin.video.youtube)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					</control>
+
+					<!-- FAKE VIDEO SUBMENU -->
+					
+					<control type="panel" id="9010">
+					<posx>116</posx>
+					<posy>-27</posy>
+					<width>1480</width>
+					<height>150</height>
+					<ondown>8000</ondown>
+					<onup>noop</onup>
+					<onleft>300</onleft>
+					<onright>noop</onright>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="out">300</scrolltime>
+					<visible>Container(300).HasFocus(2)</visible>
+
+					<itemlayout width="320" height="150">
+					</itemlayout>
+					<focusedlayout width="320" height="150">
+					</focusedlayout>
+					<content>
+
+					<!-- ITEM 1 -->
+					
+					<item id="310">
+					<description>addons</description>
+					<label>$LOCALIZE[32052]</label>
+					<onclick>ActivateWindow(Videos,Addons,return)</onclick>
+					</item>
+
+					<!-- ITEM 2 -->
+					
+					<item id="311">
+					<description>Podcast</description>
+					<label>$LOCALIZE[32208]</label>
+					<onclick>ActivateWindow(10025,plugin://plugin.video.itunes_podcasts/video/podcasts/by-genre/26/,return)</onclick>
+					</item>
+					
+					<!-- ITEM 3 -->
+					
+					<item id="312">
+					<description>My Videos</description>
+					<label>$LOCALIZE[32052]</label>
+					<onclick>ActivateWindow(Videos,Files,return)</onclick>
+					</item>
+					
+					<!-- ITEM 4 -->
+					
+					<item id="313">
+					<description>You Tube</description>
+					<label>$LOCALIZE[32063]</label>
+					<onclick>ActivateWindow(10025,plugin://plugin.video.youtube/special/popular_right_now/,return)</onclick>
+					</item>
+					
+					<!-- ITEM 5 -->
+					
+					<item id="314">
+					<description>Trailers</description>
+					<label>$LOCALIZE[32048]</label>
+					<onclick>ActivateWindow(10025,plugin://plugin.video.itunes_trailers/,return)</onclick>
+					</item>
+					
+					<!-- ITEM 6 -->
+					
+					<item id="315">
+					<description>Youtube Music Clips</description>
+					<label>$LOCALIZE[32089]</label>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ/playlist/PLFgquLnL59alCl_2TQvOiD5Vgm1hCaGSI/&quot;,return)</onclick>
+					<!-- <onclick>ActivateWindow(10025,plugin://plugin.video.youtube/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ/playlist/PLFgquLnL59alCl_2TQvOiD5Vgm1hCaGSI/,return)</onclick> -->
+					</item>
+					</content>
+					</control>
+					
+					
+					
+					
+					<!-- MUSIC SUBMENU -->
+					
+					<control type="grouplist">
+					<description>TV</description>
+					<usecontrolcoords>true</usecontrolcoords> 
+					<posx>116</posx>
+					<posy>11</posy>
+					<width>1600</width>
+					<height>50</height>
+					<itemgap>74</itemgap>
+					<orientation>horizontal</orientation>
+					<visible>Container(300).HasFocus(3)</visible>
+					
+					<!-- Item 1 -->
+					
+					<control type="label">
+					<description>Recently Added</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32128</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(500)</visible>
+					<visible>![Skin.HasSetting(hide500) | Skin.HasSetting(custom500)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32128</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(500)</visible>
+					<visible>![Skin.HasSetting(hide500) | Skin.HasSetting(custom500)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 1 -->
+					
+					<control type="label">
+					<description>Custom Item1</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom500label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(500)</visible>
+					<visible>Skin.HasSetting(custom500)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom500label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(500)</visible>
+					<visible>Skin.HasSetting(custom500)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 2 -->
+					
+					<control type="label">
+					<description>Albums</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32132</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(501)</visible>
+					<visible>![Skin.HasSetting(hide501) | Skin.HasSetting(custom501)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32132</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(501)</visible>
+					<visible>![Skin.HasSetting(hide501) | Skin.HasSetting(custom501)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 2 -->
+					
+					<control type="label">
+					<description>Custom Item2</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom501label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(501)</visible>
+					<visible>Skin.HasSetting(custom501)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom501label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(501)</visible>
+					<visible>Skin.HasSetting(custom501)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 3 -->
+					
+					<control type="label">
+					<description>Last Played</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32129</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(502)</visible>
+					<visible>![Skin.HasSetting(hide502) | Skin.HasSetting(custom502)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32129</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(502)</visible>
+					<visible>![Skin.HasSetting(hide502) | Skin.HasSetting(custom502)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 3 -->
+					
+					<control type="label">
+					<description>Custom Item3</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom502label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(502)</visible>
+					<visible>Skin.HasSetting(custom502)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom502label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(502)</visible>
+					<visible>Skin.HasSetting(custom502)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 4 -->
+					
+					<control type="label">
+					<description>Artists</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>133</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(503)</visible>
+					<visible>![Skin.HasSetting(hide503) | Skin.HasSetting(custom503)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>133</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(503)</visible>
+					<visible>![Skin.HasSetting(hide503) | Skin.HasSetting(custom503)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 4 -->
+					
+					<control type="label">
+					<description>Custom Item4</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom503label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(503)</visible>
+					<visible>Skin.HasSetting(custom503)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom503label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(503)</visible>
+					<visible>Skin.HasSetting(custom503)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 5 -->
+					
+					<control type="label">
+					<description>Genres</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>135</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(504)</visible>
+					<visible>![Skin.HasSetting(hide504) | Skin.HasSetting(custom504)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>135</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(504)</visible>
+					<visible>![Skin.HasSetting(hide504) | Skin.HasSetting(custom504)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 5 -->
+					
+					<control type="label">
+					<description>Custom Item5</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom504label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(504)</visible>
+					<visible>Skin.HasSetting(custom504)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom504label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(504)</visible>
+					<visible>Skin.HasSetting(custom504)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 6 -->
+					
+					<control type="label">
+					<description>Addons</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32052</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(505)</visible>
+					<visible>![Skin.HasSetting(hide505) | Skin.HasSetting(custom505)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32052</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(505)</visible>
+					<visible>![Skin.HasSetting(hide505) | Skin.HasSetting(custom505)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 6 -->
+					
+					<control type="label">
+					<description>Custom Item6</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom505label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(505)</visible>
+					<visible>Skin.HasSetting(custom505)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom505label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(505)</visible>
+					<visible>Skin.HasSetting(custom505)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 7 -->
+					
+					<control type="label">
+					<description>Explore</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32193</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(506)</visible>
+					<visible>![Skin.HasSetting(hide506) | Skin.HasSetting(custom506)]</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32193</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(506)</visible>
+					<visible>![Skin.HasSetting(hide506) | Skin.HasSetting(custom506)]</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Custom Item 7 -->
+					
+					<control type="label">
+					<description>Custom Item7</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom506label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(506)</visible>
+					<visible>Skin.HasSetting(custom506)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>$INFO[Skin.String(custom506label)]</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(506)</visible>
+					<visible>Skin.HasSetting(custom506)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					</control>
+
+					<!-- FAKE PANEL MUSIC -->
+					
+					<control type="panel" id="9010">
+					<posx>116</posx>
+					<posy>-27</posy>
+					<width>1480</width>
+					<height>150</height>
+					<ondown>8000</ondown>
+					<onup>noop</onup>
+					<onleft>300</onleft>
+					<onright>noop</onright>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="out">200</scrolltime>
+					<visible>Container(300).HasFocus(3)</visible>
+
+					<itemlayout width="320" height="150">
+					</itemlayout>
+					<focusedlayout width="320" height="150">
+					</focusedlayout>
+					<content>
+
+					<!-- ITEM 1 -->
+
+					<item id="500">
+					<label>32128</label>
+					<onclick>ActivateWindow(MusicLibrary,RecentlyAddedAlbums,return)</onclick>
+					<icon>icons/home/music/recentaddedalbums.png</icon>
+					<visible>![Skin.HasSetting(hide500) | Skin.HasSetting(custom500)]</visible>
+					</item>
+					
+					<item id="500">
+					<description>custom500</description>
+					<label>$INFO[Skin.String(custom500label)]</label>
+					<icon>$INFO[Skin.String(custom500icon)]</icon>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom500playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom500)</visible>
+					</item>
+
+					<!-- ITEM 2 -->
+					
+					<item id="501">
+					<label>32132</label>
+					<onclick>ActivateWindow(MusicLibrary,albums,return)</onclick>
+					<visible>![Skin.HasSetting(hide501) | Skin.HasSetting(custom501)]</visible>
+					</item>
+					
+					<item id="501">
+					<description>custom501</description>
+					<label>$INFO[Skin.String(custom501label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom501playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom501)</visible>
+					</item>
+					
+					<!-- ITEM 3 -->
+
+					<item id="502">
+					<label>32103</label>
+					<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/Last Played Songs.xsp,return)</onclick>
+					<visible>![Skin.HasSetting(hide502) | Skin.HasSetting(custom502)]</visible>
+					</item>
+					
+					<item id="502">
+					<description>custom502</description>
+					<label>$INFO[Skin.String(custom502label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom502playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom502)</visible>
+					</item>
+					
+					<!-- ITEM 4 -->
+
+					<item id="503">
+					<label>133</label>
+					<onclick>ActivateWindow(MusicLibrary,artists,return)</onclick>
+					<visible>![Skin.HasSetting(hide503) | Skin.HasSetting(custom503)]</visible>
+					</item>
+					
+					<item id="503">
+					<description>custom503</description>
+					<label>$INFO[Skin.String(custom503label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom503playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom503)</visible>
+					</item>
+					
+					<!-- ITEM 5 -->
+
+					<item id="504">
+					<label>135</label>
+					<onclick>ActivateWindow(MusicLibrary,genres,return)</onclick>
+					<visible>![Skin.HasSetting(hide504) | Skin.HasSetting(custom504)]</visible>
+					</item>
+					
+					<item id="504">
+					<description>custom504</description>
+					<label>$INFO[Skin.String(custom504label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom504playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom504)</visible>
+					</item>
+					
+					<!-- ITEM 6 -->
+
+					<item id="505">
+					<label>32052</label>
+					<onclick>ActivateWindow(musicfiles,addons://sources/audio/,return)</onclick>
+					<visible>![Skin.HasSetting(hide505) | Skin.HasSetting(custom505)]</visible>
+					</item>
+					
+					<item id="505">
+					<description>custom505</description>
+					<label>$INFO[Skin.String(custom505label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom505playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom505)</visible>
+					</item>
+
+					<!-- ITEM 7 -->
+					
+					<item id="506">
+					<label>32193</label>
+					<onclick>ActivateWindow(MusicLibrary,return)</onclick>
+					<visible>![Skin.HasSetting(hide506) | Skin.HasSetting(custom506)]</visible>
+					</item>
+					
+					<item id="506">
+					<description>custom506</description>
+					<label>$INFO[Skin.String(custom506label)]</label>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom506playlist)],return)</onclick>
+					<visible>Skin.HasSetting(custom506)</visible>
+					</item>
+					</content>
+					</control>
+					
+					<!-- APPS -->
+					
+					<control type="grouplist">
+					<description>APPS</description>
+					<usecontrolcoords>true</usecontrolcoords> 
+					<posx>116</posx>
+					<posy>11</posy>
+					<width>1600</width>
+					<height>50</height>
+					<itemgap>74</itemgap>
+					<orientation>horizontal</orientation>
+					<visible>Container(300).HasFocus(1)</visible>
+					
+					<!-- Item 1 -->
+					
+					<control type="label">
+					<description>My Apps</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32212</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(615)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32212</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(615)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 2 -->
+					
+					<control type="label">
+					<description>Favourites</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32084</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(610)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32084</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(610)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 3 -->
+					
+					<control type="label">
+					<description>Pictures</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32169</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(611)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32169</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(611)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 4 -->
+					
+					<control type="label">
+					<description>Programs</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32210</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(612)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32210</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(612)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 5 -->
+					
+					<control type="label">
+					<description>Games</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32211</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(613) + System.HasAddon(script.games.rom.collection.browser)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32211</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(613) + System.HasAddon(script.games.rom.collection.browser)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 6 -->
+					
+					<control type="label">
+					<description>Weather</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>31950</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(614) + !IsEmpty(Weather.Plugin)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>31950</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(614) + !IsEmpty(Weather.Plugin)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					
+					<!-- Item 7 -->
+					
+					<control type="label">
+					<description>System</description>
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32170</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<visible>!Container(9010).HasFocus(616)</visible>
+					</control>
+					
+					<control type="label">
+					<width>auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>50</height>
+					<label>32170</label>
+					<align>center</align>
+					<font>Medium5</font>
+					<textcolor>accent</textcolor>
+					<visible>Container(9010).HasFocus(616)</visible>
+					<animation effect="fade" start="100" end="50" time="300" reversible="false" condition="ControlGroup(8000).HasFocus">conditional</animation>
+					</control>
+					</control>
+
+
+					<!-- FAKE APPS SUBMENU -->
+
+					<control type="list" id="9010">
+					<posx>338</posx>
+					<posy>27</posy>
+					<width>1480</width>
+					<height>150</height>
+					<ondown>8000</ondown>
+					<onup>noop</onup>
+					<onleft>300</onleft>
+					<onright>noop</onright>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="out">200</scrolltime>
+					<visible>Container(300).HasFocus(1)</visible>
+
+					<itemlayout width="320" height="150">
+					</itemlayout>
+					<focusedlayout width="320" height="150">
+					</focusedlayout>
+					<content>
+					
+					<item id="615">
+					<description>My Apps</description>
+					<label>32212</label>
+					<onclick>noop</onclick>
+					</item>
+
+					<item id="610">
+					<description>Favourites</description>
+					<label>32084</label>
+					<onclick>ActivateWindow(Favourites,return)</onclick>
+					</item>
+					
+					<item id="611">
+					<description>Pictures</description>
+					<label>32169</label>
+					<onclick>ActivateWindow(Pictures,return)</onclick>
+					</item>
+
+					<item id="612">
+					<description>Programs</description>
+					<label>32210</label>
+					<onclick>ActivateWindow(programs,addons,return)</onclick>
+					</item>
+
+					<item id="613">
+					<description>Rom Collection Browser</description>
+					<label>32211</label>
+					<onclick>RunScript(script.games.rom.collection.browser)</onclick>
+					<visible>System.HasAddon(script.games.rom.collection.browser)</visible>
+					</item>
+					
+					<item id="614">
+					<description>Weather</description>
+					<label>31950</label>
+					<onclick>ActivateWindow(weather,return)</onclick>
+					<visible>!IsEmpty(Weather.Plugin)</visible>
+					</item>
+					
+					<item id="616">
+					<description>System</description>
+					<label>32170</label>
+					<onclick>ActivateWindow(settings,return)</onclick>
+					</item>
+					</content>
+					</control>					
+					</control>
+					</control>
+					</include>
+					</includes>

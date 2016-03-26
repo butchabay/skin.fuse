@@ -1,0 +1,300 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<includes>
+					<include name="CommonRootView">
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					
+					<include>OpenClose4</include>
+					<visible>Control.IsVisible(50)</visible>
+					
+					<!-- LIST CONTROL -->
+					
+					<control type="panel" id="50">
+					<posx>96</posx>
+					<posy>660</posy>
+					<width>1728</width>
+					<height>330</height>
+					<onup>9000</onup>
+					<ondown>60</ondown>
+					<onright>noop</onright>
+					<onleft>noop</onleft>
+					<orientation>horizontal</orientation>
+					<viewtype label="Panel">List</viewtype>
+					<preloaditems>2</preloaditems>
+					 <scrolltime tween="cubic" easing="out">300</scrolltime>
+					<pagecontrol>60</pagecontrol>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="576" height="110">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture fallback="DefaultAddonNone.png" background="true">$INFO[Listitem.Icon]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture background="true">$INFO[Listitem.Label,special://skin/extras/moviegenrethumb/,.jpg]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>Container.Content(Genres)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture background="true" colordiffuse="tiles">white.png</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>Container.Content(Studios)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container.Content(Studios)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>110</posx>
+					<posy>0</posy>
+					<width>456</width>
+					<height>100</height>
+					<texture background="true" colordiffuse="background2">white.png</texture>
+					</control>
+					
+					<control type="label">
+					<description>label</description>
+					<posx>130</posx>
+					<posy>8</posy>
+					<width>400</width>
+					<height>30</height>
+					<label>$INFO[Listitem.Label]</label>
+					<align>left</align>
+					<font>Medium6</font>
+					<textcolor>label3</textcolor>
+					<selectedcolor>selectednofocus</selectedcolor>
+					</control>
+					
+					<control type="label">
+					<description>label</description>
+					<posx>130</posx>
+					<posy>45</posy>
+					<width>400</width>
+					<height>20</height>
+					<label>$INFO[Listitem.Label2]</label>
+					<align>left</align>
+					<font>Title3</font>
+					<textcolor>label3</textcolor>
+					<selectedcolor>selectednofocus</selectedcolor>
+					</control>
+					
+					<control type="image">
+					<posx>60</posx>
+					<posy>60</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="576" height="110">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture fallback="DefaultAddonNone.png" background="true">$INFO[Listitem.Icon]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture background="true">$INFO[Listitem.Label,special://skin/extras/moviegenrethumb/,.jpg]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>Container.Content(Genres)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture background="true" colordiffuse="tiles">white.png</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>Container.Content(Studios)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container.Content(Studios)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>110</posx>
+					<posy>0</posy>
+					<width>456</width>
+					<height>100</height>
+					<texture background="true" colordiffuse="accent">white.png</texture>
+					</control>
+					
+					<control type="label">
+					<description>label</description>
+					<posx>130</posx>
+					<posy>8</posy>
+					<width>400</width>
+					<height>103</height>
+					<label>$INFO[Listitem.Label]</label>
+					<align>left</align>
+					<font>Medium6</font>
+					<selectedcolor>label</selectedcolor>
+					<textcolor>label</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>label</description>
+					<posx>130</posx>
+					<posy>45</posy>
+					<width>400</width>
+					<height>20</height>
+					<label>$INFO[Listitem.Label2]</label>
+					<align>left</align>
+					<font>Title3</font>
+					<textcolor>label</textcolor>
+					<selectedcolor>label</selectedcolor>
+					</control>
+					
+					<control type="image">
+					<posx>60</posx>
+					<posy>60</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</focusedlayout>
+					</control>
+					
+					<control type="scrollbar" id="60">
+					<posx>95</posx>
+					<posy>1035</posy>
+					<width>1730</width>
+					<height>10</height>
+					<texturesliderbackground colordiffuse="scrollbarback">white.png</texturesliderbackground>
+					<texturesliderbar colordiffuse="scrollbarslide">white.png</texturesliderbar>
+                    <texturesliderbarfocus colordiffuse="scrollbarfocus">white.png</texturesliderbarfocus>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>50</onup>
+					<showonepage>true</showonepage>
+					<orientation>horizontal</orientation>
+					<visible>Control.IsVisible(50)</visible>
+					</control>
+					</control>
+					
+					<control type="group">
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					<include>OpenClose4</include>
+					<visible>Control.IsVisible(50)</visible>
+					
+					<control type="label">
+					<description>genre</description>
+					<posx>320</posx>
+					<posy>140</posy>
+					<width>870</width>
+					<height>30</height>
+					<label>$INFO[Listitem.Genre]</label>
+					<align>left</align>
+					<font>Medium5</font>
+					<textcolor>label</textcolor>
+					<visible>![Container.Content(Songs) | Container.Content(Files) | Container.Content(Genres) | Container.Content(Sets)]</visible>
+					</control>
+					
+					<control type="label">
+					<description>Movie Sets Count</description>
+					<posx>320</posx>
+					<posy>140</posy>
+					<width>870</width>
+					<height>30</height>
+					<label>$INFO[Window(Home).Property(SkinHelper.MovieSet.Genre)]</label>
+					<align>left</align>
+					<font>Medium5</font>
+					<textcolor>label</textcolor>
+					<fadetime>800</fadetime>
+					<visible>Container.Content(Sets)</visible>
+					</control>
+					
+					<control type="textbox">
+					<description>Movies in Sets</description>
+					<posx>320</posx>
+					<posy>200</posy>
+					<width>870</width>
+					<height>250</height>
+					<label>$INFO[Window(Home).Property(SkinHelper.MovieSet.Title)]</label>
+					<align>left</align>
+					<font>Title3_Linespace</font>
+					<textcolor>plot</textcolor>
+					<autoscroll delay="3000" time="1000" repeat="3000">true</autoscroll>
+					<visible>Container.Content(Sets)</visible>
+					</control>
+					
+					<control type="textbox">
+					<description>Plot</description>
+					<posx>320</posx>
+					<posy>200</posy>
+					<width>870</width>
+					<height>185</height>
+					<font>plot</font>
+					<textcolor>plot</textcolor>
+					<align>justify</align>
+					<label>$VAR[global_labels_plot_view50]</label>
+					<autoscroll delay="10000" time="3000" repeat="8000">true</autoscroll>
+					<visible>Container.Content(Albums) | Container.Content(Artists) | Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) + IsEmpty(Container.PluginName) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>220</posx>
+					<posy>400</posy>
+					<width>300</width>
+					<height>80</height>
+					<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) + IsEmpty(Container.PluginName) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)</visible>
+					</control>
+					
+					<control type="label">
+					<description>album year</description>
+					<posx>0</posx>
+					<posy>410</posy>
+					<width>285</width>
+					<height>30</height>
+					<label>$VAR[global_labels_album_year]</label>
+					<align>center</align>
+					<font>Medium4</font>
+					<textcolor>plot</textcolor>
+					<visible>Container.Content(Albums) + !IsEmpty(ListItem.Year)</visible>
+					</control>
+					</control>
+					</include>
+					</includes>

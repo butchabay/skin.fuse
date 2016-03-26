@@ -1,0 +1,417 @@
+					<includes>
+
+					<include name="SkinWidgetsTVShows">
+					
+					<control type="group" id="8000">
+					<posx>295</posx>
+					<posy>430</posy>
+
+					<!-- LATEST EPISODES -->
+
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(200)</visible>
+					<visible>![Skin.HasSetting(hide200) | Skin.HasSetting(custom200)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Episodes</include>
+					<content>videodb://recentlyaddedepisodes/</content>
+					</control>
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 200 -->
+
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(200)</visible>
+					<visible>Skin.HasSetting(custom200) + Skin.HasSetting(custom200Episodes)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Episodes</include>
+					<content target="video">$INFO[Skin.String(custom200playlist)]</content>
+					</control>
+					
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(200)</visible>
+					<visible>Skin.HasSetting(custom200) + Skin.HasSetting(custom200TVShows)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_TVShows</include>
+					<content target="video">$INFO[Skin.String(custom200playlist)]</content>
+					</control>
+					
+					<!-- UNWATCHED EPISODES  -->
+
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(201)</visible>
+					<visible>![Skin.HasSetting(hide201) | Skin.HasSetting(custom201)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Episodes</include>
+					<content target="video">special://skin/playlists/Unwatched Episodes.xsp</content>
+					</control>
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 201 -->
+
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(201)</visible>
+					<visible>Skin.HasSetting(custom201) + Skin.HasSetting(custom201Episodes)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Episodes</include>
+					<content target="video">$INFO[Skin.String(custom201playlist)]</content>
+					</control>
+					
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(201)</visible>
+					<visible>Skin.HasSetting(custom201) + Skin.HasSetting(custom201TVShows)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_TVShows</include>
+					<content target="video">$INFO[Skin.String(custom201playlist)]</content>
+					</control>
+					
+					<!-- NEXT UP  -->
+
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(202)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Episodes</include>
+					<content>plugin://service.library.data.provider?type=recommendedepisodes&reload=$INFO[Window.Property(recommendedepisodes)]</content>
+					</control>
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 202 -->
+
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(202)</visible>
+					<visible>Skin.HasSetting(custom202) + Skin.HasSetting(custom202Episodes)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Episodes</include>
+					<content target="video">$INFO[Skin.String(custom202playlist)]</content>
+					</control>
+					
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(202)</visible>
+					<visible>Skin.HasSetting(custom202) + Skin.HasSetting(custom202TVShows)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_TVShows</include>
+					<content target="video">$INFO[Skin.String(custom202playlist)]</content>
+					</control>
+
+					<!-- SPOTLIGHT  -->
+
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(203)</visible>
+					<visible>![Skin.HasSetting(hide203) | Skin.HasSetting(custom203)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Episodes</include>
+					<content>plugin://service.library.data.provider?type=randomepisodes&reload=$INFO[Window.Property(randomepisodes)]</content>
+					</control>
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 203 -->
+
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(203)</visible>
+					<visible>Skin.HasSetting(custom203) + Skin.HasSetting(custom203Episodes)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Episodes</include>
+					<content target="video">$INFO[Skin.String(custom203playlist)]</content>
+					</control>
+					
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(203)</visible>
+					<visible>Skin.HasSetting(custom203) + Skin.HasSetting(custom200TVShows)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_TVShows</include>
+					<content target="video">$INFO[Skin.String(custom203playlist)]</content>
+					</control>
+					
+					<!-- LAST WATCHED -->
+
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(204)</visible>
+					<visible>![Skin.HasSetting(hide204) | Skin.HasSetting(custom204)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Episodes</include>
+					<content target="video">special://skin/playlists/Last Played Episode.xsp</content>
+					</control>
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 204 -->
+
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(204)</visible>
+					<visible>Skin.HasSetting(custom204) + Skin.HasSetting(custom204Episodes)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Episodes</include>
+					<content target="video">$INFO[Skin.String(custom204playlist)]</content>
+					</control>
+					
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(204)</visible>
+					<visible>Skin.HasSetting(custom204) + Skin.HasSetting(custom204TVShows)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_TVShows</include>
+					<content target="video">$INFO[Skin.String(custom204playlist)]</content>
+					</control>
+					
+					<!-- DOCUMENTARY -->
+
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(205)</visible>
+					<visible>![Skin.HasSetting(hide205) | Skin.HasSetting(custom205)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Episodes</include>
+					<content target="video">special://skin/playlists/TV Documentary.xsp</content>
+					</control>
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 206 -->
+
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(205)</visible>
+					<visible>Skin.HasSetting(custom205) + Skin.HasSetting(custom205Episodes)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Episodes</include>
+					<content target="video">$INFO[Skin.String(custom206playlist)]</content>
+					</control>
+					
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(205)</visible>
+					<visible>Skin.HasSetting(custom205) + Skin.HasSetting(custom205TVShows)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_TVShows</include>
+					<content target="video">$INFO[Skin.String(custom206playlist)]</content>
+					</control>
+					
+					<!-- STUDIOS -->
+					
+					<control type="fixedlist" id="8102">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(206)</visible>
+					<visible>![Skin.HasSetting(hide206) | Skin.HasSetting(custom206)]</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="250" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>35</posx>
+					<posy>35</posy>
+					<width>160</width>
+					<height>160</height>
+					<texture>resource://resource.images.studios.white/$INFO[ListItem.Label,,.png]</texture>
+					<aspectratio>keep</aspectratio>
+					</control>
+					
+					</itemlayout>
+					<focusedlayout width="250" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>35</posx>
+					<posy>35</posy>
+					<width>160</width>
+					<height>160</height>
+					<texture>resource://resource.images.studios.white/$INFO[ListItem.Label,,.png]</texture>
+					<aspectratio>keep</aspectratio>
+					</control>
+					
+					</focusedlayout>
+					<content target="video">videodb://tvshows/studios/</content>
+					</control>
+					
+					<!-- CUSTOM TV SHOWS WIDGETS 206 -->
+
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(206)</visible>
+					<visible>Skin.HasSetting(custom206) + Skin.HasSetting(custom206Episodes)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Episodes</include>
+					<content target="video">$INFO[Skin.String(custom206playlist)]</content>
+					</control>
+					
+					<control type="fixedlist" id="8101">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(206)</visible>
+					<visible>Skin.HasSetting(custom206) + Skin.HasSetting(custom206TVShows)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_TVShows</include>
+					<content target="video">$INFO[Skin.String(custom206playlist)]</content>
+					</control>
+					</control>
+					
+					<include>TitleWidgetsTVShows</include>
+					</include>
+					</includes>

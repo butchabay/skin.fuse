@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="movies">
+    <name>Collections</name>
+    <match>all</match>
+    <rule field="set" operator="endswith">
+        <value>collection</value>
+    </rule>
+</smartplaylist>

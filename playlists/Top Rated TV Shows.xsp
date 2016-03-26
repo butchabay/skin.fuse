@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="episodes">
+    <name>Top Rated TV Shows</name>
+    <match>all</match>
+    <rule field="rating" operator="greaterthan">
+        <value>8.0</value>
+    </rule>
+</smartplaylist>

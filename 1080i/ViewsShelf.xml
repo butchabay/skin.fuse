@@ -1,0 +1,479 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<includes>
+					<include name="ShelfView">
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					
+					<include>OpenClose4</include>
+					<visible>Control.IsVisible(51)</visible>
+					
+					<!-- LIST CONTROL -->
+					
+					<control type="fixedlist" id="51">
+					<posx>95</posx>
+					<posy>650</posy>
+					<width>1730</width>
+					<height>260</height>
+					<onup>9000</onup>
+					<ondown>61</ondown>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<viewtype label="Shelf">List</viewtype>
+					 <scrolltime tween="cubic" easing="out">200</scrolltime>
+					<pagecontrol>61</pagecontrol>
+					<include>widgets_animation</include>
+					<itemlayout condition="![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets) | Container.Content(MusicVideos)]" width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture fallback="DefaultFolderBack.png" background="true">$VAR[global_icons]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true">$INFO[Listitem.Label,special://skin/extras/moviegenrethumb/,.jpg]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>Container.Content(Genres)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true">$INFO[Listitem.Label,special://skin/extras/musicgenresquare/,.jpg]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>Container.Content(Genres) + Library.HasContent(music)</visible>
+					</control>
+
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true" colordiffuse="tiles">white.png</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>Container.Content(Studios)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>35</posx>
+					<posy>35</posy>
+					<width>160</width>
+					<height>160</height>
+					<texture>resource://resource.images.studios.white/$INFO[ListItem.Label,,.png]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container.Content(Studios)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>180</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</itemlayout>
+					
+					<itemlayout condition="Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets) | Container.Content(MusicVideos)" width="175" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>155</width>
+					<height>230</height>
+					<texture fallback="DefaultPosterBack.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>110</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout condition="![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets) | Container.Content(MusicVideos)] "width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture fallback="DefaultFolderBack.png" background="true">$VAR[global_icons]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true">$INFO[Listitem.Label,special://skin/extras/moviegenrethumb/,.jpg]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>Container.Content(Genres)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true">$INFO[Listitem.Label,special://skin/extras/musicgenresquare/,.jpg]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>Container.Content(Genres) + Library.HasContent(music)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true" colordiffuse="tiles">white.png</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>Container.Content(Studios)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>35</posx>
+					<posy>35</posy>
+					<width>160</width>
+					<height>160</height>
+					<texture>resource://resource.images.studios.white/$INFO[ListItem.Label,,.png]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container.Content(Studios)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>180</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</focusedlayout>
+					
+					<focusedlayout condition="Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets) | Container.Content(MusicVideos)" width="175" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>155</width>
+					<height>230</height>
+					<texture fallback="DefaultPosterBack.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>110</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</focusedlayout>
+					</control>
+					
+					<control type="image">
+					<posx>150</posx>
+					<posy>880</posy>
+					<height>50</height>
+					<width>50</width>
+					<texture>arrowup.png</texture>
+					<colordiffuse>accent</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>95</posx>
+					<posy>902</posy>
+					<height>100</height>
+					<width>1730</width>
+					<texture>white.png</texture>
+					<colordiffuse>accent</colordiffuse>
+					</control>
+					
+					<control type="group">
+					<posx>95</posx>
+					<posy>0</posy>
+					<animation effect="fade" start="100" end="65" time="100" tween="cubic" easing="in" delay="0" condition="ControlGroup(9000).HasFocus  | Control.HasFocus(60)">Conditional</animation>
+					
+					<visible>!substring(listitem.label,..,left)</visible>
+					
+					<control type="label">
+					<description>Title label</description>
+					<posx>45</posx>
+					<posy>933</posy>
+					<width>1000</width>
+					<height>30</height>
+					<label>$INFO[ListItem.Label]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<visible>![Container.Content(Episodes) | Container.Content(Albums)]</visible>
+					</control>
+					
+					
+					<control type="grouplist">
+					<visible>Container.Content(Albums)</visible>
+					<description>Titles</description>
+					<usecontrolcoords>true</usecontrolcoords> 
+					<posx>45</posx>
+					<posy>933</posy>
+					<width>1200</width>
+					<itemgap>15</itemgap>
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					
+					<control type="label">
+					<description>Title label</description>
+					<width min="0" max="800">auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>30</height>
+					<label>$INFO[ListItem.Label]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>Artist Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>800</width>
+					<height>30</height>
+					<label> $INFO[ListItem.Artist]</label>
+					<align>left</align>
+					<font>Title</font>
+					<textcolor>label2</textcolor>
+					</control>
+					</control>
+					
+					
+					<control type="grouplist">
+					<visible>Container.Content(Episodes) + !IsEmpty(ListItem.Season)</visible>
+					<description>Titles</description>
+					<usecontrolcoords>true</usecontrolcoords> 
+					<posx>45</posx>
+					<posy>933</posy>
+					<width>1200</width>
+					<itemgap>15</itemgap>
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					
+					<control type="label">
+					<description>Title label</description>
+					<width min="0" max="800">auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>30</height>
+					<label>$INFO[ListItem.TVShowTitle]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>Season and Episode Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>800</width>
+					<height>30</height>
+					<label>  [COLOR=label]$LOCALIZE[20373] $INFO[ListItem.Season]  $LOCALIZE[32091] $INFO[ListItem.Episode][/COLOR]    $INFO[ListItem.Title]</label>
+					<align>left</align>
+					<font>Title</font>
+					<textcolor>label2</textcolor>
+					</control>
+					</control>
+					
+					<!-- <control type="label">
+					<description>Title label</description>
+					<posx>45</posx>
+					<posy>933</posy>
+					<width>1000</width>
+					<height>30</height>
+					<label>$INFO[ListItem.TVShowTitle]  |  $LOCALIZE[20373] $INFO[ListItem.Season]   [COLOR=label2]$INFO[ListItem.Label][/COLOR]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<visible>Container.Content(Episodes) + !IsEmpty(listitem.Season)</visible>
+					</control> -->
+					
+					<control type="label">
+					<description>Title label</description>
+					<posx>45</posx>
+					<posy>933</posy>
+					<width>1000</width>
+					<height>30</height>
+					<label>$INFO[ListItem.Label]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<visible>Container.Content(Episodes) + IsEmpty(listitem.Season)</visible>
+					</control>
+					
+					<control type="label">
+					<description>rating/duration/mpaa</description>
+					<posx>1646</posx>
+					<posy>933</posy>
+					<width>800</width>
+					<height>30</height>
+					<label>$VAR[global_labels_watched_status,,  •  ]$VAR[global_labels_year,,  •  ]$VAR[global_labels_resolution,,  •  ]$VAR[global_labels_mpaa,,  •  ]$VAR[global_labels_duration,,  •  ]$VAR[global_labels_rating]</label>
+					<align>right</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<visible>![Container.Content(Sets) | Container.Content(Seasons) | Container.Content(Albums) | Container.Content(Songs)]</visible>
+					</control>
+					
+					<control type="label">
+					<description>rating/duration/mpaa</description>
+					<posx>1646</posx>
+					<posy>933</posy>
+					<width>800</width>
+					<height>30</height>
+					<label>$VAR[global_labels_duration2,,  •  ]$VAR[global_labels_genres]</label>
+					<align>right</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<visible>Container.Content(Songs)</visible>
+					</control>
+					
+					<control type="label">
+					<description>Addon Status</description>
+					<posx>1680</posx>
+					<posy>933</posy>
+					<width>800</width>
+					<height>30</height>
+					<label>$INFO[Listitem.Label2]</label>
+					<align>right</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<visible>Window.IsVisible(addonbrowser)</visible>
+					</control>
+					
+					<control type="image">
+					<description>star</description>
+					<posx>1660</posx>
+					<posy>937</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>star.png</texture>
+					<colordiffuse>label</colordiffuse>
+					<fadetime>400</fadetime>
+					<visible>Container.Content(Movies) | Container.Content(Episodes) | Container.Content(TVShows)</visible>
+					</control>
+					</control>
+					
+					<control type="scrollbar" id="61">
+					<posx>95</posx>
+					<posy>1035</posy>
+					<width>1730</width>
+					<height>10</height>
+					<texturesliderbackground colordiffuse="scrollbarback">white.png</texturesliderbackground>
+					<texturesliderbar colordiffuse="scrollbarslide">white.png</texturesliderbar>
+                    <texturesliderbarfocus colordiffuse="scrollbarfocus">white.png</texturesliderbarfocus>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>51</onup>
+					<showonepage>true</showonepage>
+					<orientation>horizontal</orientation>
+					<visible>Control.IsVisible(51)</visible>
+					</control>
+					</control>
+					
+					<control type="group">
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					<include>OpenClose4</include>
+					<visible>Control.IsVisible(51)</visible>
+					
+					<control type="label">
+					<description>genre</description>
+					<posx>320</posx>
+					<posy>140</posy>
+					<width>870</width>
+					<height>30</height>
+					<label>$VAR[global_labels_genre]</label>
+					<align>left</align>
+					<font>Medium5</font>
+					<textcolor>label</textcolor>
+					<visible>![Container.Content(Songs) | Container.Content(Files) | Container.Content(Genres) | Container.Content(Sets)]</visible>
+					</control>
+					
+					<control type="label">
+					<description>Movie Sets Count</description>
+					<posx>320</posx>
+					<posy>140</posy>
+					<width>870</width>
+					<height>30</height>
+					<label>$INFO[Window(Home).Property(SkinHelper.MovieSet.Genre)]</label>
+					<align>left</align>
+					<font>Medium5</font>
+					<textcolor>label</textcolor>
+					<fadetime>800</fadetime>
+					<visible>Container.Content(Sets)</visible>
+					</control>
+					
+					<control type="textbox">
+					<description>Movies in Sets</description>
+					<posx>320</posx>
+					<posy>200</posy>
+					<width>870</width>
+					<height>250</height>
+					<label>$INFO[Window(Home).Property(SkinHelper.MovieSet.Title)]</label>
+					<align>left</align>
+					<font>Title3_Linespace</font>
+					<textcolor>plot</textcolor>
+					<autoscroll delay="3000" time="1000" repeat="3000">true</autoscroll>
+					<visible>Container.Content(Sets)</visible>
+					</control>
+					
+					<control type="textbox">
+					<description>Plot</description>
+					<posx>320</posx>
+					<posy>200</posy>
+					<width>870</width>
+					<height>185</height>
+					<font>Plot</font>
+					<textcolor>plot</textcolor>
+					<align>justify</align>
+					<label>$VAR[global_labels_plot]</label>
+					<autoscroll delay="10000" time="3000" repeat="8000">true</autoscroll>
+					<visible>Container.Content(Albums) | Container.Content(Artists) | Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) + IsEmpty(Container.PluginName) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>220</posx>
+					<posy>400</posy>
+					<width>300</width>
+					<height>80</height>
+					<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) + IsEmpty(Container.PluginName) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)</visible>
+					</control>
+					
+					<control type="label">
+					<description>album year</description>
+					<posx>0</posx>
+					<posy>410</posy>
+					<width>285</width>
+					<height>30</height>
+					<label>$VAR[global_labels_album_year]</label>
+					<align>center</align>
+					<font>Medium4</font>
+					<textcolor>plot</textcolor>
+					<visible>Container.Content(Albums) + !IsEmpty(ListItem.Year)</visible>
+					</control>
+					</control>
+					</include>
+					</includes>

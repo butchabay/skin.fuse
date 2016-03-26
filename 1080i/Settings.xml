@@ -1,0 +1,227 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					
+					<defaultcontrol always="true">9000</defaultcontrol>
+					<allowoverlay>no</allowoverlay>
+					<controls>
+					
+					<!-- <control type="image">
+					<left>0</left>
+					<top>0</top>
+					<height>1080</height>
+					<width>1920</width>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</texture>
+					<fadetime>800</fadetime>
+					</control> -->
+					
+					<include>Overlay_Home</include>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					
+					<control type="wraplist" id="9000">
+					<posx>95</posx>
+					<posy>650</posy>
+					<width>1730</width>
+					<height>520</height>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<focusposition>0</focusposition>
+					<orientation>horizontal</orientation>
+					<include>OpenClose</include>
+					<itemlayout width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>55</posx>
+					<posy>55</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>55</posx>
+					<posy>55</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</focusedlayout>
+					
+					<content>
+					<item id="1">
+					<label>480</label>
+					<label2>31400</label2>
+					<onclick>ActivateWindow(AppearanceSettings)</onclick>
+					<icon>icons/home/system/appearance.png</icon>
+					</item>
+					
+					<item id="2">
+					<label>157</label>
+					<label2>31401</label2>
+					<onclick>ActivateWindow(VideosSettings)</onclick>
+					<icon>icons/home/system/video.png</icon>
+					</item>
+					
+					<!-- <item id="3">
+					<label>31502</label>
+					<label2>31409</label2>
+					<onclick>ActivateWindow(PVRSettings)</onclick>
+					<icon>icons/home/system/livetv.png</icon>
+					</item>
+					 -->
+					<item id="4">
+					<label>32077</label>
+					<label2>31407</label2>
+					<onclick>ActivateWindow(SkinSettings)</onclick>
+					<icon>icons/home/system/skinsettings.png</icon>
+					</item>
+					
+					<item id="5">
+					<label>2</label>
+					<label2>31402</label2>
+					<onclick>ActivateWindow(MusicSettings)</onclick>
+					<icon>icons/home/system/audio.png</icon>
+					</item>
+					
+					<item id="6">
+					<label>1</label>
+					<label2>31403</label2>
+					<onclick>ActivateWindow(PicturesSettings)</onclick>
+					<icon>icons/home/system/pictures.png</icon>
+					</item>
+					
+					<item id="7">
+					<label>13000</label>
+					<label2>31406</label2>
+					<onclick>ActivateWindow(SystemSettings)</onclick>
+					<icon>icons/home/system/files.png</icon>
+					</item>
+					
+					<item id="8">
+					<label>24001</label>
+					<label2>31408</label2>
+					<onclick>ActivateWindow(AddonBrowser)</onclick>
+					<icon>icons/home/system/addons.png</icon>
+					</item>
+					
+					<item id="9">
+					<label>8</label>
+					<label2>31404</label2>
+					<onclick>ActivateWindow(WeatherSettings)</onclick>
+					<icon>icons/home/system/weather.png</icon>
+					</item>
+					
+					<item id="10">
+					<label>14036</label>
+					<label2>31410</label2>
+					<onclick>ActivateWindow(ServiceSettings)</onclick>
+					<icon>icons/home/system/services.png</icon>
+					</item>
+					
+					<item id="11">
+					<description>Profiles</description>
+					<label>13200</label>
+					<label2>[UPPERCASE]$LOCALIZE[13200][/UPPERCASE]</label2>
+					<onclick>ActivateWindow(Profiles)</onclick>
+					<icon>icons/home/system/profiles.png</icon>
+					</item>
+					
+					<item id="12">
+					<description>System Info</description>
+					<label>130</label>
+					<label2>[UPPERCASE]$LOCALIZE[130][/UPPERCASE]</label2>
+					<onclick>ActivateWindow(SystemInfo)</onclick>
+					<icon>icons/home/system/info.png</icon>
+					</item>
+					</content>
+					</control>
+					</control>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					
+					<include>OpenClose</include>
+					<control type="image">
+					<posx>190</posx>
+					<posy>880</posy>
+					<height>50</height>
+					<width>50</width>
+					<texture>arrowup.png</texture>
+					<colordiffuse>accent</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>95</posx>
+					<posy>902</posy>
+					<height>100</height>
+					<width>1730</width>
+					<texture>white.png</texture>
+					<colordiffuse>accent</colordiffuse>
+					</control>
+					
+					<control type="label">
+					<description>Title label</description>
+					<posx>130</posx>
+					<posy>933</posy>
+					<width>1000</width>
+					<height>30</height>
+					<label>$INFO[Container(9000).ListItem.Label]</label>
+					<align>left</align>
+					<font>Title</font>
+					<textcolor>label</textcolor>
+					</control>
+					</control>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					
+					<include>OpenClose</include>
+					
+					<control type="label">
+					<description>Line 2 Label</description>
+					<posx>95</posx>
+					<posy>590</posy>
+					<width>1000</width>
+					<height>30</height>
+					<textcolor>home</textcolor>
+					<font>Medium3</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+					<label>$INFO[Container(9000).ListItem.Label2]</label>
+					</control>
+					</control>
+					<include>Time</include>
+					
+					</controls>
+					</window>

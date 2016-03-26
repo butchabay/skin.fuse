@@ -1,0 +1,1139 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<includes>
+					<include file="defaults.xml" />
+					
+					<include file="ViewsFiles.xml" />
+					<include file="ViewsShelf.xml" />
+					<include file="Includes_Animations.xml" />
+					<include file="Includes_Backgrounds.xml" />
+					<include file="Includes_HomeSubmenu.xml" />
+					<include file="Variables.xml" />
+					<include file="Includes_SkinWidgetsMovies.xml" />
+					<include file="Includes_SkinWidgetsTVShows.xml" />
+					<include file="Includes_SkinWidgetsLiveTV.xml" />
+					<include file="Includes_SkinWidgetsVideos.xml" />
+					<include file="Includes_SkinWidgetsMusic.xml" />
+					<include file="Includes_SkinWidgetsWeather.xml" />
+					<include file="Includes_SkinWidgetsApps.xml" />
+					<include file="Includes_SkinWidgetsPictures.xml" />
+					<include file="Includes_SkinWidgetsSystem.xml" />
+					
+					<include name="Dimensions_Fullscreen">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>1080</height>
+					</include>
+
+					<constant name="FanartCrossfadeTime">500</constant>
+					<constant name="IconCrossfadeTime">400</constant>
+					
+					<variable name="PlayList">
+					<value condition="Player.HasVideo">ActivateWindow(videoplaylist)</value>
+					<value condition="Player.HasAudio">ActivateWindow(musicplaylist)</value>
+					</variable>
+					
+					<!-- TIME and DATE -->
+					
+					<include name="Time">
+					
+					<control type="group">
+					<posx>1755</posx>
+					<posy>0</posy>
+					
+					<include>OpenClose2</include>
+					
+					<control type="label">
+					<description>Time label</description>
+					<width>1000</width>
+					<height>60</height>
+					<posx>20</posx>
+					<posy>15</posy>
+					<label>$INFO[System.Time]</label>
+					<align>right</align>
+					<font>Medium2</font>
+					<textcolor>clock</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>Date label</description>
+					<width>1000</width>
+					<height>30</height>
+					<posx>20</posx>
+					<posy>59</posy>
+					<label>$INFO[System.Date]</label>
+					<align>right</align>
+					<font>Title2</font>
+					<textcolor>clock</textcolor>
+					</control>
+					
+					<control type="image">
+					<posx>40</posx>
+					<posy>12</posy>
+					<width>90</width>
+					<height>90</height>
+					<texture colordiffuse="weathericon" background="true">weather/default.png</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<visible>!Weather.IsFetched</visible>
+					</control>
+					
+					<control type="image">
+					<posx>40</posx>
+					<posy>12</posy>
+					<width>90</width>
+					<height>90</height>
+					<texture colordiffuse="weathericon">$INFO[Window(Weather).Property(Day0.FanartCode),weather/medium/,.png]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<visible>Weather.IsFetched</visible>
+					</control>
+					</control>
+					</include>
+					
+	
+					<!-- WIDGETS MOVIES -->
+					
+					<include name="TitleWidgetsMovies">
+					<control type="group">
+					<posx>355</posx>
+					<posy>348</posy>
+					<visible>Container(300).HasFocus(5) + ControlGroup(8000).HasFocus</visible>
+					<animation effect="fade" start="0" end="100" time="400" tween="cubic" easing="in" delay="200" condition="Container(300).HasFocus(5) + ControlGroup(8000).HasFocus">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="0" tween="cubic" easing="out" delay="0" condition="!ControlGroup(8000).HasFocus">Conditional</animation>
+					
+					<control type="label">
+					<description>Title label</description>
+					<width>1000</width>
+					<height>30</height>
+					<posx>30</posx>
+					<posy>585</posy>
+					<label>$VAR[widgetslabels]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>rating/duration/mpaa</description>
+					<posx>1388</posx>
+					<posy>585</posy>
+					<width>800</width>
+					<height>30</height>
+					<label>$VAR[widgetslabels_years,,  •  ]$VAR[widgetslabels_resolution,,  •  ]$VAR[widgetslabels_mpaa,,  •  ]$VAR[widgetslabels_duration,,  •  ]$VAR[widgetslabels_rating]</label>
+					<align>right</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					</control>
+					
+					<control type="image">
+					<description>star</description>
+					<posx>1400</posx>
+					<posy>589</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>star.png</texture>
+					<colordiffuse>label</colordiffuse>
+					<fadetime>400</fadetime>
+					<visible>Control.HasFocus(8001)</visible>
+					</control>
+					</control>
+					</include>
+					
+					<include name="Items_Widgets_Movies">
+					<itemlayout width="187.5" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>167.5</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultPosterMovies.png">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>120</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="187.5" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>167.5</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultPosterMovies.png">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>120</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</focusedlayout>
+					</include>
+					
+					<!-- --------------------------------------------------------------------------------- -->
+					
+					
+					<!-- WIDGETS TV EPISODES -->
+					
+					<!-- TVSHOWS -->
+					
+					<include name="TitleWidgetsTVShows">
+					<control type="group">
+					<posx>355</posx>
+					<posy>348</posy>
+					<visible>Container(300).HasFocus(6) + ControlGroup(8000).HasFocus</visible>
+					<animation effect="fade" start="0" end="100" time="400" tween="cubic" easing="in" delay="200" condition="Container(300).HasFocus(6) + ControlGroup(8000).HasFocus">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="0" tween="cubic" easing="out" delay="0" condition="!ControlGroup(8000).HasFocus">Conditional</animation>
+					
+					
+					<control type="grouplist">
+					<description>Titles</description>
+					<usecontrolcoords>true</usecontrolcoords> 
+					<posx>30</posx>
+					<posy>585</posy>
+					<width>1200</width>
+					<itemgap>15</itemgap>
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					
+					<control type="label">
+					<description>Title label</description>
+					<width min="0" max="800">auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>30</height>
+					<label>$VAR[widgetslabelstv]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>Episode Title</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>800</width>
+					<height>30</height>
+					<label> $VAR[widgetslabels]</label>
+					<align>left</align>
+					<font>Title</font>
+					<textcolor>label2</textcolor>
+					<visible>Control.HasFocus(8101)</visible>
+					</control>
+					
+					<control type="label">
+					<description>Episode Title</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>800</width>
+					<height>30</height>
+					<label> $VAR[widgetslabels]</label>
+					<align>left</align>
+					<font>Title</font>
+					<textcolor>label</textcolor>
+					<visible>!Control.HasFocus(8101)</visible>
+					</control>
+					</control>
+					
+					<control type="label">
+					<description>rating/duration/mpaa</description>
+					<posx>1388</posx>
+					<posy>585</posy>
+					<width>600</width>
+					<height>30</height>
+					<label>$VAR[widgetslabels_resolution,,  •  ]$VAR[widgetslabels_mpaa,,  •  ]$VAR[widgetslabels_duration,,  •  ]$VAR[widgetslabels_rating]</label>
+					<align>right</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					</control>
+					
+					<control type="image">
+					<description>star</description>
+					<posx>1400</posx>
+					<posy>589</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>star.png</texture>
+					<colordiffuse>label</colordiffuse>
+					<fadetime>400</fadetime>
+					<visible>Control.HasFocus(8101)</visible>
+					</control>
+					</control>
+					</include>
+					
+					<include name="Items_Widgets_Episodes">
+					
+					<itemlayout width="250" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultTVShows.png">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>180</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="250" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultTVShows.png">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>180</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</focusedlayout>
+					</include>
+		
+					<include name="Items_Widgets_TVShows">
+					
+				    <itemlayout width="187.5" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>167.5</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultPosterTVShows.png">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control> 
+					</itemlayout>
+					
+					<control type="image">
+					<posx>120</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					
+					<focusedlayout width="187.5" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>167.5</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultPosterTVShows.png">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>120</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</focusedlayout>
+					</include>
+					
+					
+					<!-- ------------------------------------------------------------------------------------------------- -->
+					
+					
+					<!-- VIDEOS -->
+					
+					<include name="TitleWidgetsVideos">
+					<control type="group">
+					<posx>355</posx>
+					<posy>348</posy>
+					<visible>Container(300).HasFocus(2) + ControlGroup(8000).HasFocus</visible>
+					<animation effect="fade" start="0" end="100" time="400" tween="cubic" easing="in" delay="200" condition="Container(300).HasFocus(2) + ControlGroup(8000).HasFocus">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="0" tween="cubic" easing="out" delay="0" condition="!ControlGroup(8000).HasFocus">Conditional</animation>
+					
+					<control type="label">
+					<description>Title label</description>
+					<width>1000</width>
+					<height>30</height>
+					<posx>30</posx>
+					<posy>585</posy>
+					<label>$INFO[Container(8061).ListItem.Label]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					</control>
+					</control>
+					</include>
+					
+					<include name="Items_Widgets_Videos">
+					<itemlayout width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultDirector.png">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>180</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultDirector.png">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>180</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Progress</info>
+					</control>
+					</focusedlayout>
+					</include>
+					
+					<!-- ------------------------------------------------------------------------------------------------------ -->
+					
+					<!-- WIDGETS MUSIC -->
+					
+					<include name="TitleWidgetsMusic">
+					<control type="group">
+					<posx>355</posx>
+					<posy>348</posy>
+					<visible>Container(300).HasFocus(3) + ControlGroup(8000).HasFocus</visible>
+					<animation effect="fade" start="0" end="100" time="400" tween="cubic" easing="in" delay="200" condition="Container(300).HasFocus(3) + ControlGroup(8000).HasFocus">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="0" tween="cubic" easing="out" delay="0" condition="!ControlGroup(8000).HasFocus">Conditional</animation>
+					
+					
+					<control type="grouplist">
+					<description>Titles</description>
+					<usecontrolcoords>true</usecontrolcoords> 
+					<posx>30</posx>
+					<posy>585</posy>
+					<width>1200</width>
+					<itemgap>15</itemgap>
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					
+					<control type="label">
+					<description>Title label</description>
+					<width min="0" max="800">auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>30</height>
+					<label>$VAR[widgetslabels]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>Artist</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>800</width>
+					<height>30</height>
+					<label> $VAR[widgetslabelsmusic]</label>
+					<align>left</align>
+					<font>Title</font>
+					<textcolor>label2</textcolor>
+					<visible>Control.HasFocus(8201)</visible>
+					</control>
+					
+					<control type="label">
+					<description>Artist</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>800</width>
+					<height>30</height>
+					<label> $VAR[widgetslabelsmusic]</label>
+					<align>left</align>
+					<font>Title</font>
+					<textcolor>label</textcolor>
+					<visible>!Control.HasFocus(8201)</visible>
+					</control>
+					</control>
+					
+					<control type="label">
+					<description>years/genre</description>
+					<posx>1428</posx>
+					<posy>585</posy>
+					<width>800</width>
+					<height>30</height>
+					<label>$VAR[widgetslabels_years,,  •  ]$VAR[widgetslabelsmusicgenre,,]</label>
+					<align>right</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<visible>!Control.HasFocus(8204)</visible>
+					</control>
+					</control>
+					</include>
+					
+					<include name="Items_Widgets_Music">
+					<itemlayout width="250" height="250">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultAudio.png">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="250" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultAudio.png">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</focusedlayout>
+					</include>
+					
+					
+					<!-- APPS -->
+					
+					<include name="Items_Widgets_Apps">
+					<itemlayout width="250" height="250">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultProgram.png">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="250" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultProgram.png">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</focusedlayout>
+					</include>
+					
+					<!-- APPS SYSTEM -->
+					
+					<include name="Items_Widgets_Apps_System">
+					<itemlayout width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					</control>
+				
+					<control type="image">
+					<posx>55</posx>
+					<posy>55</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>55</posx>
+					<posy>55</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</focusedlayout>
+					</include>
+					
+					
+					<!-- ------------------------------------------------------------------------------------------------------ -->
+					
+					
+					<include name="TitleWidgetsApps">
+					<control type="group">
+					<posx>355</posx>
+					<posy>348</posy>
+					<visible>Container(300).HasFocus(1) + ControlGroup(8000).HasFocus</visible>
+					<animation effect="fade" start="0" end="100" time="400" tween="cubic" easing="in" delay="200" condition="Container(300).HasFocus(1) + ControlGroup(8000).HasFocus">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="0" tween="cubic" easing="out" delay="0" condition="!ControlGroup(8000).HasFocus">Conditional</animation>
+					
+					
+					<control type="grouplist">
+					<description>Titles</description>
+					<usecontrolcoords>true</usecontrolcoords> 
+					<posx>30</posx>
+					<posy>585</posy>
+					<width>1200</width>
+					<itemgap>15</itemgap>
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					
+					<control type="label">
+					<description>Title label</description>
+					<width min="0" max="800">auto</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>30</height>
+					<label>$VAR[widgetslabels]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					</control>
+					</control>
+					</control>
+					</include>
+					
+					<!-- ---------------------------------------------------------------------------------------- -->
+					
+					<!-- Weather -->
+					
+					<include name="Items_Widgets_Weather">
+					<itemlayout width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					</control>
+				
+					<control type="image">
+					<posx>55</posx>
+					<posy>55</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					<control type="label">
+					<description>Weather</description>
+					<width>230</width>
+					<posx>0</posx>
+					<posy>20</posy>
+					<height>50</height>
+					<label>$INFO[ListItem.Label]</label>
+					<align>center</align>
+					<font>Title2</font>
+					<textcolor>plot</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>Weather</description>
+					<width>230</width>
+					<posx>0</posx>
+					<posy>180</posy>
+					<height>50</height>
+					<label>$INFO[ListItem.Label2]</label>
+					<align>center</align>
+					<font>Title2</font>
+					<textcolor>plot</textcolor>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>55</posx>
+					<posy>55</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					
+					<control type="label">
+					<description>Weather</description>
+					<width>230</width>
+					<posx>0</posx>
+					<posy>20</posy>
+					<height>50</height>
+					<label>$INFO[ListItem.Label]</label>
+					<align>center</align>
+					<font>Title2</font>
+					<textcolor>plot</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>Weather</description>
+					<width>230</width>
+					<posx>0</posx>
+					<posy>180</posy>
+					<height>50</height>
+					<label>$INFO[ListItem.Label2]</label>
+					<align>center</align>
+					<font>Title2</font>
+					<textcolor>plot</textcolor>
+					</control>
+					</focusedlayout>
+					</include>
+					
+					<!-- ------------------------------------------------------------------------ -->	
+					
+					<include name="Items_Global">
+					<itemlayout width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture fallback="empty.png">$VAR[global_icons]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>180</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="250" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture fallback="empty.png">$VAR[global_icons]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>180</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</focusedlayout>
+					</include>
+					
+					<!-- ------------------------------------------------------------------------ -->
+					
+					
+					<include name="Items_Posters">
+					<itemlayout width="187.5" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>167.5</width>
+					<height>230</height>
+					<texture background="true" fallback="empty.png">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>120</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="187.5" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>167.5</width>
+					<height>230</height>
+					<texture background="true" fallback="empty.png">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>120</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</focusedlayout>
+					</include>
+					
+					
+					<!-- NOW PLAYING -->
+					
+					<include name="NowPlaying">
+					<control type="group">
+					<include>OpenClose4</include>
+					<visible>Player.HasVideo | Player.HasAudio</visible>
+					
+					<posx>10</posx>
+					<posy>0</posy>
+					
+					<control type="image">
+					<posx>275</posx>
+					<posy>120</posy>
+					<width>670</width>
+					<height>378</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="videowindow">
+					<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="0" end="100" time="400" center="auto" tween="sine" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="zoom" start="100" end="0" time="300" center="auto" tween="sine" easing="out" />
+					</animation>
+					<posx>275</posx>
+					<posy>120</posy>
+					<width>670</width>
+					<height>378</height>
+					</control>
+					
+					<control type="multiimage">
+					<posx>275</posx>
+					<posy>120</posy>
+					<width>670</width>
+					<height>378</height>
+					<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<timeperimage>5000</timeperimage>
+				    <fadetime>2000</fadetime>
+				    <randomize>true</randomize>
+					<visible>Player.HasAudio</visible>
+					</control>
+					</control>
+					
+					<control type="group">
+					<posx>286</posx>
+					<posy>376</posy>
+					<visible>Player.HasVideo | Player.HasAudio</visible>
+					<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="300" delay="500" tween="sine" easing="in" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="100" tween="sine" easing="out" />
+					</animation>
+					
+					<control type="image">
+					<description>thumb</description>
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>$INFO[Player.Art(thumb)]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="label">
+					<description>Now Playing label</description>
+					<posx>130</posx>
+					<posy>45</posy>
+					<width>480</width>
+					<height>60</height>
+					<textcolor>label</textcolor>
+					<font>Medium5</font>
+					<align>left</align>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+					<label fallback="31040">$INFO[VideoPlayer.TVShowTitle]$INFO[MusicPlayer.Artist]</label>
+					<visible>!VideoPlayer.Content(Movies)</visible>
+					</control>
+					
+					<control type="label">
+					<description>Now Playing label</description>
+					<posx>130</posx>
+					<posy>45</posy>
+					<width>480</width>
+					<height>60</height>
+					<textcolor>label</textcolor>
+					<font>Medium5</font>
+					<align>left</align>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+					<label fallback="31040">$INFO[VideoPlayer.Title]</label>
+					<visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(VideoFiles)</visible>
+					</control>
+					
+					<control type="label">
+					<description>Line 2 Label</description>
+					<posx>130</posx>
+					<posy>78</posy>
+					<width>480</width>
+					<height>30</height>
+					<font>Title3</font>
+					<textcolor>label</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+					<label>$INFO[Player.Title]   $INFO[Player.Time] $INFO[Player.Duration, / ]</label>
+					<visible>!VideoPlayer.Content(Movies)</visible>
+					</control>
+					
+					<control type="label">
+					<description>Line 2 Label</description>
+					<posx>130</posx>
+					<posy>78</posy>
+					<width>480</width>
+					<height>30</height>
+					<font>Title3</font>
+					<textcolor>label</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+					<label>$INFO[Player.Time] $INFO[Player.Duration, / ]</label>
+					<visible>VideoPlayer.Content(Movies)</visible>
+					</control>
+					</control>
+					</include>
+					
+					<include name="WindowTitleCommons">
+					<posx>0</posx>
+					<posy>10</posy>
+					<width min="0" max="1800">auto</width>
+					<height>50</height>
+					<font>Medium5</font>
+					<textcolor>home</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					</include>
+					
+					<include name="WindowTitleCommons2">
+					<posx>0</posx>
+					<posy>20</posy>
+					<width min="0" max="1800">auto</width>
+					<height>50</height>
+					<font>Title2</font>
+					<textcolor>home</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					</include>
+					
+					<!-- BUTTONS -->
+					
+					<include name="ListButtons">
+					<height>50</height>
+					<width>600</width>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>340</textwidth>
+					<align>left</align>
+					<font>Medium6</font>
+					<textcolor>buttons2</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<pulseonselect>false</pulseonselect>
+					<disabledcolor>buttons3</disabledcolor>
+					</include>
+					
+					<include name="ListButtons2">
+					<height>50</height>
+					<width>1240</width>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>800</textwidth>
+					<align>left</align>
+					<font>Medium6</font>
+					<textcolor>buttons2</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<pulseonselect>false</pulseonselect>
+					<disabledcolor>buttons3</disabledcolor>
+					</include>
+					
+					<include name="ListRadioButtons">
+					<height>50</height>
+					<width>600</width>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>340</textwidth>
+					<align>left</align>
+					<font>Medium6</font>
+					<textcolor>buttons2</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<pulseonselect>false</pulseonselect>
+					<disabledcolor>buttons3</disabledcolor>
+					<radiowidth>20</radiowidth>
+					<radioheight>20</radioheight>
+					<radioposx>420</radioposx>
+					<radioposy>10</radioposy>
+					<textureradioonfocus colordiffuse="label">white.png</textureradioonfocus> <!-- ON focus -->
+					<textureradioonnofocus colordiffuse="label">white.png</textureradioonnofocus> <!-- ON no focus -->
+					<textureradioofffocus colordiffuse="buttons2">white.png</textureradioofffocus> <!-- OFF focus -->
+					<textureradiooffnofocus colordiffuse="buttons2">white.png</textureradiooffnofocus>  <!-- OFF no focus -->
+					</include>
+					
+					<include name="ListRadioButtons2">
+					<height>50</height>
+					<width>1240</width>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>1000</textwidth>
+					<align>left</align>
+					<font>Medium6</font>
+					<textcolor>buttons2</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<pulseonselect>false</pulseonselect>
+					<disabledcolor>buttons3</disabledcolor>
+					<radiowidth>20</radiowidth>
+					<radioheight>20</radioheight>
+					<radioposx>1200</radioposx>
+					<radioposy>10</radioposy>
+					<textureradioonfocus colordiffuse="label">white.png</textureradioonfocus> <!-- ON focus -->
+					<textureradioonnofocus colordiffuse="label">white.png</textureradioonnofocus> <!-- ON no focus -->
+					<textureradioofffocus colordiffuse="buttons3">white.png</textureradioofffocus> <!-- OFF focus -->
+					<textureradiooffnofocus colordiffuse="buttons3">white.png</textureradiooffnofocus>  <!-- OFF no focus -->
+					</include>
+					
+					<include name="ButtonValuesInfo">
+					<height>63</height>
+					<width>237.5</width>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>175</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>Medium6</font>
+					<texturefocus colordiffuse="accent">white.png</texturefocus>
+					<textcolor>home</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<pulseonselect>false</pulseonselect>
+					<disabledcolor>buttons2</disabledcolor>
+					</include>
+					
+					<include name="ButtonValuesInfoLarge">
+					<height>65</height>
+					<width>160</width>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>Medium6</font>
+					<texturefocus colordiffuse="background_full">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons3">white.png</texturenofocus>
+					<textcolor>label</textcolor>
+					<focusedcolor>tiles</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<pulseonselect>false</pulseonselect>
+					<disabledcolor>buttons2</disabledcolor>
+					</include>
+					
+					
+					<!-- SLIDEREX -->
+					
+					<include name="Sliderex1">
+					<width>1240</width>
+					<height>50</height>
+					<font>Medium6</font>
+					<textoffsetx>30</textoffsetx>
+					<aligny>center</aligny>
+					<sliderwidth>100</sliderwidth>
+					<sliderheight>10</sliderheight>
+					<textcolor>buttons2</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<pulseonselect>false</pulseonselect>
+					<disabledcolor>buttons3</disabledcolor>
+					<texturesliderbar colordiffuse="buttons2">white.png</texturesliderbar>
+					<textureslidernib colordiffuse="buttons2">white.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="label">white.png</textureslidernibfocus>
+					</include>
+					
+					<!-- SPINCONTROL -->
+					
+					<include name="Spincontrolex_1">
+					<height>50</height>
+					<width>1240</width>
+					<textoffsetx>30</textoffsetx>
+					<textwidth>1000</textwidth>
+					<align>left</align>
+					<font>Medium6</font>
+					<textcolor>buttons2</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<pulseonselect>false</pulseonselect>
+					<disabledcolor>buttons3</disabledcolor>
+					<spinwidth>32</spinwidth>
+					<spinheight>70</spinheight>
+					<textureup colordiffuse="buttons2">dialogs/buttons/up.png</textureup>
+					<texturedown colordiffuse="buttons2">dialogs/buttons/down.png</texturedown>
+					<textureupfocus colordiffuse="label">dialogs/buttons/up.png</textureupfocus>
+					<texturedownfocus colordiffuse="label">dialogs/buttons/down.png</texturedownfocus>
+					<reverse>yes</reverse>
+					<pulseonselect>no</pulseonselect>
+					</include>
+					
+					<!-- KEYBOARD -->
+					
+					<include name="KeyboardButton">
+					<width>75</width>
+					<height>75</height>
+					<texturenofocus colordiffuse="buttons3">white.png</texturenofocus>
+					<texturefocus colordiffuse="background_full">white.png</texturefocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Title2</font>
+					<focusedcolor>tiles</focusedcolor>
+					<textcolor>buttons</textcolor>
+					<pulseonselect>no</pulseonselect>
+					</include>
+					</includes>

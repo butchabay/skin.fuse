@@ -1,0 +1,394 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol>20</defaultcontrol>
+					<allowoverlay>no</allowoverlay>
+					<controls>
+                    
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>1080</height>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<texture colordiffuse="background_diffuse">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<height>1080</height>
+					<width>1920</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</texture>
+					<fadetime>800</fadetime>
+					</control>
+					
+					<include>Overlay_Home</include>
+					
+					<control type="group">
+					<posx>90</posx>
+					<posy>150</posy>
+					
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,2000" end="0,0" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,2000" time="800" tween="quadratic" easing="in" />
+					</animation>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>860</width>
+					<height>850</height>
+					<texture colordiffuse="tiles">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>860</width>
+					<height>100</height>
+				    <texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>770</posx>
+					<posy>10</posy>
+					<width>80</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<info>Container(20).ListItem.Icon</info>
+					</control>
+					
+					<control type="label">
+					<description>header label</description>
+					<posx>30</posx>
+					<posy>25</posy>
+					<width>705</width>
+					<height>45</height>
+					<font>Medium</font>
+					<label>A</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>tiles</textcolor>
+					</control>
+					
+					<control type="label" id="101">
+					<description>current directory text label</description>
+					<posx>30</posx>
+					<posy>125</posy>
+					<width>705</width>
+					<height>45</height>
+					<font>Title</font>
+					<textcolor>buttons</textcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					</control>
+					
+					<control type="list" id="20">
+					<posx>30</posx>
+					<posy>205</posy>
+					<width>850</width>
+					<height>540</height>
+					<onright>21</onright>
+					<onup>20</onup>
+					<ondown>20</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					
+					<itemlayout height="60" width="850">
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>700</width>
+					<height>50</height>
+					<font>Title2</font>
+					<aligny>center</aligny>
+					<selectedcolor>selectedfocus</selectedcolor>
+					<textcolor>buttons2</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					</control>
+					
+					<control type="label">
+					<posx>600</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>50</height>
+					<font>Title2</font>
+					<aligny>center</aligny>
+					<selectedcolor>selectedfocus</selectedcolor>
+					<textcolor>buttons2</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout height="60" width="810">
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>750</width>
+					<height>50</height>
+					<font>Title2</font>
+					<aligny>center</aligny>
+					<selectedcolor>selectedfocus</selectedcolor>
+					<textcolor>label</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>Control.HasFocus(20)</visible>
+					</control>
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>750</width>
+					<height>50</height>
+					<font>Title2</font>
+					<aligny>center</aligny>
+					<selectedcolor>selectedfocus</selectedcolor>
+					<textcolor>buttons2</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>!Control.HasFocus(20)</visible>
+					</control>
+					
+					<control type="label">
+					<posx>600</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>50</height>
+					<font>Title2</font>
+					<aligny>center</aligny>
+					<selectedcolor>selectedfocus</selectedcolor>
+					<textcolor>label</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					<visible>Control.HasFocus(20)</visible>
+					</control>
+					
+					<control type="label">
+					<posx>600</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>50</height>
+					<font>Title2</font>
+					<aligny>center</aligny>
+					<selectedcolor>selectedfocus</selectedcolor>
+					<textcolor>buttons2</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					<visible>!Control.HasFocus(20)</visible>
+					</control>
+					
+					</focusedlayout>
+					</control>
+					</control>
+					
+					<control type="group">
+					<posx>965</posx>
+					<posy>150</posy>
+					
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,2000" end="0,0" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,2000" time="800" tween="quadratic" easing="in" />
+					</animation>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>860</width>
+					<height>850</height>
+					<texture colordiffuse="tiles">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>860</width>
+					<height>100</height>
+				    <texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>770</posx>
+					<posy>10</posy>
+					<width>80</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<info>Container(21).ListItem.Icon</info>
+					</control>
+					
+					<control type="label">
+					<description>header label</description>
+					<posx>30</posx>
+					<posy>25</posy>
+					<width>705</width>
+					<height>45</height>
+					<font>Medium</font>
+					<label>B</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>tiles</textcolor>
+					</control>
+					
+					<control type="label" id="102">
+					<description>current directory text label</description>
+					<posx>30</posx>
+					<posy>125</posy>
+					<width>705</width>
+					<height>45</height>
+					<font>Title</font>
+					<textcolor>buttons</textcolor>
+					<scroll>true</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					</control>
+					
+					<control type="list" id="21">
+					<posx>30</posx>
+					<posy>205</posy>
+					<width>850</width>
+					<height>540</height>
+					<onleft>20</onleft>
+					<onup>21</onup>
+					<ondown>21</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					
+					<itemlayout height="60" width="850">
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>700</width>
+					<height>50</height>
+					<font>Title2</font>
+					<aligny>center</aligny>
+					<selectedcolor>selectedfocus</selectedcolor>
+					<textcolor>buttons2</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					</control>
+					
+					<control type="label">
+					<posx>600</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>50</height>
+					<font>Title2</font>
+					<aligny>center</aligny>
+					<selectedcolor>selectedfocus</selectedcolor>
+					<textcolor>buttons2</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout height="60" width="810">
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>750</width>
+					<height>50</height>
+					<font>Title2</font>
+					<aligny>center</aligny>
+					<selectedcolor>selectedfocus</selectedcolor>
+					<textcolor>label</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>Control.HasFocus(21)</visible>
+					</control>
+					
+					<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>750</width>
+					<height>50</height>
+					<font>Title2</font>
+					<aligny>center</aligny>
+					<selectedcolor>selectedfocus</selectedcolor>
+					<textcolor>buttons2</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>!Control.HasFocus(21)</visible>
+					</control>
+					
+					<control type="label">
+					<posx>600</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>50</height>
+					<font>Title2</font>
+					<aligny>center</aligny>
+					<selectedcolor>selectedfocus</selectedcolor>
+					<textcolor>label</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					<visible>Control.HasFocus(21)</visible>
+					</control>
+					
+					<control type="label">
+					<posx>600</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>50</height>
+					<font>Title2</font>
+					<aligny>center</aligny>
+					<selectedcolor>selectedfocus</selectedcolor>
+					<textcolor>buttons2</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					<visible>!Control.HasFocus(21)</visible>
+					</control>
+					</focusedlayout>
+					</control>
+					</control>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>60</posy>
+					
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,2000" end="0,0" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,2000" time="800" tween="quadratic" easing="in" />
+					</animation>
+					
+					<control type="label">
+					<posx>120</posx>
+					<posy>870</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>Title</font>
+					<textcolor>buttons2</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$VAR[breadcrumps_filemanager_A]</label>
+					</control>
+					
+					<control type="label">
+					<posx>995</posx>
+					<posy>870</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>Title</font>
+					<textcolor>buttons2</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$VAR[breadcrumps_filemanager_B]</label>
+					</control>
+					</control>
+					</controls>
+					</window>

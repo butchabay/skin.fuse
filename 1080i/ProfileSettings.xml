@@ -1,0 +1,192 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<coordinates>
+					<system>1</system>
+					<posx>0</posx>
+					<posy>0</posy>
+					</coordinates>
+					<controls>
+					
+					<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<height>1080</height>
+					<width>1920</width>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</texture>
+					<fadetime>800</fadetime>
+					</control>
+					
+					<include>Overlay_Home</include>
+					
+					<control type="group">
+					
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,1500" end="0,0" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,1500" time="400" tween="quadratic" easing="in" />
+					</animation>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>220</posy>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>180</posy>
+					<width>470</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>560</posx>
+					<posy>180</posy>
+					<width>1265</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>80</posy>
+					<width>1735</width>
+					<height>100</height>
+					<texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+					
+					<control type="label">
+					<posx>122</posx>
+					<posy>90</posy>
+					<width>1200</width>
+					<height>84</height>
+					<font>Title</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>tiles</textcolor>
+					<label>$INFO[Window.Property(heading)]</label>
+					</control>
+					
+					<control type="image" id="101">
+					<description>profile image</description>
+					<posx>1580</posx>
+					<posy>200</posy>
+					<width>225</width>
+					<height>225</height>
+					<align>left</align>
+					<aspectratio>scale</aspectratio>
+					<texture>start.png</texture>
+					</control>
+					
+					<control type="label">
+					<description>profile name label</description>
+					<posx>130</posx>
+					<posy>110</posy>
+					<width>690</width>
+					<align>left</align>
+					<font>Title</font>
+					<textcolor>tiles</textcolor>
+					<label>$LOCALIZE[32227]</label>
+					</control>
+					
+					<control type="label" id="102">
+					<description>profile name Value</description>
+					<posx>1805</posx>
+					<posy>440</posy>
+					<width>690</width>
+					<align>right</align>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					</control>
+					
+					<control type="label" id="103">
+					<description>profile directory Value</description>
+					<posx>1805</posx>
+					<posy>480</posy>
+					<width>690</width>
+					<align>right</align>
+					<font>Title2</font>
+					<textcolor>buttons2</textcolor>
+					</control>
+					</control>
+					
+					<control type="grouplist" id="5">
+					<description>control area</description>
+					<posx>102</posx>
+					<posy>450</posy>
+					<width>1000</width>
+					<height>722</height>
+					<itemgap>5</itemgap>
+					<onleft>noop</onleft>
+					<onright>28</onright>
+					<onup>28</onup>
+					<ondown>noop</ondown>
+					</control>
+					
+					<control type="button" id="7">
+					<description>Default Button</description>
+					<include>ListButtons</include>
+					</control>
+					
+					<control type="radiobutton" id="8">
+					<description>Default RadioButton</description>
+					<include>ListRadioButtons</include>
+					</control>
+					
+					<control type="spincontrolex" id="9">
+					<description>Default SpinControlex</description>
+					<include>Spincontrolex_1</include>
+					</control>
+					
+					
+					<control type="button" id="28">
+					<description>Ok Button</description>
+					<posx>1475</posx>
+					<posy>317</posy>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<pulseonselect>false</pulseonselect>
+					<label>186</label>
+					<onleft>29</onleft>
+					<onright>29</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+					</control>
+					
+					<control type="button" id="29">
+					<description>Cancel Button</description>
+					<posx>1646</posx>
+					<posy>317</posy>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<pulseonselect>false</pulseonselect>
+					<label>222</label>
+					<onleft>28</onleft>
+					<onright>28</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+					</control>
+					</control>
+					</controls>
+					</window>

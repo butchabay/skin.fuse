@@ -1,0 +1,62 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol>11</defaultcontrol>
+					
+					<controls>
+					
+					<control type="group">
+					<posx>604</posx>
+					<posy>590</posy>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>712</width>
+					<height>100</height>
+					<texture colordiffuse="tiles">white.png</texture>
+					</control>
+					
+					<control type="label" id="10">
+					<description>Dialog header</description>
+					<posx>40</posx>
+					<posy>15</posy>
+					<width>345</width>
+					<height>30</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Title3</font>
+					<textcolor>home</textcolor>
+					</control>
+					
+					<control type="label" id="12">
+					<description>Slider Value</description>
+					<posx>672</posx>
+					<posy>15</posy>
+					<width>330</width>
+					<height>30</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Title3</font>
+					<textcolor>home</textcolor>
+					</control>
+					
+					<control type="slider" id="11">
+					<description>Slider</description>
+					<posx>40</posx>
+					<posy>65</posy>
+					<width>632</width>
+					<height>10</height>
+					<aligny>center</aligny>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<texturesliderbar colordiffuse="buttons3">white.png</texturesliderbar>
+					<textureslidernib colordiffuse="label">white.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="selectedfocus">white.png</textureslidernibfocus>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					<onleft>11</onleft>
+					<onright>11</onright>
+					</control>
+					</control>
+					</controls>
+					</window>

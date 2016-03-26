@@ -1,0 +1,238 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">9000</defaultcontrol>
+					<controls>
+					
+					<!-- <control type="image">
+					<left>0</left>
+					<top>0</top>
+					<height>1080</height>
+					<width>1920</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</texture>
+					<fadetime>800</fadetime>
+					</control> -->
+					
+					<include>Overlay_Home</include>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>220</posy>
+					
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,1500" end="0,0" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,1500" time="400" tween="quadratic" easing="in" />
+					</animation>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>180</posy>
+					<width>470</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>560</posx>
+					<posy>180</posy>
+					<width>1265</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>80</posy>
+					<width>1735</width>
+					<height>100</height>
+					<texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+					
+					<control type="label">
+					<description>header label</description>
+					<posx>122</posx>
+					<posy>90</posy>
+					<width>1200</width>
+					<height>84</height>
+					<font>Medium5</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>tiles</textcolor>
+					<label>32077</label>
+					</control>
+					
+					<control type="list" id="9000">
+					<posx>90</posx>
+					<posy>220</posy>
+					<width>455</width>
+					<height>580</height>
+					<aligny>center</aligny>
+					<onleft>9020</onleft>
+					<onright>9001</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<scrolltime>300</scrolltime>
+					
+					<itemlayout height="65" width="455">
+					
+					<control type="label">
+					<posx>30</posx>
+					<posy>0</posy>
+					<width>424</width>
+					<height>50</height>
+					<font>Medium6</font>
+					<textcolor>buttons2</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout height="65" width="455">
+					
+					<control type="label">
+					<posx>30</posx>
+					<posy>0</posy>
+					<width>424</width>
+					<height>50</height>
+					<font>Medium6</font>
+					<textcolor>label</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<animation effect="fade" start="100" end="45" time="300" tween="cubic" easing="in" delay="0" condition="ControlGroup(9001).HasFocus | ControlGroup(9020).HasFocus">Conditional</animation>
+					</control>
+					
+					</focusedlayout>
+					<content>
+					<item id="1">
+					<label>32053</label>
+					<onclick>noop</onclick>
+					</item>
+					</content>
+					</control>
+				
+					<!-- RIGHT SIDE -->
+					
+					<control type="group" id="9010">
+					<control type="grouplist" id="9001">
+					<visible>Container(9000).Hasfocus(1)</visible>
+					<posx>560</posx>
+					<posy>230</posy>
+					<width>1268</width>
+					<height>675</height>
+					<itemgap>15</itemgap>
+					<onleft>9000</onleft>
+					<onright>9020</onright>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					
+					<control type="button" id="101">
+					<include>ListButtons2</include>
+					<label>32054</label>
+					<onclick>ActivateWindow(3000)</onclick>
+					</control>
+					
+					<control type="button" id="102">
+					<include>ListButtons2</include>
+					<label>32055</label>
+					<onclick>ActivateWindow(3001)</onclick>
+					</control>
+					
+					<control type="button" id="104">
+					<include>ListButtons2</include>
+					<label>32057</label>
+					<onclick>ActivateWindow(3003)</onclick>
+					</control>
+					
+					<control type="button" id="105">
+					<include>ListButtons2</include>
+					<label>32058</label>
+					<onclick>ActivateWindow(3004)</onclick>
+					</control>
+					
+					<control type="button" id="106">
+					<include>ListButtons2</include>
+					<label>32060</label>
+					<onclick>ActivateWindow(3005)</onclick>
+					</control>
+					
+					<control type="button" id="107">
+					<include>ListButtons2</include>
+					<label>32168</label>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>!System.GetBool(pvrmanager.enabled)</visible>
+					</control>
+					</control>
+					
+					<control type="grouplist" id="9020">
+					<posx>1480</posx>
+					<posy>98</posy>
+					<width>500</width>
+					<height>65</height>
+					<onleft>9020</onleft>
+					<onright>9020</onright>
+					<onup>noop</onup>
+					<ondown>9000</ondown>
+					<onback>9000</onback>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					
+					<control type="button" id="110">
+					<description>reload button</description>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<pulseonselect>false</pulseonselect>
+					<label>32165</label>
+					<onclick>ReloadSkin()</onclick>
+					</control>
+					
+					<control type="button" id="111">
+					<description>Reset button</description>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<pulseonselect>false</pulseonselect>
+					<label>10035</label>
+					<onclick>Skin.ResetSettings</onclick>
+					</control>
+					</control>
+					
+					<!-- <control type="label" id="200">
+					<posx>1600</posx>
+					<posy>110</posy>
+					<width>300</width>
+					<height>65</height>
+					<font>title2</font>
+					<align>right</align>
+					<textcolor>tiles</textcolor>
+					<label>32114</label>
+					</control> -->
+					
+					
+					</control>
+					</control>
+					<include>Time</include>
+					</controls>
+					</window>

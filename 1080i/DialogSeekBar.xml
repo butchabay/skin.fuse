@@ -1,0 +1,428 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol>1</defaultcontrol>
+					<visible>Window.IsVisible(FullScreenVideo) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + ![Window.IsVisible(VideoOSD) | Window.IsVisible(MusicOSD)]</visible>
+					<controls>
+					
+					<control type="group">
+					<posx>140</posx>
+					<posy>-80</posy>
+					<visible>!Window.IsVisible(FullScreenInfo)</visible>
+					
+					<control type="group">
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>690</posy>
+					<width>1460</width>
+					<height>390</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>690</posy>
+					<width>1460</width>
+					<height>100</height>
+					<texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+					</control>
+					
+					<control type="image">
+					<description>poster</description>
+					<posx>1355</posx>
+					<posy>810</posy>
+					<width>177</width>
+					<height>252</height>
+					<texture>$INFO[Player.Art(poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>![VideoPlayer.Content(LiveTV) | VideoPlayer.Content(Files)] | VideoPlayer.Content(Movies)</visible>
+					</control>
+					
+					<control type="image">
+					<description>poster</description>
+					<posx>1355</posx>
+					<posy>810</posy>
+					<width>177</width>
+					<height>252</height>
+					<texture>$INFO[Player.Art(tvshow.poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!VideoPlayer.Content(LiveTV) | VideoPlayer.Content(Episodes)</visible>
+					</control>
+					
+					<control type="image">
+					<description>Thumb image</description>
+					<posx>1355</posx>
+					<posy>810</posy>
+					<width>177</width>
+					<height>177</height>
+					<texture>$INFO[Player.Art(thumb)]</texture>
+					<aspectratio>scale</aspectratio>
+					<visible>VideoPlayer.Content(Files)</visible>
+					<visible>![VideoPlayer.Content(LiveTV) | VideoPlayer.Content(Movies)]</visible>
+					</control>
+					
+					<control type="image">
+					<description>LiveTV Channel Logo</description>
+					<posx>1355</posx>
+					<posy>810</posy>
+					<width>177</width>
+					<height>177</height>
+					<animation effect="fade" time="900">VisibleChange</animation>
+					<texture>$INFO[VideoPlayer.Cover]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+					</control>
+					
+					<control type="group">
+					<posx>90</posx>
+					<posy>690</posy>
+					
+					<control type="label">
+					<description>Title label</description>
+					<width>1000</width>
+					<height>30</height>
+					<posx>30</posx>
+					<posy>30</posy>
+					<label>$INFO[VideoPlayer.Title]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>tiles</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>Director label</description>
+					<width>1000</width>
+					<height>30</height>
+					<posx>30</posx>
+					<posy>120</posy>
+					<label>$LOCALIZE[32190] $INFO[VideoPlayer.Director]</label>
+					<align>left</align>
+					<font>Title3</font>
+					<textcolor>buttons2</textcolor>
+					<visible>!IsEmpty(VideoPlayer.Director)</visible>
+					<visible>!VideoPlayer.Content(Episodes)</visible>
+					</control>
+					
+					<control type="label">
+					<description>TVShow label</description>
+					<width>1000</width>
+					<height>30</height>
+					<posx>30</posx>
+					<posy>120</posy>
+					<label>$INFO[VideoPlayer.TVShowTitle] $LOCALIZE[32189] $LOCALIZE[32188] $INFO[VideoPlayer.Season] $LOCALIZE[32189] $LOCALIZE[32091] $INFO[VideoPlayer.Episode]</label>
+					<align>left</align>
+					<font>Title3</font>
+					<textcolor>buttons2</textcolor>
+					<visible>VideoPlayer.Content(Episodes)</visible>
+					</control>
+					
+					<control type="label">
+					<description>Files label</description>
+					<width>1000</width>
+					<height>30</height>
+					<posx>30</posx>
+					<posy>120</posy>
+					<label>$INFO[Player.Folderpath]</label>
+					<align>left</align>
+					<font>Title3</font>
+					<textcolor>buttons2</textcolor>
+					<visible>VideoPlayer.Content(Files)</visible>
+					</control>
+					
+					<control type="textbox">
+					<description>Plot</description>
+					<posx>30</posx>
+					<posy>180</posy>
+					<width>1200</width>
+					<height>100</height>
+					<font>Plot</font>
+					<textcolor>plot</textcolor>
+					<align>justify</align>
+					<label>$INFO[VideoPlayer.Plot]</label>
+					<autoscroll delay="10000" time="3000" repeat="8000">true</autoscroll>
+					</control>
+					
+					<control type="label">
+					<description>rating/duration/mpaa</description>
+					<posx>1388</posx>
+					<posy>30</posy>
+					<width>800</width>
+					<height>30</height>
+					<label>$VAR[playerlabels_years,,  •  ]$VAR[playerlabels_resolution,,  •  ]$VAR[playerlabels_mpaa,,  •  ]$VAR[playerlabels_rating]</label>
+					<align>right</align>
+					<font>Title2</font>
+					<textcolor>tiles</textcolor>
+					<visible>[VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes) | VideoPlayer.Content(LiveTV) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(Files)] + !IsEmpty(VideoPlayer.Rating)</visible>
+					</control>
+					
+					<control type="label">
+					<description>rating/duration/mpaa</description>
+					<posx>1388</posx>
+					<posy>30</posy>
+					<width>800</width>
+					<height>30</height>
+					<label>$VAR[playerlabels_years,,  •  ]$VAR[playerlabels_resolution,,  •  ]$VAR[playerlabels_mpaa,,  •  ]$LOCALIZE[32240]</label>
+					<align>right</align>
+					<font>Title2</font>
+					<textcolor>tiles</textcolor>
+					<visible>[VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes) | VideoPlayer.Content(LiveTV) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(Files)] + IsEmpty(VideoPlayer.Rating)</visible>
+					</control>
+					
+					<control type="image">
+					<description>star</description>
+					<posx>1400</posx>
+					<posy>34</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>star.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					<fadetime>400</fadetime>
+					</control>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>100</posy>
+					
+					<control type="progress">
+					<description>Progressbar</description>
+					<posx>250</posx>
+					<posy>247</posy>
+					<width>760</width>
+					<height>10</height>
+					<info>Player.Progress</info>
+					<texturebg colordiffuse="buttons3">white.png</texturebg>
+					<midtexture colordiffuse="selectedfocus">white.png</midtexture>
+					</control>
+					
+					<control type="label">
+					<description>Player Time</description>
+					<posx>30</posx>
+					<posy>237</posy>
+					<width>300</width>
+					<height>30</height>
+					<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Title3</font>
+					<textcolor>plot</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>System / Finish Time label</description>
+					<posx>1230</posx>
+					<posy>237</posy>
+					<width>400</width>
+					<height>30</height>
+					<label>$INFO[System.Time] - $INFO[Player.FinishTime]</label>
+					<align>right</align>
+					<font>Title3</font>
+					<textcolor>plot</textcolor>
+					</control>
+					</control>
+					</control>
+					
+					<control type="group">
+					<posx>1545</posx>
+					<posy>490</posy>
+					
+					<control type="label">
+					<description>Paused Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[112]</label>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<visible>[Player.Paused + !Player.Caching] + !Player.Seeking</visible>
+					</control>
+					
+					<control type="label">
+					<description>Cache Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1000</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
+					<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
+					</control>
+					
+					<control type="label">
+					<description>REW Label</description>
+					<posx>-60</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<label>32066</label>
+					<visible>Player.Rewinding</visible>
+					</control>
+					
+					<control type="label">
+					<description>FF Label</description>
+					<posx>-60</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<label>32067</label>
+					<visible>Player.Forwarding</visible>
+					</control>
+					
+					<control type="label">
+					<description>REWx2 Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<label>32068</label>
+					<visible>Player.Rewinding2x</visible>
+					</control>
+					
+					<control type="label">
+					<description>REWx4 Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<label>32069</label>
+					<visible>Player.Rewinding4x</visible>
+					</control>
+					
+					<control type="label">
+					<description>REWx8 Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<label>32070</label>
+					<visible>Player.Rewinding8x</visible>
+					</control>
+					
+					<control type="label">
+					<description>REWx16 Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<label>32071</label>
+					<visible>Player.Rewinding16x</visible>
+					</control>
+					
+					<control type="label">
+					<description>REWx32 Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<label>32164</label>
+					<visible>Player.Rewinding32x</visible>
+					</control>
+					
+					<control type="label">
+					<description>FFx2 Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+				    <font>Medium4</font>
+					<textcolor>label</textcolor>
+					<label>32068</label>
+					<visible>Player.Forwarding2x</visible>
+					</control>
+					
+					<control type="label">
+					<description>FFx4 Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<label>32069</label>
+					<visible>Player.Forwarding4x</visible>
+					</control>
+					
+					<control type="label">
+					<description>FFx8 Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<label>32070</label>
+					<visible>Player.Forwarding8x</visible>
+					</control>
+					
+					<control type="label">
+					<description>FFx16 Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<label>32071</label>
+					<visible>Player.Forwarding16x</visible>
+					</control>
+					
+					<control type="label">
+					<description>FFx32 Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					<label>32164</label>
+					<visible>Player.Forwarding32x</visible>
+					</control>
+					</control>
+					</control>
+
+					</controls>
+					</window>

@@ -1,0 +1,364 @@
+					<includes>
+
+					<include name="SkinWidgetsMovies">
+
+					<control type="group" id="8000">
+					<posx>295</posx>
+					<posy>430</posy>
+					
+					<!-- LATEST MOVIES -->
+
+					<control type="fixedlist" id="8001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(100)</visible>
+					<visible>![Skin.HasSetting(hide100) | Skin.HasSetting(custom100)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content>videodb://recentlyaddedmovies/</content>
+					</control>
+					
+					<!-- CUSTOM MOVIES WIDGETS 100 -->
+
+					<control type="fixedlist" id="8001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(100)</visible>
+					<visible>Skin.HasSetting(custom100)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content>$INFO[Skin.String(custom100playlist)]</content>
+					</control>
+					
+					<!-- UNWATCHED MOVIES  -->
+
+					<control type="fixedlist" id="8001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(101)</visible>
+					<visible>![Skin.HasSetting(hide101) | Skin.HasSetting(custom101)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content target="video">special://skin/playlists/Unwatched Movies.xsp</content>
+					</control>
+					
+					<!-- CUSTOM MOVIES WIDGETS 101 -->
+
+					<control type="fixedlist" id="8001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(101)</visible>
+					<visible>Skin.HasSetting(custom101)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content>$INFO[Skin.String(custom101playlist)]</content>
+					</control>
+					
+					<!-- MOVIES IN PROGRESS -->
+				
+					<control type="fixedlist" id="8001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<pagecontrol>25</pagecontrol>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(102)</visible>
+					<visible>![Skin.HasSetting(hide102) | Skin.HasSetting(custom102)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content>plugin://service.library.data.provider?type=recommendedmovies&reload=$INFO[Window.Property(recommendedmovies)]</content>
+					</control>
+
+					<!-- CUSTOM MOVIES WIDGETS 102 -->
+
+					<control type="fixedlist" id="8001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(102)</visible>
+					<visible>Skin.HasSetting(custom102)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content>$INFO[Skin.String(custom102playlist)]</content>
+					</control>
+					
+					<!-- TOP RATED  -->
+				
+					<control type="fixedlist" id="8001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(103)</visible>
+					<visible>![Skin.HasSetting(hide103) | Skin.HasSetting(custom103)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content target="video">special://skin/playlists/Top Rated Movies.xsp</content>
+					</control>
+					
+					<!-- CUSTOM MOVIES WIDGETS 103 -->
+
+					<control type="fixedlist" id="8001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(103)</visible>
+					<visible>Skin.HasSetting(custom103)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content>$INFO[Skin.String(custom103playlist)]</content>
+					</control>
+					
+					<!-- KIDS -->
+
+					<control type="fixedlist" id="8001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(104)</visible>
+					<visible>![Skin.HasSetting(hide104) | Skin.HasSetting(custom104)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content target="video">special://skin/playlists/Kids Movies.xsp</content>
+					</control>
+					
+					<!-- CUSTOM MOVIES WIDGETS 104 -->
+
+					<control type="fixedlist" id="8001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(104)</visible>
+					<visible>Skin.HasSetting(custom104)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content>$INFO[Skin.String(custom104playlist)]</content>
+					</control>
+					
+					<!-- MOVIES SETS  -->
+
+					<control type="fixedlist" id="8002">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(105)</visible>
+					<visible>![Skin.HasSetting(hide105) | Skin.HasSetting(custom105)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content target="video">videodb://movies/sets/</content>
+					</control> 
+					
+					<!-- CUSTOM MOVIES WIDGETS 105 -->
+
+					<control type="fixedlist" id="8001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(105)</visible>
+					<visible>Skin.HasSetting(custom105)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content>$INFO[Skin.String(custom105playlist)]</content>
+					</control>
+					
+
+					<!-- GENRES -->
+
+					<control type="fixedlist" id="8003">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(106)</visible>
+					<visible>![Skin.HasSetting(hide106) | Skin.HasSetting(custom106)]</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="250" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture fallback="special://skin/extras/moviegenrethumb/action.jpg">$INFO[Listitem.Label,special://skin/extras/moviegenrethumb/,.jpg]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</itemlayout>
+					<focusedlayout width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture fallback="special://skin/extras/moviegenrethumb/action.jpg">$INFO[Listitem.Label,special://skin/extras/moviegenrethumb/,.jpg]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</focusedlayout>
+					<content target="video">videodb://movies/genres/</content>
+					</control>
+					
+					<!-- CUSTOM MOVIES WIDGETS 106 -->
+
+					<control type="fixedlist" id="8001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(106)</visible>
+					<visible>Skin.HasSetting(custom106)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content>$INFO[Skin.String(custom106playlist)]</content>
+					</control>
+					
+					<!-- ONLINE VIDEO ADDONS -->
+
+					<control type="fixedlist" id="8004">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(107)</visible>
+					<visible>![Skin.HasSetting(hide107) | Skin.HasSetting(custom107)]</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="250" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>white.png</texture>
+					<colordiffuse>color5</colordiffuse>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					</itemlayout>
+					<focusedlayout width="250" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>white.png</texture>
+					<colordiffuse>color5</colordiffuse>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					</focusedlayout>
+					<content target="videos">addons://sources/video</content>
+					</control>
+					
+					<!-- CUSTOM MOVIES WIDGETS 107 -->
+
+					<control type="fixedlist" id="8001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(107)</visible>
+					<visible>Skin.HasSetting(custom107)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Movies</include>
+					<content>$INFO[Skin.String(custom107playlist)]</content>
+					</control>
+					</control>
+					
+					<include>TitleWidgetsMovies</include>
+					</include>
+					</includes>

@@ -1,0 +1,145 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">5</defaultcontrol>
+					<coordinates>
+					<system>1</system>
+					<posx>360</posx>
+					<posy>68</posy>
+					</coordinates>
+					<include>WindowOverlay</include>
+					<controls>
+					
+					<control type="group">
+					
+					<control type="image">
+					<description>Overlay</description>
+					<posx>-360</posx>
+					<posy>-68</posy>
+					<include>Dimensions_Fullscreen_Home</include>
+					<texture background="true">overlay.jpg</texture>
+					<colordiffuse>grey2-transparent</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<description>background image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1200</width>
+					<height>945</height>
+					<texture flipx="true" >overlay.jpg</texture>
+					<visible>!Window.IsVisible(Slideshow)</visible>
+					</control>
+					
+					<control type="image">
+					<description>background image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1200</width>
+					<height>945</height>
+					<texture flipx="true">overlay.jpg</texture>
+					<visible>Window.IsVisible(Slideshow)</visible>
+					</control>
+					
+					<control type="label">
+					<description>header label</description>
+					<posx>75</posx>
+					<posy>30</posy>
+					<width>1080</width>
+					<height>45</height>
+					<font>Condensed-52</font>
+					<textcolor>grey-light2</textcolor>
+					<label>$LOCALIZE[13406]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					</control>
+					
+					<control type="list" id="5">
+					<posx>60</posx>
+					<posy>105</posy>
+					<width>1080</width>
+					<height>742</height>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="68">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1080</width>
+					<height>60</height>
+					<texture colordiffuse="grey-light2-condensed">white.png</texture>
+					<include>VisibleFadeEffect</include>
+					</control>
+					
+					<control type="label">
+					<posx>15</posx>
+					<posy>0</posy>
+					<width>750</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Condensed-36</font>
+					<textcolor>grey-light2</textcolor>
+					<selectedcolor>red1</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					<control type="label">
+					<posx>1065</posx>
+					<posy>0</posy>
+					<width>975</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Condensed-36</font>
+					<textcolor>grey-light2</textcolor>
+					<selectedcolor>red1</selectedcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					</control>
+					
+					</itemlayout>
+					<focusedlayout height="68">
+				
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1080</width>
+					<height>60</height>
+					<texture colordiffuse="grey6">white.png</texture>
+					</control>
+					
+					<control type="label">
+					<posx>15</posx>
+					<posy>0</posy>
+					<width>750</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Condensed-36</font>
+					<textcolor>home</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					<control type="label">
+					<posx>1065</posx>
+					<posy>0</posy>
+					<width>975</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Condensed-36</font>
+					<textcolor>home</textcolor>
+					<selectedcolor>selected2</selectedcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					</control>
+					</focusedlayout>
+					</control>
+					</control>
+					</control>
+					</controls>
+					</window>

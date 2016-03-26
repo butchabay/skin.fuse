@@ -1,0 +1,189 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">14</defaultcontrol>
+					<allowoverlay>no</allowoverlay>
+					<zorder>0</zorder>
+					<controls>
+					
+					<include>Overlay</include>
+						
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>1080</height>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<texture colordiffuse="white-condensed" fallback="special://skin/extras/backgrounds/1080/music.jpg">$INFO[ListItem.Art(fanart)]</texture>
+					</control>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>20</posy>
+					
+					<animation effect="slide" start="0,0" end="2000,0" time="1000" tween="quadratic" easing="out" condition="Window.IsVisible(selectdialog)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="0" tween="quadratic" easing="out" condition="Window.IsVisible(filebrowser)">Conditional</animation>
+					
+					
+					<control type="group">
+					<posy>180</posy>
+					<posx>90</posx>
+					
+					<control type="label">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>850</width>
+					<height>84.375</height>
+					<font>Condensed-26-B</font>
+					<textcolor>home</textcolor>
+					<selectedcolor>color7</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Title]</label>
+					</control>
+					
+					<control type="panel" id="49">
+					<posx>0</posx>
+					<posy>95</posy>
+					<width>1000</width>
+					<height>240</height>
+					<onleft>49</onleft>
+					<onright>49</onright>
+					<onup>9000</onup>
+					<ondown>61</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>!Control.IsVisible(50)</visible>
+					<itemlayout height="55" width="500">
+					
+					<control type="label">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>800</width>
+					<height>60</height>
+					<font>Title</font>
+					<textcolor>home</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout height="55" width="500">
+					<control type="label">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>800</width>
+					<height>60</height>
+					<font>Title</font>
+					<textcolor>home</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					</control>
+					</focusedlayout>
+					<content>
+					
+					<item>
+					<label>$LOCALIZE[557]: $INFO[ListItem.Artist]</label>
+					<onclick>noop</onclick>
+					<visible>!IsEmpty(ListItem.Artist)</visible>
+					</item>
+					
+					<item>
+					<label>$LOCALIZE[554]: $INFO[ListItem.TrackNumber]</label>
+					<onclick>noop</onclick>
+					</item>
+					
+					<item>
+					<label>$LOCALIZE[180]: $INFO[ListItem.Duration]</label>
+					<onclick>noop</onclick>
+					<visible>!IsEmpty(ListItem.Duration)</visible>
+					</item>
+					
+					<item>
+					<label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+					<onclick>noop</onclick>
+					<visible>!IsEmpty(ListItem.Genre)</visible>
+					</item>
+					
+					</content>
+					</control>
+					</control>
+					
+					
+					
+					<control type="group">
+					<posx>110</posx>
+					<posy>530</posy>
+					
+					<control type="image">
+					<description>Rating value</description>
+					<posx>-5</posx>
+					<posy>10</posy>
+					<width>225</width>
+					<height>38</height>
+					<aspectratio align="left">keep</aspectratio>
+					<texture fallback="stars/0.0.png">stars/$INFO[ListItem.StarRating]</texture>
+					</control>
+					
+					<control type="button" id="14">
+					<description>Decrease Rating</description>
+					<posx>240</posx>
+					<posy>8</posy>
+					<width>50</width>
+					<height>50</height>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<onleft>DecreaseRating</onleft>
+					<onright>IncreaseRating</onright>
+					<ondown>9000</ondown>
+					<onup>9000</onup>
+					</control>
+					</control>
+					
+					<control type="grouplist" id="9000">
+					<posx>100</posx>
+					<posy>782</posy>
+					<width>1030</width>
+					<height>84.375</height>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>14</onup>
+					<ondown>noop</ondown>
+					<itemgap>26</itemgap>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					
+					<control type="button" id="10">
+					<description>Ok button</description>
+					<include>ButtonValuesInfo</include>
+					<label>186</label>
+					</control>
+					
+					<control type="button" id="11">
+					<description>Cancel button</description>
+					<include>ButtonValuesInfo</include>
+					<label>222</label>
+					</control>
+					
+					<control type="button" id="12">
+					<description>Album Info button</description>
+					<include>ButtonValuesInfo</include>
+					<label>10523</label>
+					</control>
+					
+					<control type="button" id="13">
+					<description>Get Thumb button</description>
+					<include>ButtonValuesInfo</include>
+					<label>13405</label>
+					</control>
+					</control>
+					</control>
+					</control>
+					</controls>
+					</window>

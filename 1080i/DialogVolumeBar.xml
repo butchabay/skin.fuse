@@ -1,0 +1,55 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol>1</defaultcontrol>
+					
+					<controls>
+					
+					<control type="group">
+					<posx>1198</posx>
+					<posy>0</posy>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>712</width>
+					<height>100</height>
+					<texture colordiffuse="tiles">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<description>Volume Logo</description>
+					<posx>20</posx>
+					<posy>28</posy>
+					<width>65</width>
+					<height>65</height>
+					<aspectratio>keep</aspectratio>
+					<texture>dialogs/volume/volume.png</texture>
+					<colordiffuse>plot</colordiffuse>
+					</control>
+					
+					<control type="progress" id="1">
+					<description>progress control</description>
+					<posx>85</posx>
+					<posy>55</posy>
+					<width>475</width>
+					<height>15</height>
+					<texturebg colordiffuse="buttons3">white.png</texturebg>
+					<midtexture colordiffuse="selectedfocus">white.png</midtexture>
+					<info>Player.Volume</info>
+					</control>
+					
+					<control type="label">
+					<posx>575</posx>
+					<posy>45</posy>
+					<width>200</width>
+					<height>30</height>
+					<font>Medium4</font>
+					<textcolor>plot</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Player.Volume</info>
+					</control>
+					</control>
+					
+					</controls>
+					</window>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<strings>
+
+  <string id="31000">Finishes at</string>
+  <string id="31001">Files Mode</string>
+  <string id="31002">PROGRAMS</string>
+  <string id="31003">VIDEOS</string>
+  <string id="31004">MUSIC</string>
+  <string id="31005">PICTURES</string>
+  <string id="31006">MOVIES</string>
+  <string id="31007">TV SHOWS</string>
+  <string id="31008">FAVOURITES</string>
+  <string id="31009">PROFILES</string>
+  <string id="31010">WEATHER</string>
+  <string id="31011">FILE MANAGER</string>
+  <string id="31012">SETTINGS</string>
+  <string id="31013">SHUTDOWN</string>
+  <string id="31014">PLAY DISC</string>
+  <string id="31015">Player Controls</string>
+  <string id="31016">Background Visuals</string>
+  <string id="31017">Lyrics/Subtitles</string>
+  <string id="31018">Current Selected</string>
+  <string id="31019">Open playlist</string>
+  <string id="31020">Save playlist</string>
+  <string id="31021">Close playlist</string>
+  <string id="31022">System music files</string>
+  <string id="31023">Disable Background Visualiser</string>
+  <string id="31024">Disable Background Video</string>
+  <string id="31025">Click to change default Lyrics script</string>
+  <string id="31026">Click to change default Subtitles script</string>
+  <string id="31027">Items</string>
+  <string id="31028">Page</string>
+  <string id="31029">Current playlist</string>
+  <string id="31030">Memory Used</string>
+  <string id="31031">Karaoke Song Selector</string>
+  <string id="31032">Visualization Presets</string>
+  <string id="31033">Debug</string>
+  <string id="31034">Enable Debug Grid</string>
+  <string id="31035">Disable Debug Info</string>
+  <string id="31036">Rewind</string>
+  <string id="31037">Pause</string>
+  <string id="31038">Stop</string>
+  <string id="31039">Fast Forward</string>
+  <string id="31040">Visualisation Presets</string>
+  <string id="31041">DVD Menu</string>
+  
+ <!-- Dawn -->
+  
+  <string id="31042">Live TV</string>
+  <string id="31043">Now playing</string>
+  <string id="31044">Recently added</string>
+  <string id="31045">Featured</string>
+  <string id="31046">Full HD 1080p</string>
+  <string id="31047">HD 720p</string>
+  <string id="31048">3D</string>
+  <string id="31049">Collections</string>
+  <string id="31050">Video addons</string>
+  <string id="31051">Action</string>
+  <string id="31052">Adventure</string>
+  <string id="31053">Animation</string>
+  <string id="31054">Drama</string>
+  <string id="31055">Family</string>
+  <string id="31056">Fantasy</string>
+  <string id="31057">History</string>
+  <string id="31058">Horror</string>
+  <string id="31059">Science-Fiction</string>
+  <string id="31060">Comedy</string>
+  <string id="31061">2013</string>
+  <string id="31062">2012</string>
+  <string id="31063">2011</string>
+  <string id="31064">2010</string>
+  <string id="31065">2009</string>
+  <string id="31066">2008</string>
+  <string id="31067">2007</string>
+  <string id="31068">2006</string>
+  <string id="31069">2005</string>
+  <string id="31070">2004</string>
+  <string id="31071">2003</string>
+  <string id="31072">Logged in: </string>
+  <string id="31073">• </string>
+  
+</strings>

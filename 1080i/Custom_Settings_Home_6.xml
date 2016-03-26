@@ -1,0 +1,534 @@
+					
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window type="dialog" id="3006">
+					<defaultcontrol always="true">9010</defaultcontrol>
+					<controls>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>220</posy>
+					
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,1500" end="0,0" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,1500" time="400" tween="quadratic" easing="in" />
+					</animation>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>180</posy>
+					<width>470</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>560</posx>
+					<posy>180</posy>
+					<width>1265</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>80</posy>
+					<width>1735</width>
+					<height>100</height>
+					<texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+					
+					<control type="label">
+					<description>header label</description>
+					<posx>122</posx>
+					<posy>90</posy>
+					<width>1200</width>
+					<height>84</height>
+					<font>Title</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>tiles</textcolor>
+					<label>$LOCALIZE[31951]: $LOCALIZE[32220]</label>
+					</control>
+					
+					<control type="group" id="9010">
+					<control type="grouplist" id="9001">
+					<posx>90</posx>
+					<posy>220</posy>
+					<width>1400</width>
+					<height>510</height>
+					<itemgap>15</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					
+					<!-- Pics SUBMENU ITEM 1 -->
+					
+					<control type="radiobutton" id="900">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32136]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Pics_Submenu_Item1)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item1)</selected>
+					</control>
+					
+					<control type="radiobutton" id="901">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide900)</onclick>
+					<onclick>Skin.Reset(custom900)</onclick>
+					<selected>Skin.HasSetting(hide900)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item1)</visible>
+					</control>
+					
+					<control type="radiobutton" id="902">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide900)</onclick>
+					<onclick>Skin.ToggleSetting(custom900)</onclick>
+					<selected>Skin.HasSetting(custom900)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item1)</visible>
+					</control>
+					
+					<control type="button" id="903">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Pics.1)</onclick>
+					<label2>$INFO[Skin.String(Pics.1.Label)]</label2>
+					<visible>Skin.HasSetting(custom900)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item1)</visible>
+					</control>
+					
+					<control type="button" id="905">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Pics.1.Icon)</onclick>
+					<label2>$INFO[Skin.String(Pics.1.Icon)]</label2>
+					<visible>Skin.HasSetting(custom900)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item1)</visible>
+					</control>
+					
+					<!-- Pics SUBMENU ITEM 2 -->
+					
+					<control type="radiobutton" id="911">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32137]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Pics_Submenu_Item2)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item2)</selected>
+					</control>
+					
+					<control type="radiobutton" id="912">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide901)</onclick>
+					<onclick>Skin.Reset(custom901)</onclick>
+					<selected>Skin.HasSetting(hide901)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item2)</visible>
+					</control>
+					
+					<control type="radiobutton" id="913">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide901)</onclick>
+					<onclick>Skin.ToggleSetting(custom901)</onclick>
+					<selected>Skin.HasSetting(custom901)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item2)</visible>
+					</control>
+					
+					<control type="button" id="914">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Pics.2)</onclick>
+					<label2>$INFO[Skin.String(Pics.2.Label)]</label2>
+					<visible>Skin.HasSetting(custom901)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item2)</visible>
+					</control>
+					
+					<control type="button" id="916">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Pics.2.Icon)</onclick>
+					<label2>$INFO[Skin.String(Pics.2.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item2)</visible>
+					<visible>Skin.HasSetting(custom901)</visible>
+					</control>
+					
+					
+					<!-- Pics SUBMENU ITEM 3 -->
+					
+					<control type="radiobutton" id="921">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32138]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Pics_Submenu_Item3)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item3)</selected>
+					</control>
+					
+					<control type="radiobutton" id="922">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide902)</onclick>
+					<onclick>Skin.Reset(custom902)</onclick>
+					<selected>Skin.HasSetting(hide902)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item3)</visible>
+					</control>
+					
+					<control type="radiobutton" id="923">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide902)</onclick>
+					<onclick>Skin.ToggleSetting(custom902)</onclick>
+					<selected>Skin.HasSetting(custom902)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item3)</visible>
+					</control>
+					
+					<control type="button" id="924">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Pics.3)</onclick>
+					<label2>$INFO[Skin.String(Pics.3.Label)]</label2>
+					<visible>Skin.HasSetting(custom902)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item3)</visible>
+					</control>
+					
+					<control type="button" id="926">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Pics.3.Icon)</onclick>
+					<label2>$INFO[Skin.String(Pics.3.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item3)</visible>
+					<visible>Skin.HasSetting(custom902)</visible>
+					</control>
+					
+					
+					<!-- Pics SUBMENU ITEM 4 -->
+					
+					<control type="radiobutton" id="931">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32139]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Pics_Submenu_Item4)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item4)</selected>
+					</control>
+					
+					<control type="radiobutton" id="932">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide903)</onclick>
+					<onclick>Skin.Reset(custom903)</onclick>
+					<selected>Skin.HasSetting(hide903)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item4)</visible>
+					</control>
+					
+					<control type="radiobutton" id="933">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide903)</onclick>
+					<onclick>Skin.ToggleSetting(custom903)</onclick>
+					<selected>Skin.HasSetting(custom903)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item4)</visible>
+					</control>
+					
+					<control type="button" id="934">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Pics.4)</onclick>
+					<label2>$INFO[Skin.String(Pics.4.Label)]</label2>
+					<visible>Skin.HasSetting(custom903)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item4)</visible>
+					</control>
+					
+					<control type="button" id="936">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Pics.4.Icon)</onclick>
+					<label2>$INFO[Skin.String(Pics.4.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item4)</visible>
+					<visible>Skin.HasSetting(custom903)</visible>
+					</control>
+					
+					
+					<!-- Pics SUBMENU ITEM 5 -->
+					
+					<control type="radiobutton" id="941">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32140]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Pics_Submenu_Item5)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item5)</selected>
+					</control>
+					
+					<control type="radiobutton" id="942">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide904)</onclick>
+					<onclick>Skin.Reset(custom904)</onclick>
+					<selected>Skin.HasSetting(hide904)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item5)</visible>
+					</control>
+					
+					<control type="radiobutton" id="943">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide904)</onclick>
+					<onclick>Skin.ToggleSetting(custom904)</onclick>
+					<selected>Skin.HasSetting(custom904)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item5)</visible>
+					</control>
+					
+					<control type="button" id="944">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Pics.5)</onclick>
+					<label2>$INFO[Skin.String(Pics.5.Label)]</label2>
+					<visible>Skin.HasSetting(custom904)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item5)</visible>
+					</control>
+					
+					<control type="button" id="946">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Pics.5.Icon)</onclick>
+					<label2>$INFO[Skin.String(Pics.5.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item5)</visible>
+					<visible>Skin.HasSetting(custom904)</visible>
+					</control>
+					
+					
+					<!-- Pics SUBMENU ITEM 6 -->
+					
+					<control type="radiobutton" id="951">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32141]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Pics_Submenu_Item6)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item6)</selected>
+					</control>
+					
+					<control type="radiobutton" id="952">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide905)</onclick>
+					<onclick>Skin.Reset(custom905)</onclick>
+					<selected>Skin.HasSetting(hide905)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item6)</visible>
+					</control>
+					
+					<control type="radiobutton" id="953">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide905)</onclick>
+					<onclick>Skin.ToggleSetting(custom905)</onclick>
+					<selected>Skin.HasSetting(custom905)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item6)</visible>
+					</control>
+					
+					<control type="button" id="954">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Pics.6)</onclick>
+					<label2>$INFO[Skin.String(Pics.6.Label)]</label2>
+					<visible>Skin.HasSetting(custom905)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item6)</visible>
+					</control>
+					
+					<control type="button" id="956">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Pics.6.Icon)</onclick>
+					<label2>$INFO[Skin.String(Pics.6.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item6)</visible>
+					<visible>Skin.HasSetting(custom905)</visible>
+					</control>
+					
+					
+					<!-- Pics SUBMENU ITEM 7 -->
+					
+					<control type="radiobutton" id="961">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32142]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Pics_Submenu_Item7)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item7)</selected>
+					</control>
+					
+					<control type="radiobutton" id="962">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide906)</onclick>
+					<onclick>Skin.Reset(custom906)</onclick>
+					<selected>Skin.HasSetting(hide906)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item7)</visible>
+					</control>
+					
+					<control type="radiobutton" id="963">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide906)</onclick>
+					<onclick>Skin.ToggleSetting(custom906)</onclick>
+					<selected>Skin.HasSetting(custom906)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item7)</visible>
+					</control>
+					
+					<control type="button" id="964">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Pics.7)</onclick>
+					<label2>$INFO[Skin.String(Pics.7.Label)]</label2>
+					<visible>Skin.HasSetting(custom906)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item7)</visible>
+					</control>
+					
+					<control type="button" id="966">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Pics.7.Icon)</onclick>
+					<label2>$INFO[Skin.String(Pics.7.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item7)</visible>
+					<visible>Skin.HasSetting(custom906)</visible>
+					</control>
+					
+					
+					<!-- Pics SUBMENU ITEM 8 -->
+					
+					<control type="radiobutton" id="971">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32143]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Pics_Submenu_Item8)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item8)</selected>
+					</control>
+					
+					<control type="radiobutton" id="972">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide907)</onclick>
+					<onclick>Skin.Reset(custom907)</onclick>
+					<selected>Skin.HasSetting(hide907)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item8)</visible>
+					</control>
+					
+					<control type="radiobutton" id="973">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide907)</onclick>
+					<onclick>Skin.ToggleSetting(custom907)</onclick>
+					<selected>Skin.HasSetting(custom907)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item8)</visible>
+					</control>
+					
+					<control type="button" id="974">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Pics.8)</onclick>
+					<label2>$INFO[Skin.String(Pics.8.Label)]</label2>
+					<visible>Skin.HasSetting(custom907)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item8)</visible>
+					</control>
+					
+					<control type="button" id="976">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Pics.8.Icon)</onclick>
+					<label2>$INFO[Skin.String(Pics.8.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item8)</visible>
+					<visible>Skin.HasSetting(custom907)</visible>
+					</control>
+					
+					
+					<!-- Pics SUBMENU ITEM 9 -->
+					
+					<control type="radiobutton" id="981">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32144]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Pics_Submenu_Item9)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item9)</selected>
+					</control>
+					
+					<control type="radiobutton" id="982">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide908)</onclick>
+					<onclick>Skin.Reset(custom908)</onclick>
+					<selected>Skin.HasSetting(hide908)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item9)</visible>
+					</control>
+					
+					<control type="radiobutton" id="983">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide908)</onclick>
+					<onclick>Skin.ToggleSetting(custom908)</onclick>
+					<selected>Skin.HasSetting(custom908)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item9)</visible>
+					</control>
+					
+					<control type="button" id="984">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Pics.9)</onclick>
+					<label2>$INFO[Skin.String(Pics.9.Label)]</label2>
+					<visible>Skin.HasSetting(custom908)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item9)</visible>
+					</control>
+					
+					<control type="button" id="986">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Pics.9.Icon)</onclick>
+					<label2>$INFO[Skin.String(Pics.9.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item9)</visible>
+					<visible>Skin.HasSetting(custom908)</visible>
+					</control>
+					
+					
+					<!-- Pics SUBMENU ITEM 10 -->
+					
+					<control type="radiobutton" id="991">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32145]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Pics_Submenu_Item10)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item10)</selected>
+					</control>
+					
+					<control type="radiobutton" id="992">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide909)</onclick>
+					<onclick>Skin.Reset(custom909)</onclick>
+					<selected>Skin.HasSetting(hide909)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item10)</visible>
+					</control>
+					
+					<control type="radiobutton" id="993">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide909)</onclick>
+					<onclick>Skin.ToggleSetting(custom909)</onclick>
+					<selected>Skin.HasSetting(custom909)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item10)</visible>
+					</control>
+					
+					<control type="button" id="994">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Pics.10)</onclick>
+					<label2>$INFO[Skin.String(Pics.10.Label)]</label2>
+					<visible>Skin.HasSetting(custom909)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item10)</visible>
+					</control>
+					
+					<control type="button" id="996">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Pics.10.Icon)</onclick>
+					<label2>$INFO[Skin.String(Pics.10.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Pics_Submenu_Item10)</visible>
+					<visible>Skin.HasSetting(custom909)</visible>
+					</control>
+					
+					</control>
+					</control>
+					</control>
+					<include>Time</include>
+					</controls>
+					</window>
+					
+					
+					
+				

@@ -1,0 +1,189 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+
+					<defaultcontrol always="true">50</defaultcontrol>
+					<allowoverlay>no</allowoverlay>
+					<views>50,51</views>
+					<controls>
+
+					<!-- <control type="image">
+					<left>0</left>
+					<top>0</top>
+					<height>1080</height>
+					<width>1920</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</texture>
+					<fadetime>800</fadetime>
+					</control> -->
+					
+					<include>Overlay_Home</include>
+					<include>OpenClose</include>
+					<include>Backgrounds_Home_Static_Library_Music</include>
+					<include>NowPlaying</include>
+					<include>Time</include>
+
+					<control type="group">
+					
+					<include>CommonRootView</include>
+					<include>ShelfView</include>
+					</control>
+					
+					<include>ScrollOffsetLabel</include>
+
+					<control type="group">
+					
+					<control type="grouplist" id="9000">
+					<posx>95</posx>
+					<posy>573</posy>
+					<width>1900</width>
+					<height>50</height>
+					<align>left</align>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>50</ondown>
+					<itemgap>85</itemgap>
+					<orientation>horizontal</orientation>
+					<include>OpenClose</include>
+
+					<control type="label">
+					<include>WindowTitleCommons</include>
+					<label>$VAR[breadcrumps_music]</label>
+					</control>
+					
+					<control type="label">
+					<include>WindowTitleCommons2</include>
+					<label>$VAR[breadcrumps2]</label>
+					<visible>Control.IsEnabled(3)</visible>
+					</control>
+						
+					<control type="button" id="500">
+					<description>Info</description>
+					<posy>-4</posy>
+					<width>auto</width>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>Title2</font>
+					<textcolor>home</textcolor>
+					<focusedcolor>accent</focusedcolor>
+					<label>32213</label>
+					<onclick>SetFocus(50)</onclick>
+					<onclick>Info</onclick>
+					<visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Musicvideos) | Container.Content(Songs) | Container.Content(Addons)</visible>
+					<visible>Control.IsVisible(51)</visible>
+					</control>
+					
+					<control type="button" id="8">
+					<description>Search</description>
+					<posy>-4</posy>
+					<width>auto</width>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>Title2</font>
+					<textcolor>home</textcolor>
+					<focusedcolor>accent</focusedcolor>
+					<label>137</label>
+					<visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Musicvideos) | Container.Content(Songs) | Container.Content(Addons)</visible>
+					<visible>Control.IsVisible(51)</visible>
+					</control>
+					
+					<control type="button" id="502">
+					<description>Options</description>
+					<posy>-4</posy>
+					<width>auto</width>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>Title2</font>
+					<textcolor>home</textcolor>
+					<focusedcolor>accent</focusedcolor>
+					<label>31112</label>
+					<onclick>SetFocus(9001)</onclick>
+					</control>
+					</control>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>2</posy>
+					
+					<animation effect="slide" start="0,0" end="-635,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+					<control type="image">
+					<posx>1980</posx>
+					<posy>199</posy>
+					<width>480</width>
+					<height>680</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					</control>
+
+					<control type="image">
+					<posx>1980</posx>
+					<posy>199</posy>
+					<width>480</width>
+					<height>100</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>white.png</texture>
+					<colordiffuse>background_full</colordiffuse>
+					</control>
+
+					<control type="label">
+					<description>Options</description>
+					<width>440</width>
+					<height>30</height>
+					<posx>2010</posx>
+					<posy>230</posy>
+					<label>31112</label>
+					<align>left</align>
+					<font>Medium5</font>
+					<textcolor>tiles</textcolor>
+					</control>
+						
+					<control type="grouplist" id="9001">
+					<posx>1980</posx>
+					<posy>330</posy>
+					<width>440</width>
+					<height>600</height>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onback>502</onback>
+					<itemgap>15</itemgap>
+					<orientation>vertical</orientation>
+					
+					<control type="button" id="2">
+					<description>View</description>
+					<include>ListButtons</include>
+					<label>-</label>
+					</control>
+					
+					<control type="radiobutton" id="20">
+					<description>Shuffle button</description>
+					<include>ListRadioButtons</include>
+					<label>191</label>
+					</control>
+					
+					<control type="button" id="26">
+					<description>Repeat button</description>
+					<include>ListButtons</include>
+					<label>-</label>
+					</control>
+					
+					<control type="button" id="21">
+					<description>Save button</description>
+					<label>190</label>
+					<include>ListButtons</include>
+					</control>
+					
+					<control type="button" id="22">
+					<description>Clear button</description>
+					<label>192</label>
+					<onclick>ReplaceWindow(music)</onclick>
+					<include>ListButtons</include>
+					</control>
+					
+					</control>
+					</control>
+					</control>
+					</controls>
+					</window>

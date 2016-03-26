@@ -1,0 +1,276 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol>-</defaultcontrol>
+					<allowoverlay>no</allowoverlay>
+					<controls>
+					
+					<control type="visualisation" id="2">
+					<description>visualisation</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>1080</height>
+					</control>
+
+					<control type="multiimage">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>1080</height>
+					<imagepath background="true">$INFO[Window.Property(ArtistSlideshow)]</imagepath>
+					<colordiffuse>AAFFFFFF</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<timeperimage>5000</timeperimage>
+					<fadetime>2000</fadetime>
+					<randomize>true</randomize>
+					<visible>IsEmpty(Window.Property(ArtistSlideshowRefresh))</visible>
+					</control>
+
+					<control type="image">
+					<description>Fanart Image for Artist</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>1080</height>
+					<texture background="true">$INFO[Player.Art(fanart)]</texture>
+					<colordiffuse>AAFFFFFF</colordiffuse>
+					<visible>!IsEmpty(Window.Property(ArtistSlideshowRefresh))</visible>
+					<fadetime>2000</fadetime>
+					</control>
+
+					
+					<control type="group">
+					<posx>140</posx>
+					<posy>-130</posy>
+					<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>690</posy>
+					<width>1460</width>
+					<height>410</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>690</posy>
+					<width>1460</width>
+					<height>100</height>
+					<texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<description>cover</description>
+					<posx>1345</posx>
+					<posy>820</posy>
+					<width>177</width>
+					<height>177</height>
+					<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!VideoPlayer.Content(LiveTV)</visible>
+					</control>
+					
+					<control type="group">
+					<posx>90</posx>
+					<posy>690</posy>
+					
+					<control type="label">
+					<description>Title label</description>
+					<width>700</width>
+					<height>30</height>
+					<posx>30</posx>
+					<posy>30</posy>
+					<label>$INFO[MusicPlayer.TrackNumber]. $INFO[Player.Title,, - ]$INFO[MusicPlayer.Artist]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>tiles</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>Album</description>
+					<width>1000</width>
+					<height>30</height>
+					<posx>30</posx>
+					<posy>120</posy>
+					<label>$INFO[MusicPlayer.Album]</label>
+					<align>left</align>
+					<font>Medium5</font>
+					<textcolor>plot</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>Next:</description>
+					<posx>30</posx>
+					<posy>170</posy>
+					<width>1000</width>
+					<height>30</height>
+					<font>Title3</font>
+					<textcolor>buttons2</textcolor>
+					<align>left</align>
+					<label>$LOCALIZE[32243]</label>
+					<visible>MusicPlayer.HasNext</visible>
+					</control>
+					
+					<control type="label">
+					<description>Track Offset 1-3</description>
+					<posx>30</posx>
+					<posy>210</posy>
+					<width>1200</width>
+					<height>30</height>
+					<font>Title3</font>
+					<textcolor>plot</textcolor>
+					<align>left</align>
+					<label>[COLOR=label][B]$INFO[MusicPlayer.offset(1).TrackNumber,,.][/COLOR][/B] $INFO[MusicPlayer.offset(1).Title,, - ]$INFO[MusicPlayer.offset(1).Artist]   [COLOR=label][B]$INFO[MusicPlayer.offset(2).TrackNumber,,.][/COLOR][/B] $INFO[MusicPlayer.offset(2).Title,, - ]$INFO[MusicPlayer.offset(2).Artist]  [COLOR=label][B]$INFO[MusicPlayer.offset(3).TrackNumber,,.][/COLOR][/B] $INFO[MusicPlayer.offset(3).Title,, - ]$INFO[MusicPlayer.offset(3).Artist]</label>
+					<visible>MusicPlayer.HasNext</visible>
+					</control>
+					
+					<control type="label">
+					<description>Track Offset 4-6</description>
+					<posx>30</posx>
+					<posy>240</posy>
+					<width>1200</width>
+					<height>30</height>
+					<font>Title3</font>
+					<textcolor>plot</textcolor>
+					<align>left</align>
+					<label>[COLOR=label][B]$INFO[MusicPlayer.offset(4).TrackNumber,,.][/COLOR][/B] $INFO[MusicPlayer.offset(4).Title,, - ]$INFO[MusicPlayer.offset(4).Artist]  [COLOR=label][B]$INFO[MusicPlayer.offset(5).TrackNumber,,.][/COLOR][/B] $INFO[MusicPlayer.offset(5).Title,, - ]$INFO[MusicPlayer.offset(5).Artist]  [COLOR=label][B]$INFO[MusicPlayer.offset(6).TrackNumber,,.][/COLOR][/B] $INFO[MusicPlayer.offset(6).Title,, - ]$INFO[MusicPlayer.offset(6).Artist]</label>
+					<visible>MusicPlayer.HasNext</visible>
+					</control>
+					
+					<control type="label">
+					<description>Track Offset 7-9</description>
+					<posx>30</posx>
+					<posy>270</posy>
+					<width>1200</width>
+					<height>30</height>
+					<font>Title3</font>
+					<textcolor>plot</textcolor>
+					<align>left</align>
+					<label>[COLOR=label][B]$INFO[MusicPlayer.offset(7).TrackNumber,,.][/COLOR][/B] $INFO[MusicPlayer.offset(7).Title,, - ]$INFO[MusicPlayer.offset(7).Artist]  [COLOR=label][B]$INFO[MusicPlayer.offset(8).TrackNumber,,.][/COLOR][/B] $INFO[MusicPlayer.offset(8).Title,, - ]$INFO[MusicPlayer.offset(8).Artist]  [COLOR=label][B]$INFO[MusicPlayer.offset(9).TrackNumber,,.][/COLOR][/B] $INFO[MusicPlayer.offset(9).Title,, - ]$INFO[MusicPlayer.offset(9).Artist]</label>
+					<visible>MusicPlayer.HasNext</visible>
+					</control>
+					
+					<control type="label">
+					<description>rating/duration/codec</description>
+					<posx>1425</posx>
+					<posy>30</posy>
+					<width>800</width>
+					<height>30</height>
+					<label>$VAR[musicplayerlabels_years] $INFO[musicplayer.Codec, • ] $INFO[musicplayer.Bitrate, •  $LOCALIZE[623]: ,kbps] $INFO[musicplayer.Samplerate, •  $LOCALIZE[613]: ,kHz]</label>
+					<align>right</align>
+					<font>Title2</font>
+					<textcolor>tiles</textcolor>
+					</control>
+					
+					<!-- <control type="image">
+					<description>star</description>
+					<posx>1400</posx>
+					<posy>34</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>star.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					<fadetime>400</fadetime>
+					</control> -->
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>100</posy>
+					
+					<control type="progress">
+					<description>Progressbar</description>
+					<posx>200</posx>
+					<posy>247</posy>
+					<width>1230</width>
+					<height>10</height>
+					<info>Player.Progress</info>
+					<texturebg colordiffuse="buttons3">white.png</texturebg>
+					<midtexture colordiffuse="selectedfocus">white.png</midtexture>
+					</control>
+					
+					<control type="label">
+					<description>Player Time</description>
+					<posx>30</posx>
+					<posy>235</posy>
+					<width>300</width>
+					<height>30</height>
+					<label>$INFO[Player.Time] [COLOR=buttons2]/ $INFO[Player.Duration][/COLOR]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Title3</font>
+					<textcolor>plot</textcolor>
+					</control>
+					
+					<!-- <control type="label">
+					<description>System / Finish Time label</description>
+					<posx>1430</posx>
+					<posy>235</posy>
+					<width>400</width>
+					<height>30</height>
+					<label>[COLOR=buttons2]$INFO[System.Time] - [/COLOR]$INFO[Player.FinishTime]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Title3</font>
+					<textcolor>plot</textcolor>
+					</control> -->
+					</control>
+					</control>
+					</control>
+					
+					<!-- codec & viz infos -->
+					<!-- <control type="group" id="0">
+					<posx>0</posx>
+					<posy>75</posy>
+					<visible>Player.ShowCodec + ![Window.IsVisible(script-XBMC_Lyrics-main.xml) | Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<control type="image">
+					<description>media info background image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>158</height>
+					<colordiffuse>AAFFFFFF</colordiffuse>
+					<texture>black-back.png</texture>
+					</control>
+					<control type="label">
+					<description>row 1 label</description>
+					<posx>75</posx>
+					<posy>15</posy>
+					<label>-</label>
+					<align>left</align>
+					<label>$INFO[musicplayer.Codec,$LOCALIZE[21446]: ,]$INFO[musicplayer.Bitrate, · $LOCALIZE[623]: ,kbps]$INFO[musicplayer.bitspersample, · $LOCALIZE[612]: ,]$INFO[musicplayer.Samplerate, · $LOCALIZE[613]: ,kHz]$INFO[musicplayer.Channels, · $LOCALIZE[21444]: ]</label>
+					<font>font12</font>
+					</control>
+					<control type="label">
+					<description>row 2 label</description>
+					<posx>75</posx>
+					<posy>60</posy>
+					<label>-</label>
+					<align>left</align>
+					<label>$INFO[Visualisation.Name,, [I][COLOR=color8]($LOCALIZE[20166])[/COLOR][/I] · ]fps: $INFO[System.FPS]</label>
+					<font>font12</font>
+					<visible>Visualisation.Locked</visible>
+					</control>
+					<control type="label">
+					<description>Unlocked row 2 label</description>
+					<posx>75</posx>
+					<posy>60</posy>
+					<label>-</label>
+					<align>left</align>
+					<label>$INFO[Visualisation.Name,, · ]fps: $INFO[System.FPS]</label>
+					<font>font12</font>
+					<visible>!Visualisation.Locked</visible>
+					</control>
+					<control type="label">
+					<description>row 3 label</description>
+					<posx>75</posx>
+					<posy>105</posy>
+					<label>-</label>
+					<align>left</align>
+					<label>$INFO[Visualisation.Preset,$LOCALIZE[13388]: ]</label>
+					<font>font12</font>
+					</control>
+					</control> -->
+					</controls>
+					</window>

@@ -1,0 +1,320 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">95</defaultcontrol>
+					<allowoverlay>no</allowoverlay>
+					<controls>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>1080</height>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<texture colordiffuse="background_diffuse">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<height>1080</height>
+					<width>1920</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</texture>
+					<fadetime>800</fadetime>
+					</control>
+					
+					<include>Overlay_Home</include>
+					
+					<control type="group">
+					
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,1500" end="0,0" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,1500" time="400" tween="quadratic" easing="in" />
+					</animation>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>220</posy>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>180</posy>
+					<width>470</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>560</posx>
+					<posy>180</posy>
+					<width>1265</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>80</posy>
+					<width>1735</width>
+					<height>100</height>
+					<texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+					
+					<control type="label">
+					<description>header label</description>
+					<posx>122</posx>
+					<posy>90</posy>
+					<width>1200</width>
+					<height>84</height>
+					<font>Title</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>tiles</textcolor>
+					<label>System Info</label>
+					</control>
+					</control>
+					
+					<control type="grouplist" id="9000">
+					<posx>102</posx>
+					<posy>450</posy>
+					<width>390</width>
+					<height>722</height>
+					<itemgap>5</itemgap>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					
+					<control type="button" id="95">
+					<description>Button Summary Values</description>
+					<include>ListButtons</include>
+					<label>20037</label>
+					</control>
+					
+					<control type="button" id="94">
+					<description>Button Storage</description>
+					<include>ListButtons</include>
+					<label>13277</label>
+					</control>
+					
+					<control type="button" id="96">
+					<description>Button Network</description>
+					<include>ListButtons</include>
+					<label>13279</label>
+					</control>
+					
+					<control type="button" id="97">
+					<description>Button Video</description>
+					<include>ListButtons</include>
+					<label>13280</label>
+					</control>
+					
+					<control type="button" id="98">
+					<description>Button Hardware</description>
+					<include>ListButtons</include>
+					<label>13281</label>
+					</control>
+					
+					<control type="button" id="99">
+					<description>Button PVR</description>
+					<include>ListButtons</include>
+					<label>19191</label>
+					</control>
+					</control>
+					
+					<control type="grouplist" id="9001">
+					<posx>350</posx>
+					<posy>450</posy>
+					<width>1200</width>
+					<height>722</height>
+					<itemgap>5</itemgap>
+					<orientation>vertical</orientation>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					
+					<control type="label" id="2">
+					<description>Label 2</description>
+					<width>1125</width>
+					<height>50</height>
+					<align>left</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					</control>
+					
+					<control type="label" id="3">
+					<description>Label 3</description>
+					<width>1125</width>
+					<height>50</height>
+					<align>left</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					</control>
+					
+					<control type="label" id="4">
+					<description>Label 4</description>
+					<width>1125</width>
+					<height>50</height>
+					<align>left</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					</control>
+					
+					<control type="label" id="5">
+					<description>Label 5</description>
+					<width>1125</width>
+					<height>50</height>
+					<align>left</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					</control>
+					
+					<control type="label" id="6">
+					<description>Label 6</description>
+					<width>1125</width>
+					<height>50</height>
+					<align>left</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					</control>
+					
+					<control type="label" id="7">
+					<description>Label 7</description>
+					<width>1125</width>
+					<height>50</height>
+					<align>left</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					</control>
+					
+					<control type="label" id="8">
+					<description>Label 8</description>
+					<width>1125</width>
+					<height>50</height>
+					<align>left</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					</control>
+					
+					<control type="label" id="9">
+					<description>Label 9</description>
+					<width>1125</width>
+					<height>50</height>
+					<align>left</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					</control>
+					
+					<control type="label" id="10">
+					<description>Label 10</description>
+					<width>1125</width>
+					<height>50</height>
+					<align>left</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					</control>
+					
+					<control type="label" id="11">
+					<description>Label 11</description>
+					<width>1125</width>
+					<height>50</height>
+					<align>left</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					</control>
+					</control>
+					
+					<control type="image">
+					<posx>1735</posx>
+					<posy>310</posy>
+					<width>80</width>
+					<height>80</height>
+					<texture background="true">start.png</texture>
+					</control>
+					
+					<control type="label" id="52">
+					<description>XBMC BUILD Version</description>
+					<posx>1690</posx>
+					<posy>330</posy>
+					<width>1095</width>
+					<label>144</label>
+					<align>right</align>
+					<textcolor>tiles</textcolor>
+					<font>Medium4</font>
+					</control>
+					
+					<control type="label">
+					<description>CPU Text</description>
+					<posx>1620</posx>
+					<posy>440</posy>
+					<width>525</width>
+					<height>38</height>
+					<label>$LOCALIZE[13271]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>home</textcolor>
+					<font>Medium4</font>
+					</control>
+					
+					<control type="label">
+					<description>CPU Text</description>
+					<posx>1690</posx>
+					<posy>440</posy>
+					<width>525</width>
+					<height>38</height>
+					<label>$INFO[System.CPUUsage]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>selectedfocus</textcolor>
+					<font>Medium4</font>
+					</control>
+					
+					<control type="label">
+					<description>Memory Text</description>
+					<posx>1620</posx>
+					<posy>500</posy>
+					<width>525</width>
+					<height>38</height>
+					<label>$LOCALIZE[31309]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>home</textcolor>
+					<font>Medium4</font>
+					</control>
+					
+					<control type="label">
+					<description>Memory Text</description>
+					<posx>1690</posx>
+					<posy>500</posy>
+					<width>525</width>
+					<height>38</height>
+					<label>$INFO[system.memory(used.percent)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>selectedfocus</textcolor>
+					<font>Medium4</font>
+					</control>
+					</control>
+					<include>Time</include>
+					</controls>
+					</window>

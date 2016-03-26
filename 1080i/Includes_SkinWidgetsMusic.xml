@@ -1,0 +1,422 @@
+					<includes>
+
+					<include name="SkinWidgetsMusic">
+
+					<control type="group" id="8000">
+					<posx>295</posx>
+					<posy>430</posy>
+					
+					
+					<!-- RECENT ALBUMS  -->
+					
+
+					<control type="fixedlist" id="8201">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(500)</visible>
+					<visible>![Skin.HasSetting(hide500) | Skin.HasSetting(custom500)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Music</include>
+					<content target="music">musicdb://recentlyaddedalbums/</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 500 -->
+					
+					
+					<control type="fixedlist" id="8201">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(500)</visible>
+					<visible>Skin.HasSetting(custom500)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Music</include>
+					<content>$INFO[Skin.String(custom500playlist)]</content>
+					</control>
+					
+					<!-- ALBUMS  -->
+
+					<control type="fixedlist" id="8201">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(501)</visible>
+					<visible>![Skin.HasSetting(hide501) | Skin.HasSetting(custom501)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Music</include>
+					<content target="music">musicdb://albums/</content>
+					</control>
+					
+					<!-- CUSTOM MUSIC WIDGETS 501 -->
+					
+					<control type="fixedlist" id="8201">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(501)</visible>
+					<visible>Skin.HasSetting(custom501)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Music</include>
+					<content>$INFO[Skin.String(custom501playlist)]</content>
+					</control>
+					
+					<!-- RECENTLY PLAYED ALBUMS -->
+					
+					<control type="fixedlist" id="8201">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(502)</visible>
+					<visible>![Skin.HasSetting(hide502) | Skin.HasSetting(custom502)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Music</include>
+					<content target="music">special://skin/playlists/Last Played Songs.xsp</content>
+					</control>
+					
+					<!-- CUSTOM MUSIC WIDGETS 502 -->
+					
+					<control type="fixedlist" id="8201">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(502)</visible>
+					<visible>Skin.HasSetting(custom502)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Music</include>
+					<content>$INFO[Skin.String(custom502playlist)]</content>
+					</control>
+
+					<!-- ARTISTS -->
+
+					<control type="fixedlist" id="8203">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(503)</visible>
+					<visible>![Skin.HasSetting(hide503) | Skin.HasSetting(custom503)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Music</include>
+					<content target="music">musicdb://artists/</content>
+					</control>
+					
+					<!-- CUSTOM MUSIC WIDGETS 504 -->
+
+					<control type="fixedlist" id="8201">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(503)</visible>
+					<visible>Skin.HasSetting(custom503)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Music</include>
+					<content>$INFO[Skin.String(custom503playlist)]</content>
+					</control>
+					
+					<!-- GENRES -->
+
+					<control type="fixedlist" id="8204">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(504)</visible>
+					<visible>![Skin.HasSetting(hide504) | Skin.HasSetting(custom504)]</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture fallback="special://skin/extras/musicgenresquare/empty.jpg">$INFO[Listitem.Label,special://skin/extras/musicgenresquare/,.jpg]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout  width="250" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture fallback="special://skin/extras/musicgenresquare/empty.jpg">$INFO[Listitem.Label,special://skin/extras/musicgenresquare/,.jpg]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</focusedlayout>
+					<content target="music">musicdb://genres/</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 504 -->
+
+					
+					<control type="fixedlist" id="8201">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(504)</visible>
+					<visible>Skin.HasSetting(custom504)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Music</include>
+					<content>$INFO[Skin.String(custom504playlist)]</content>
+					</control>
+					
+					<!-- ADDONS -->
+
+					<control type="fixedlist" id="8202">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(505)</visible>
+					<visible>![Skin.HasSetting(hide505) | Skin.HasSetting(custom505)]</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Music</include>
+					<content target="music">addons://sources/audio</content>
+					</control>
+					
+					
+					<!-- CUSTOM MUSIC WIDGETS 505 -->
+
+					
+					<control type="fixedlist" id="8201">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(505)</visible>
+					<visible>Skin.HasSetting(custom505)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Music</include>
+					<content>$INFO[Skin.String(custom505playlist)]</content>
+					</control>
+					
+					<!-- LIBRARY -->
+
+					<control type="fixedlist" id="8206">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(506)</visible>
+					<visible>![Skin.HasSetting(hide506) | Skin.HasSetting(custom507)]</visible>
+					<include>widgets_animation</include>
+					
+					<itemlayout width="250" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>55</posx>
+					<posy>55</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout  width="250" height="250">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>230</width>
+					<height>230</height>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>55</posx>
+					<posy>55</posy>
+					<width>120</width>
+					<height>120</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+					</focusedlayout>
+					<content>
+					
+					<item id="1">
+					<description>Files</description>
+					<label>32209</label>
+					<onclick>ActivateWindow(Music,files,return)</onclick>
+					<icon>icons/home/music/files.png</icon>
+					</item>
+					
+					<item id="2">
+					<description>Genre</description>
+					<label>135</label>
+					<onclick>ActivateWindow(MusicLibrary,genres,return)</onclick>
+					<icon>icons/home/music/genres.png</icon>
+					</item>
+					
+					<item id="3">
+					<description>Artists</description>
+					<label>133</label>
+					<onclick>ActivateWindow(MusicLibrary,artists,return)</onclick>
+					<icon>icons/home/music/artists.png</icon>
+					</item>
+					
+					<item id="4">
+					<description>Albums</description>
+					<label>132</label>
+					<onclick>ActivateWindow(MusicLibrary,albums,return)</onclick>
+					<icon>icons/home/music/albums.png</icon>
+					</item>
+					
+					<item id="5">
+					<description>Recently Added Albums</description>
+					<label>32128</label>
+					<onclick>ActivateWindow(MusicLibrary,RecentlyAddedAlbums,return)</onclick>
+					<icon>icons/home/music/recentaddedalbums.png</icon>
+					</item>
+					
+					<item id="6">
+					<description>Top 100 Albums</description>
+					<label>32103</label>
+					<onclick>ActivateWindow(MusicLibrary,Top100Albums,return)</onclick>
+					<icon>icons/home/music/top100.png</icon>
+					</item>
+					
+					<item id="7">
+					<description>Last Played Albums</description>
+					<label>517</label>
+					<onclick>ActivateWindow(MusicLibrary,RecentlyPlayedAlbums,return)</onclick>
+					<icon>icons/home/music/recentlyplayedalbums.png</icon>
+					</item>
+					
+					<item id="8">
+					<description>Top 100 Songs</description>
+					<label>32126</label>
+					<onclick>ActivateWindow(MusicLibrary,Top100Songs,return)</onclick>
+					<icon>icons/home/music/top100songs.png</icon>
+					</item>
+					
+					<item id="9">
+					<description>Playlists</description>
+					<label>136</label>
+					<onclick>ActivateWindow(MusicLibrary,Playlists,return)</onclick>
+					<icon>icons/home/music/playlists.png</icon>
+					</item>
+					
+					<item id="10">
+					<description>Music Videos</description>
+					<label>20389</label>
+					<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+					<icon>icons/home/music/musicvideos.png</icon>
+					</item>
+					
+					<item id="11">
+					<description>Addons</description>
+					<label>32052</label>
+					<onclick>ActivateWindow(musicfiles,addons://sources/audio/,return)</onclick>
+					<icon>icons/home/music/addons.png</icon>
+					</item>
+					
+					<item id="12">
+					<description>Years</description>
+					<label>652</label>
+					<onclick>ActivateWindow(MusicLibrary,years,return)</onclick>
+					<icon>icons/home/music/years.png</icon>
+					</item>
+					</content>
+					</control>
+					
+					<!-- CUSTOM MUSIC WIDGETS 506 -->
+
+					<control type="fixedlist" id="8201">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>200</scrolltime>
+					<visible>Container(9010).Hasfocus(506)</visible>
+				    <visible>Skin.HasSetting(custom506)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Music</include>
+					<content>$INFO[Skin.String(custom506playlist)]</content>
+					</control>
+					</control>
+				    <include>TitleWidgetsMusic</include>
+					</include>
+					</includes>

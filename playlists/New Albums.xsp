@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="albums">
+    <name>New Albums</name>
+    <match>all</match>
+    <rule field="year" operator="greaterthan">
+        <value>2014</value>
+    </rule>
+    <order direction="ascending">year</order>
+</smartplaylist>

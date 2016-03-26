@@ -1,0 +1,50 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<includes>
+					<default type="image">
+					</default>
+					
+					<default type="label">
+					</default>
+					
+					<default type="fadelabel">
+					</default>
+					
+					<default type="button">
+					</default>
+					
+					<default type="togglebutton">
+					</default>
+					
+					<default type="textbox">
+					</default>
+					
+					<default type="progress">
+					</default>
+					
+					<default type="spincontrol">
+					</default>
+					
+					<default type="spincontrolex">
+					</default>
+					
+					<default type="radiobutton">
+					</default>
+					
+					<default type="selectbutton">
+					</default>
+					
+					<default type="slider">
+					</default>
+					
+					<default type="sliderex">
+					</default>
+					
+					<default type="mover">
+					</default>
+					
+					<default type="resize">
+					</default>
+					
+					<default type="edit">
+					</default>
+					</includes>

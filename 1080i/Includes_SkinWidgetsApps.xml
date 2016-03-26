@@ -1,0 +1,745 @@
+					<includes>
+
+					<include name="SkinWidgetsApps">
+
+					<control type="group" id="8000">
+					<posx>295</posx>
+					<posy>430</posy>
+					
+					<!-- FAVOURITES -->
+					
+					<control type="fixedlist" id="8081">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(610)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Apps</include>
+				    <content>favourites://</content>
+					</control>
+					
+					<!-- PROGRAMS -->
+					
+					<control type="fixedlist" id="8081">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(612)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Apps</include>
+				    <content>addons://sources/executable</content>
+					</control>
+					
+					<!-- Custom APPS -->
+					
+					<control type="fixedlist" id="8081">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(615)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Apps</include>
+					<content>
+					
+					<!-- APP ITEM 1 -->
+					
+					<item id="1">
+					<description>Custom Item 1</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3005)</onclick>
+					<visible>![Skin.HasSetting(hide600) | Skin.HasSetting(custom600)]</visible>
+					</item>
+					
+					<item id="1">
+					<description>Custom Item 1</description>
+					<label>$INFO[Skin.String(App.1.Label)]</label>
+					<icon>$INFO[Skin.String(App.1.Icon)]</icon>
+					<onclick>$INFO[Skin.String(App.1.Path)]</onclick>
+					<visible>Skin.HasSetting(custom600)</visible>
+					</item>
+					
+					
+					<!-- APP ITEM 2 -->
+					
+					
+					<item id="2">
+					<description>Custom Item 2</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3005)</onclick>
+					<visible>![Skin.HasSetting(hide601) | Skin.HasSetting(custom601)]</visible>
+					</item>
+					
+					<item id="2">
+					<description>Custom Item 2</description>
+					<label>$INFO[Skin.String(App.2.Label)]</label>
+					<icon>$INFO[Skin.String(App.2.Icon)]</icon>
+					<onclick>$INFO[Skin.String(App.2.Path)]</onclick>
+					<visible>Skin.HasSetting(custom601)</visible>
+					</item>
+					
+					<!-- APP ITEM 3 -->
+					
+					<item id="3">
+					<description>Custom Item 3</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3005)</onclick>
+					<visible>![Skin.HasSetting(hide602) | Skin.HasSetting(custom602)]</visible>
+					</item>
+					
+					<item id="3">
+					<description>Custom Item 3</description>
+					<label>$INFO[Skin.String(App.3.Label)]</label>
+					<icon>$INFO[Skin.String(App.3.Icon)]</icon>
+					<onclick>$INFO[Skin.String(App.3.Path)]</onclick>
+					<visible>Skin.HasSetting(custom602)</visible>
+					</item>
+					
+					<!-- APP ITEM 4 -->
+					
+					<item id="4">
+					<description>Custom Item 4</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3005)</onclick>
+					<visible>![Skin.HasSetting(hide603) | Skin.HasSetting(custom603)]</visible>
+					</item>
+					
+					<item id="4">
+					<description>Custom Item 4</description>
+					<label>$INFO[Skin.String(App.4.Label)]</label>
+					<icon>$INFO[Skin.String(App.4.Icon)]</icon>
+					<onclick>$INFO[Skin.String(App.4.Path)]</onclick>
+					<visible>Skin.HasSetting(custom603)</visible>
+					</item>
+					
+					<!-- APP ITEM 5 -->
+					
+					<item id="5">
+					<description>Custom Item 5</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3005)</onclick>
+					<visible>![Skin.HasSetting(hide604) | Skin.HasSetting(custom604)]</visible>
+					</item>
+					
+					<item id="5">
+					<description>Custom Item 5</description>
+					<label>$INFO[Skin.String(App.5.Label)]</label>
+					<icon>$INFO[Skin.String(App.5.Icon)]</icon>
+					<onclick>$INFO[Skin.String(App.5.Path)]</onclick>
+					<visible>Skin.HasSetting(custom604)</visible>
+					</item>
+					
+					<!-- APP ITEM 6 -->
+					
+					<item id="6">
+					<description>Custom Item 6</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3005)</onclick>
+					<visible>![Skin.HasSetting(hide605) | Skin.HasSetting(custom605)]</visible>
+					</item>
+					
+					<item id="6">
+					<description>Custom Item 6</description>
+					<label>$INFO[Skin.String(App.6.Label)]</label>
+					<icon>$INFO[Skin.String(App.6.Icon)]</icon>
+					<onclick>$INFO[Skin.String(App.6.Path)]</onclick>
+					<visible>Skin.HasSetting(custom605)</visible>
+					</item>
+					
+					<!-- APP ITEM 7 -->
+					
+					<item id="7">
+					<description>Custom Item 7</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3005)</onclick>
+					<visible>![Skin.HasSetting(hide606) | Skin.HasSetting(custom606)]</visible>
+					</item>
+					
+					<item id="7">
+					<description>Custom Item 7</description>
+					<label>$INFO[Skin.String(App.7.Label)]</label>
+					<icon>$INFO[Skin.String(App.7.Icon)]</icon>
+					<onclick>$INFO[Skin.String(App.7.Path)]</onclick>
+					<visible>Skin.HasSetting(custom606)</visible>
+					</item>
+					
+					<!-- APP ITEM 8 -->
+					
+					<item id="8">
+					<description>Custom Item 8</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3005)</onclick>
+					<visible>![Skin.HasSetting(hide607) | Skin.HasSetting(custom607)]</visible>
+					</item>
+					
+					<item id="8">
+					<description>Custom Item 8</description>
+					<label>$INFO[Skin.String(App.8.Label)]</label>
+					<icon>$INFO[Skin.String(App.8.Icon)]</icon>
+					<onclick>$INFO[Skin.String(App.8.Path)]</onclick>
+					<visible>Skin.HasSetting(custom607)</visible>
+					</item>
+					
+					<!-- APP ITEM 9 -->
+					
+					<item id="9">
+					<description>Custom Item 9</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3005)</onclick>
+					<visible>![Skin.HasSetting(hide608) | Skin.HasSetting(custom608)]</visible>
+					</item>
+					
+					<item id="9">
+					<description>Custom Item 9</description>
+					<label>$INFO[Skin.String(App.9.Label)]</label>
+					<icon>$INFO[Skin.String(App.9.Icon)]</icon>
+					<onclick>$INFO[Skin.String(App.9.Path)]</onclick>
+					<visible>Skin.HasSetting(custom608)</visible>
+					</item>
+					
+					<!-- APP ITEM 10 -->
+					
+					<item id="10">
+					<description>Custom Item 10</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3005)</onclick>
+					<visible>![Skin.HasSetting(hide609) | Skin.HasSetting(custom609)]</visible>
+					</item>
+					
+					<item id="10">
+					<description>Custom Item 10</description>
+					<label>$INFO[Skin.String(App.10.Label)]</label>
+					<icon>$INFO[Skin.String(App.10.Icon)]</icon>
+					<onclick>$INFO[Skin.String(App.10.Path)]</onclick>
+					<visible>Skin.HasSetting(custom609)</visible>
+					</item>
+					</content>
+					</control>
+					
+					<!-- PICTURES -->
+					
+					<control type="fixedlist" id="8081">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(611)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Apps</include>
+					<content>
+					
+					<!-- Pics ITEM 1 -->
+					
+					
+					<item id="1">
+					<description>Custom Item 1</description>
+					<label>$INFO[Skin.String(Pics.1.Label)]</label>
+					<icon>$INFO[Skin.String(Pics.1.Icon)]</icon>
+					<onclick>$INFO[Skin.String(Pics.1.Path)]</onclick>
+					<visible>Skin.HasSetting(custom900)</visible>
+					</item>
+					
+					<item id="1">
+					<description>Custom Item 1</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide900) | Skin.HasSetting(custom900)]</visible>
+					</item>
+					
+					<!-- Pics ITEM 2 -->
+					
+					<item id="2">
+					<description>Custom Item 2</description>
+					<label>$INFO[Skin.String(Pics.2.Label)]</label>
+					<icon>$INFO[Skin.String(Pics.2.Icon)]</icon>
+					<onclick>$INFO[Skin.String(Pics.2.Path)]</onclick>
+					<visible>Skin.HasSetting(custom901)</visible>
+					</item>
+					
+					<item id="2">
+					<description>Custom Item 2</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide901) | Skin.HasSetting(custom901)]</visible>
+					</item>
+					
+					<!-- Pics ITEM 3 -->
+					
+					<item id="3">
+					<description>Custom Item 3</description>
+					<label>$INFO[Skin.String(Pics.3.Label)]</label>
+					<icon>$INFO[Skin.String(Pics.3.Icon)]</icon>
+					<onclick>$INFO[Skin.String(Pics.3.Path)]</onclick>
+					<visible>Skin.HasSetting(custom902)</visible>
+					</item>
+					
+					<item id="3">
+					<description>Custom Item 3</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide902) | Skin.HasSetting(custom902)]</visible>
+					</item>
+					
+					<!-- Pics ITEM 4 -->
+					
+					<item id="4">
+					<description>Custom Item 4</description>
+					<label>$INFO[Skin.String(Pics.4.Label)]</label>
+					<icon>$INFO[Skin.String(Pics.4.Icon)]</icon>
+					<onclick>$INFO[Skin.String(Pics.4.Path)]</onclick>
+					<visible>Skin.HasSetting(custom903)</visible>
+					</item>
+					
+					<item id="4">
+					<description>Custom Item 4</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide903) | Skin.HasSetting(custom903)]</visible>
+					</item>
+					
+					<!-- Pics ITEM 5 -->
+					
+					<item id="5">
+					<description>Custom Item 5</description>
+					<label>$INFO[Skin.String(Pics.5.Label)]</label>
+					<icon>$INFO[Skin.String(Pics.5.Icon)]</icon>
+					<onclick>$INFO[Skin.String(Pics.5.Path)]</onclick>
+					<visible>Skin.HasSetting(custom904)</visible>
+					</item>
+					
+					<item id="5">
+					<description>Custom Item 5</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide904) | Skin.HasSetting(custom904)]</visible>
+					</item>
+					
+					<!-- Pics ITEM 6 -->
+					
+					<item id="6">
+					<description>Custom Item 6</description>
+					<label>$INFO[Skin.String(Pics.6.Label)]</label>
+					<icon>$INFO[Skin.String(Pics.6.Icon)]</icon>
+					<onclick>$INFO[Skin.String(Pics.6.Path)]</onclick>
+					<visible>Skin.HasSetting(custom905)</visible>
+					</item>
+					
+					<item id="6">
+					<description>Custom Item 6</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide905) | Skin.HasSetting(custom905)]</visible>
+					</item>
+					
+					<!-- Pics ITEM 7 -->
+					
+					<item id="7">
+					<description>Custom Item 7</description>
+					<label>$INFO[Skin.String(Pics.7.Label)]</label>
+					<icon>$INFO[Skin.String(Pics.7.Icon)]</icon>
+					<onclick>$INFO[Skin.String(Pics.7.Path)]</onclick>
+					<visible>Skin.HasSetting(custom906)</visible>
+					</item>
+					
+					<item id="7">
+					<description>Custom Item 7</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide906) | Skin.HasSetting(custom906)]</visible>
+					</item>
+					
+					<!-- Pics ITEM 8 -->
+					
+					
+					<item id="8">
+					<description>Custom Item 8</description>
+					<label>$INFO[Skin.String(Pics.8.Label)]</label>
+					<icon>$INFO[Skin.String(Pics.8.Icon)]</icon>
+					<onclick>$INFO[Skin.String(Pics.8.Path)]</onclick>
+					<visible>Skin.HasSetting(custom907)</visible>
+					</item>
+					
+					<item id="8">
+					<description>Custom Item 8</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide907) | Skin.HasSetting(custom907)]</visible>
+					</item>
+					
+					<!-- Pics ITEM 9 -->
+					
+					<item id="9">
+					<description>Custom Item 9</description>
+					<label>$INFO[Skin.String(Pics.9.Label)]</label>
+					<icon>$INFO[Skin.String(Pics.9.Icon)]</icon>
+					<onclick>$INFO[Skin.String(Pics.9.Path)]</onclick>
+					<visible>Skin.HasSetting(custom908)</visible>
+					</item>
+					
+					<item id="9">
+					<description>Custom Item 9</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide908) | Skin.HasSetting(custom908)]</visible>
+					</item>
+					
+					<!-- Pics ITEM 10 -->
+					
+					<item id="10">
+					<description>Custom Item 10</description>
+					<label>$INFO[Skin.String(Pics.10.Label)]</label>
+					<icon>$INFO[Skin.String(Pics.10.Icon)]</icon>
+					<onclick>$INFO[Skin.String(Pics.10.Path)]</onclick>
+					<visible>Skin.HasSetting(custom909)</visible>
+					</item>
+					
+					<item id="10">
+					<description>Custom Item 10</description>
+					<label>32104</label>
+					<icon>-</icon>
+					<onclick>ActivateWindow(3006)</onclick>
+					<visible>![Skin.HasSetting(hide909) | Skin.HasSetting(custom909)]</visible>
+					</item>
+					</content>
+					</control>
+					
+					<!-- GAMES -->
+					
+					<control type="fixedlist" id="8081">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(613)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Apps</include>
+					<content>
+					
+					<!-- Games ITEM 1 -->
+					
+					
+					<item id="1">
+					<description>Game1</description>
+					<label>$INFO[Window(Home).Property(MostPlayedROM.1.Title)]</label>
+					<icon>$INFO[Window(Home).Property(MostPlayedROM.1.Thumb)]</icon>
+					<property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.1.Fanart)]</property>
+					<onclick>RunScript(script.games.rom.collection.browser,launchid=1)</onclick>
+					</item>
+					
+					<item id="2">
+					<description>Game2</description>
+					<label>$INFO[Window(Home).Property(MostPlayedROM.2.Title)]</label>
+					<icon>$INFO[Window(Home).Property(MostPlayedROM.2.Thumb)]</icon>
+					<property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.2.Fanart)]</property>
+					<onclick>RunScript(script.games.rom.collection.browser,launchid=2)</onclick>
+					</item>
+					
+					<item id="3">
+					<description>Game3</description>
+					<label>$INFO[Window(Home).Property(MostPlayedROM.3.Title)]</label>
+					<icon>$INFO[Window(Home).Property(MostPlayedROM.3.Thumb)]</icon>
+					<property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.3.Fanart)]</property>
+					<onclick>RunScript(script.games.rom.collection.browser,launchid=3)</onclick>
+					</item>
+					
+					<item id="4">
+					<description>Game4</description>
+					<label>$INFO[Window(Home).Property(MostPlayedROM.4.Title)]</label>
+					<icon>$INFO[Window(Home).Property(MostPlayedROM.4.Thumb)]</icon>
+					<property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.4.Fanart)]</property>
+					<onclick>RunScript(script.games.rom.collection.browser,launchid=4)</onclick>
+					</item>
+					
+					<item id="5">
+					<description>Game5</description>
+					<label>$INFO[Window(Home).Property(MostPlayedROM.5.Title)]</label>
+					<icon>$INFO[Window(Home).Property(MostPlayedROM.5.Thumb)]</icon>
+					<property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.5.Fanart)]</property>
+					<onclick>RunScript(script.games.rom.collection.browser,launchid=5)</onclick>
+					</item>
+					
+					<item id="6">
+					<description>Game6</description>
+					<label>$INFO[Window(Home).Property(MostPlayedROM.6.Title)]</label>
+					<icon>$INFO[Window(Home).Property(MostPlayedROM.6.Thumb)]</icon>
+					<property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.6.Fanart)]</property>
+					<onclick>RunScript(script.games.rom.collection.browser,launchid=6)</onclick>
+					</item>
+					
+					<item id="7">
+					<description>Game7</description>
+					<label>$INFO[Window(Home).Property(MostPlayedROM.7.Title)]</label>
+					<icon>$INFO[Window(Home).Property(MostPlayedROM.7.Thumb)]</icon>
+					<property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.7.Fanart)]</property>
+					<onclick>RunScript(script.games.rom.collection.browser,launchid=7)</onclick>
+					</item>
+					
+					<item id="8">
+					<description>Game8</description>
+					<label>$INFO[Window(Home).Property(MostPlayedROM.8.Title)]</label>
+					<icon>$INFO[Window(Home).Property(MostPlayedROM.8.Thumb)]</icon>
+					<property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.8.Fanart)]</property>
+					<onclick>RunScript(script.games.rom.collection.browser,launchid=8)</onclick>
+					</item>
+					
+					<item id="9">
+					<description>Game9</description>
+					<label>$INFO[Window(Home).Property(MostPlayedROM.9.Title)]</label>
+					<icon>$INFO[Window(Home).Property(MostPlayedROM.9.Thumb)]</icon>
+					<property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.9.Fanart)]</property>
+					<onclick>RunScript(script.games.rom.collection.browser,launchid=9)</onclick>
+					</item>
+					
+					<item id="10">
+					<description>Game10</description>
+					<label>$INFO[Window(Home).Property(MostPlayedROM.10.Title)]</label>
+					<icon>$INFO[Window(Home).Property(MostPlayedROM.10.Thumb)]</icon>
+					<property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.10.Fanart)]</property>
+					<onclick>RunScript(script.games.rom.collection.browser,launchid=10)</onclick>
+					</item>
+					</content>
+					</control>
+					
+						<!-- SYSTEM -->
+					
+					<control type="fixedlist" id="8081">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(616)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Apps_System</include>
+					<content>
+					
+					<item id="1">
+					<description>Shutdown Menu</description>
+					<label>31003</label>
+					<onclick>ActivateWindow(Shutdownmenu)</onclick>
+					<icon>icons/home/system/power.png</icon>
+					</item>
+					
+					<item id="2">
+					<description>File Manager</description>
+					<label>7</label>
+					<onclick>ActivateWindow(FileManager)</onclick>
+					<icon>icons/home/system/files.png</icon>
+					</item>
+					
+					<item id="3">
+					<description>Profiles</description>
+					<label>13200</label>
+					<onclick>dialog.close(all,true)</onclick>
+					<onclick>System.LogOff</onclick>
+					<visible>IntegerGreaterThan(System.ProfileCount,1)</visible>
+					<visible>System.Loggedon</visible>
+					<icon>icons/home/system/profiles.png</icon>
+					</item>
+					
+					<item id="3">
+					<description>Profiles</description>
+					<label>13200</label>
+					<onclick>ActivateWindow(Profiles)</onclick>
+					<visible>!IntegerGreaterThan(System.ProfileCount,1)</visible>
+					<visible>!System.Loggedon</visible>
+					<icon>icons/home/system/profiles.png</icon>
+					</item>
+					
+					<item id="4">
+					<description>System Info</description>
+					<label>130</label>
+					<onclick>ActivateWindow(SystemInfo)</onclick>
+					<icon>icons/home/system/info.png</icon>
+					</item>
+					
+					<item id="5">
+					<description>Skin Settings</description>
+					<label>32077</label>
+					<onclick>ActivateWindow(SkinSettings)</onclick>
+					<icon>icons/home/system/skinsettings.png</icon>
+					</item>
+					
+					<item id="6">
+					<description>Appearance Settings</description>
+					<label>$LOCALIZE[480] $LOCALIZE[5]</label>
+					<onclick>ActivateWindow(AppearanceSettings)</onclick>
+					<icon>icons/home/system/appearance.png</icon>
+					</item>
+					
+					<item id="7">
+					<description>Video Settings</description>
+					<label>$LOCALIZE[31953] $LOCALIZE[5]</label>
+					<onclick>ActivateWindow(VideosSettings)</onclick>
+					<icon>icons/home/system/video.png</icon>
+					</item>
+					
+					<item id="8">
+					<description>Audio Settings</description>
+					<label>$LOCALIZE[292] $LOCALIZE[5]</label>
+					<onclick>ActivateWindow(MusicSettings)</onclick>
+					<icon>icons/home/system/audio.png</icon>
+					</item>
+					
+					<item id="9">
+					<description>Addons Settings</description>
+					<label>$LOCALIZE[32177]</label>
+					<onclick>ActivateWindow(AddonBrowser)</onclick>
+					<icon>icons/home/system/addons.png</icon>
+					</item>
+					
+					<item id="10">
+					<description>Live TV Settings</description>
+					<label>$LOCALIZE[31502] $LOCALIZE[5]</label>
+					<onclick>ActivateWindow(PVRSettings)</onclick>
+					<icon>icons/home/system/livetv.png</icon>
+					</item>
+					
+					<item id="11">
+					<description>Network Settings</description>
+					<label>$LOCALIZE[14036]</label>
+					<onclick>ActivateWindow(NetworkSettings)</onclick>
+					<icon>icons/home/system/services.png</icon>
+					</item>
+					
+					<item id="12">
+					<description>Weather Settings</description>
+					<label>$LOCALIZE[31950] $LOCALIZE[5]</label>
+					<onclick>ActivateWindow(WeatherSettings)</onclick>
+					<icon>icons/home/system/weather.png</icon>
+					</item>
+					
+					<item id="13">
+					<description>Picture Settings</description>
+					<label>$LOCALIZE[31951] $LOCALIZE[5]</label>
+					<onclick>ActivateWindow(PicturesSettings)</onclick>
+					<icon>icons/home/system/pictures.png</icon>
+					</item>
+					
+					</content>
+					</control>
+					</control>
+					
+					<include>TitleWidgetsApps</include>
+					
+					<!-- WEATHER -->
+					
+					<control type="group" id="10000">
+					<posx>295</posx>
+					<posy>430</posy>
+					
+					<control type="fixedlist" id="10001">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(614)</visible>
+					<visible>Weather.IsFetched</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Weather</include>
+					<content>
+					
+					<!-- WEATHER FORECAST ICONS -->
+					
+					<item id="1">
+					<description>Day0</description>
+					<label>$INFO[Window(Weather).Property(Day0.Title)]</label>
+					<label2>$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</label2>
+					<onclick>noop</onclick>
+					<icon>$INFO[Window(Weather).Property(Day0.FanartCode),weather/medium/,.png]</icon>
+					</item>
+					
+					<item id="2">
+					<description>Day1</description>
+					<label>$INFO[Window(Weather).Property(Day1.Title)]</label>
+					<label2>$INFO[Window(Weather).Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</label2>
+					<onclick>noop</onclick>
+					<icon>$INFO[Window(Weather).Property(Day1.FanartCode),weather/medium/,.png]</icon>
+					</item>
+					
+					<item id="3">
+					<description>Day2</description>
+					<label>$INFO[Window(Weather).Property(Day2.Title)]</label>
+					<label2>$INFO[Window(Weather).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</label2>
+					<onclick>noop</onclick>
+					<icon>$INFO[Window(Weather).Property(Day2.FanartCode),weather/medium/,.png]</icon>
+					</item>
+					
+					<item id="4">
+					<description>Day3</description>
+					<label>$INFO[Window(Weather).Property(Day3.Title)]</label>
+					<label2>$INFO[Window(Weather).Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</label2>
+					<onclick>noop</onclick>
+					<icon>$INFO[Window(Weather).Property(Day3.FanartCode),weather/medium/,.png]</icon>
+					</item>
+					
+					<item id="5">
+					<description>Day4</description>
+					<label>$INFO[Window(Weather).Property(Day4.Title)]</label>
+					<label2>$INFO[Window(Weather).Property(Day4.HighTemp)]$INFO[System.TemperatureUnits]</label2>
+					<onclick>noop</onclick>
+					<icon>$INFO[Window(Weather).Property(Day4.FanartCode),weather/medium/,.png]</icon>
+					</item>
+					
+					<item id="6">
+					<description>Day5</description>
+					<label>32112</label>
+					<label2>$INFO[Window(Weather).Property(WeatherProvider)]</label2>
+					<onclick>noop</onclick>
+					<icon>weather/default.png</icon>
+					</item>
+					
+					</content>
+					</control>
+					</control>
+
+					</include>
+					</includes>

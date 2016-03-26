@@ -1,0 +1,485 @@
+					
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window type="dialog" id="3003">
+					<defaultcontrol always="true">9010</defaultcontrol>
+					<controls>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>220</posy>
+					
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,1500" end="0,0" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,1500" time="400" tween="quadratic" easing="in" />
+					</animation>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>180</posy>
+					<width>470</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>560</posx>
+					<posy>180</posy>
+					<width>1265</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>80</posy>
+					<width>1735</width>
+					<height>100</height>
+					<texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+					
+					<control type="label">
+					<description>header label</description>
+					<posx>122</posx>
+					<posy>90</posy>
+					<width>1200</width>
+					<height>84</height>
+					<font>Title</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>tiles</textcolor>
+					<label>$LOCALIZE[32081]: $LOCALIZE[32220]</label>
+					</control>
+					
+					<control type="group" id="9010">
+					<control type="grouplist" id="9001">
+					<posx>90</posx>
+					<posy>220</posy>
+					<width>1400</width>
+					<height>510</height>
+					<itemgap>15</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					
+					<!-- VIDEOS SUBMENU ITEM 1 -->
+					
+					<control type="radiobutton" id="300">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32136]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Videos_Submenu_Item1)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item1)</selected>
+					</control>
+					
+					<control type="radiobutton" id="301">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide300)</onclick>
+					<onclick>Skin.Reset(custom300)</onclick>
+					<selected>Skin.HasSetting(hide300)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item1)</visible>
+					</control>
+					
+					<control type="radiobutton" id="302">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32153]</label>
+					<onclick>Skin.Reset(hide300)</onclick>
+					<onclick>Skin.ToggleSetting(custom300)</onclick>
+					<selected>Skin.HasSetting(custom300)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item1)</visible>
+					</control>
+					
+					<control type="button" id="303">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Video.1)</onclick>
+					<label2>$INFO[Skin.String(Video.1.Label)]</label2>
+					<visible>Skin.HasSetting(custom300)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item1)</visible>
+					</control>
+					
+					<control type="button" id="305">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Video.1.Icon)</onclick>
+					<label2>$INFO[Skin.String(Video.1.Icon)]</label2>
+					<visible>Skin.HasSetting(custom300)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item1)</visible>
+					</control>
+					
+					<!-- Videos SUBMENU ITEM 2 -->
+					
+					<control type="radiobutton" id="311">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32137]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Videos_Submenu_Item2)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item2)</selected>
+					</control>
+					
+					<control type="radiobutton" id="312">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide301)</onclick>
+					<onclick>Skin.Reset(custom301)</onclick>
+					<selected>Skin.HasSetting(hide301)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item2)</visible>
+					</control>
+					
+					<control type="radiobutton" id="313">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32153]</label>
+					<onclick>Skin.Reset(hide301)</onclick>
+					<onclick>Skin.ToggleSetting(custom301)</onclick>
+					<selected>Skin.HasSetting(custom301)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item2)</visible>
+					</control>
+					
+					<control type="button" id="314">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Video.2)</onclick>
+					<label2>$INFO[Skin.String(Video.2.Label)]</label2>
+					<visible>Skin.HasSetting(custom301)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item2)</visible>
+					</control>
+					
+					<control type="button" id="316">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Video.2.Icon)</onclick>
+					<label2>$INFO[Skin.String(Video.2.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item2)</visible>
+					<visible>Skin.HasSetting(custom301)</visible>
+					</control>
+					
+					
+					<!-- Videos SUBMENU ITEM 3 -->
+					
+					<control type="radiobutton" id="321">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32138]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Videos_Submenu_Item3)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item3)</selected>
+					</control>
+					
+					<control type="radiobutton" id="322">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide302)</onclick>
+					<onclick>Skin.Reset(custom302)</onclick>
+					<selected>Skin.HasSetting(hide302)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item3)</visible>
+					</control>
+					
+					<control type="radiobutton" id="323">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide302)</onclick>
+					<onclick>Skin.ToggleSetting(custom302)</onclick>
+					<selected>Skin.HasSetting(custom302)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item3)</visible>
+					</control>
+					
+					<control type="button" id="324">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Video.3)</onclick>
+					<label2>$INFO[Skin.String(Video.3.Label)]</label2>
+					<visible>Skin.HasSetting(custom302)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item3)</visible>
+					</control>
+					
+					<control type="button" id="326">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Video.3.Icon)</onclick>
+					<label2>$INFO[Skin.String(Video.3.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item3)</visible>
+					<visible>Skin.HasSetting(custom302)</visible>
+					</control>
+					
+					
+					<!-- Videos SUBMENU ITEM 4 -->
+					
+					<control type="radiobutton" id="331">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32139]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Videos_Submenu_Item4)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item4)</selected>
+					</control>
+					
+					<control type="radiobutton" id="332">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide303)</onclick>
+					<onclick>Skin.Reset(custom303)</onclick>
+					<selected>Skin.HasSetting(hide303)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item4)</visible>
+					</control>
+					
+					<control type="radiobutton" id="333">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide303)</onclick>
+					<onclick>Skin.ToggleSetting(custom303)</onclick>
+					<selected>Skin.HasSetting(custom303)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item4)</visible>
+					</control>
+					
+					<control type="button" id="334">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Video.4)</onclick>
+					<label2>$INFO[Skin.String(Video.4.Label)]</label2>
+					<visible>Skin.HasSetting(custom303)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item4)</visible>
+					</control>
+					
+					<control type="button" id="336">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Video.4.Icon)</onclick>
+					<label2>$INFO[Skin.String(Video.4.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item4)</visible>
+					<visible>Skin.HasSetting(custom303)</visible>
+					</control>
+					
+					
+					<!-- Videos SUBMENU ITEM 5 -->
+					
+					<control type="radiobutton" id="341">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32140]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Videos_Submenu_Item5)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item5)</selected>
+					</control>
+					
+					<control type="radiobutton" id="342">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide304)</onclick>
+					<onclick>Skin.Reset(custom304)</onclick>
+					<selected>Skin.HasSetting(hide304)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item5)</visible>
+					</control>
+					
+					<control type="radiobutton" id="343">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide304)</onclick>
+					<onclick>Skin.ToggleSetting(custom304)</onclick>
+					<selected>Skin.HasSetting(custom304)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item5)</visible>
+					</control>
+					
+					<control type="button" id="344">
+				    <include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Video.5)</onclick>
+					<label2>$INFO[Skin.String(Video.5.Label)]</label2>
+					<visible>Skin.HasSetting(custom304)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item5)</visible>
+					</control>
+					
+					<control type="button" id="346">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Video.5.Icon)</onclick>
+					<label2>$INFO[Skin.String(Video.5.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item5)</visible>
+					<visible>Skin.HasSetting(custom304)</visible>
+					</control>
+					
+					
+					<!-- Videos SUBMENU ITEM 6 -->
+					
+					<control type="radiobutton" id="351">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32141]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Videos_Submenu_Item6)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item6)</selected>
+					</control>
+					
+					<control type="radiobutton" id="352">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide305)</onclick>
+					<onclick>Skin.Reset(custom305)</onclick>
+					<selected>Skin.HasSetting(hide305)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item6)</visible>
+					</control>
+					
+					<control type="radiobutton" id="353">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide305)</onclick>
+					<onclick>Skin.ToggleSetting(custom305)</onclick>
+					<selected>Skin.HasSetting(custom305)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item6)</visible>
+					</control>
+					
+					<control type="button" id="354">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Video.6)</onclick>
+					<label2>$INFO[Skin.String(Video.6.Label)]</label2>
+					<visible>Skin.HasSetting(custom305)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item6)</visible>
+					</control>
+					
+					<control type="button" id="356">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Video.6.Icon)</onclick>
+					<label2>$INFO[Skin.String(Video.6.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item6)</visible>
+					<visible>Skin.HasSetting(custom305)</visible>
+					</control>
+					
+					
+					<!-- Videos SUBMENU ITEM 7 -->
+					
+					<control type="radiobutton" id="361">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32142]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Videos_Submenu_Item7)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item7)</selected>
+					</control>
+					
+					<control type="radiobutton" id="362">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide306)</onclick>
+					<onclick>Skin.Reset(custom306)</onclick>
+					<selected>Skin.HasSetting(hide306)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item7)</visible>
+					</control>
+					
+					<control type="radiobutton" id="363">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide306)</onclick>
+					<onclick>Skin.ToggleSetting(custom306)</onclick>
+					<selected>Skin.HasSetting(custom306)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item7)</visible>
+					</control>
+					
+					<control type="button" id="364">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Video.7)</onclick>
+					<label2>$INFO[Skin.String(Video.7.Label)]</label2>
+					<visible>Skin.HasSetting(custom306)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item7)</visible>
+					</control>
+					
+					<control type="button" id="366">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Video.7.Icon)</onclick>
+					<label2>$INFO[Skin.String(Video.7.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item7)</visible>
+					<visible>Skin.HasSetting(custom306)</visible>
+					</control>
+					
+					
+					<!-- Videos SUBMENU ITEM 8 -->
+					
+					<control type="radiobutton" id="371">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32143]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Videos_Submenu_Item8)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item8)</selected>
+					</control>
+					
+					<control type="radiobutton" id="372">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide307)</onclick>
+					<onclick>Skin.Reset(custom307)</onclick>
+					<selected>Skin.HasSetting(hide307)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item8)</visible>
+					</control>
+					
+					<control type="radiobutton" id="373">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide307)</onclick>
+					<onclick>Skin.ToggleSetting(custom307)</onclick>
+					<selected>Skin.HasSetting(custom307)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item8)</visible>
+					</control>
+					
+					<control type="button" id="374">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Video.8)</onclick>
+					<label2>$INFO[Skin.String(Video.8.Label)]</label2>
+					<visible>Skin.HasSetting(custom307)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item8)</visible>
+					</control>
+					
+					<control type="button" id="376">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Video.8.Icon)</onclick>
+					<label2>$INFO[Skin.String(Video.8.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item8)</visible>
+					<visible>Skin.HasSetting(custom307)</visible>
+					</control>
+					
+					<!-- Videos SUBMENU ITEM 9 -->
+					
+					<control type="radiobutton" id="381">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32144]</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_Videos_Submenu_Item9)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item9)</selected>
+					</control>
+					
+					<control type="radiobutton" id="382">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide308)</onclick>
+					<onclick>Skin.Reset(custom308)</onclick>
+					<selected>Skin.HasSetting(hide308)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item9)</visible>
+					</control>
+					
+					<control type="radiobutton" id="383">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32108]</label>
+					<onclick>Skin.Reset(hide308)</onclick>
+					<onclick>Skin.ToggleSetting(custom308)</onclick>
+					<selected>Skin.HasSetting(custom308)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item9)</visible>
+					</control>
+					
+					<control type="button" id="384">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32087]</label>
+					<onclick>RunScript(script.favourites,changetitle=true&amp;property=Video.9)</onclick>
+					<label2>$INFO[Skin.String(Video.9.Label)]</label2>
+					<visible>Skin.HasSetting(custom308)</visible>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item9)</visible>
+					</control>
+					
+					<control type="button" id="386">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32156]</label>
+					<onclick>Skin.SetImage(Video.9.Icon)</onclick>
+					<label2>$INFO[Skin.String(Video.9.Icon)]</label2>
+					<visible>Skin.HasSetting(Activate_Settings_Videos_Submenu_Item9)</visible>
+					<visible>Skin.HasSetting(custom308)</visible>
+					</control>
+					</control>
+					</control>
+					</control>
+					<include>Time</include>
+					</controls>
+					</window>
+					
+					
+					

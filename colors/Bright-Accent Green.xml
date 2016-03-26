@@ -1,0 +1,54 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<colors>
+
+					<!-- GLOBAL COLORS -->
+					
+					<color name="background_diffuse">eeefefef</color>
+					<color name="background_diffuse2">AAefefef</color>
+					<color name="background_full">FFefefef</color>
+					<color name="background2">5Fffffff</color>
+					<color name="dark_diffuse">DD000000</color>
+					<color name="overlay_dialogs">EE505050</color>
+					
+					<color name="tiles">FF2C3538</color>
+					<color name="clock">1F000000</color>
+					<color name="home">1F000000</color> 
+					<color name="buttons">FFDBDBDB</color>
+					<color name="buttons2">FF5C6D75</color>
+					<color name="buttons3">FF364145</color>
+					<color name="label">FFFFFFFF</color>
+					<color name="label2">FFa3cf9e</color>
+					<color name="label3">FFb4b4b4</color>
+					<color name="disabled">AAE6977A</color>
+					
+					<color name="selectednofocus">8840DE8F</color>
+					<color name="selectedfocus">FF40DE8F</color>
+					
+					<color name="plot">FFc5c9cb</color>
+					
+					<!-- ACCENT COLOR -->
+					
+					<color name="accent">FF13ae73</color>
+					
+					<!-- SCROLLBAR COLORS -->
+					
+					<color name="scrollbarback">1F000000</color>
+					<color name="scrollbarslide">1F000000</color>
+					<color name="scrollbarfocus">FF13ae73</color>
+					
+					<!-- WEATHER ICON -->
+					
+					<color name="weathericon">FF2C3538</color>
+					
+					<!-- DEFAULT -->
+
+					<color name="white">FFFFFFFF</color>
+					<color name="grey">FFb4b4b4</color>
+					<color name="grey2">FF999999</color>
+					<color name="grey3">FF505050</color>
+					<color name="black">FF000000</color>
+					<color name="blue">FF0084ff</color>
+					<color name="selected">FFEB9E17</color>
+					<color name="invalid">FFFF0000</color>
+
+					</colors>

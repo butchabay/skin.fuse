@@ -1,0 +1,205 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol>3</defaultcontrol>
+					<allowoverlay>no</allowoverlay>
+					<controls>
+					
+					<!-- <control type="image">
+					<left>0</left>
+					<top>0</top>
+					<height>1080</height>
+					<width>1920</width>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</texture>
+					<fadetime>800</fadetime>
+					</control> -->
+					
+					<include>Overlay_Home</include>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>220</posy>
+					
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,1500" end="0,0" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,1500" time="400" tween="quadratic" easing="in" />
+					</animation>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>180</posy>
+					<width>470</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>560</posx>
+					<posy>180</posy>
+					<width>1265</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>80</posy>
+					<width>1735</width>
+					<height>100</height>
+					<texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+					
+					<control type="label">
+					<description>header label</description>
+					<posx>122</posx>
+					<posy>90</posy>
+					<width>1200</width>
+					<height>84</height>
+					<font>Medium5</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>tiles</textcolor>
+					<label>$INFO[Control.GetLabel(2)] $LOCALIZE[5]</label>
+					</control>
+					
+					<!-- LIST ON THE LEFT -->
+					
+					<control type="grouplist" id="3">
+					<description>button area</description>
+					<posx>90</posx>
+					<posy>220</posy>
+					<width>455</width>
+					<height>580</height>
+					<itemgap>15</itemgap>
+					<orientation>vertical</orientation>
+					<aligny>center</aligny>
+					<onleft>9000</onleft>
+					<onright>5</onright>
+					<onup>3</onup>
+					<ondown>3</ondown>
+					</control>
+					
+					<!-- LIST ON THE RIGHT -->
+					
+					<control type="grouplist" id="5">
+					<description>control area</description>
+					<posx>560</posx>
+					<posy>220</posy>
+					<width>1268</width>
+					<height>510</height>
+					<itemgap>15</itemgap>
+					<orientation>vertical</orientation>
+					<pagecontrol>-</pagecontrol>
+					<onleft>3</onleft>
+					<onright>9000</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+					</control>
+					</control>
+					
+					<control type="button" id="10">
+					<description>Default Category Button</description>
+					<include>ListButtons</include>
+					<animation effect="fade" start="100" end="45" time="300" tween="cubic" easing="in" delay="0" condition="ControlGroup(5).HasFocus | ControlGroup(9000).HasFocus">Conditional</animation>
+					</control>
+					
+					<control type="button" id="7">
+					<description>Default Button</description>
+					<include>ListButtons2</include>
+					</control>
+					
+					<control type="radiobutton" id="8">
+					<description>Default RadioButton</description>
+					<include>ListRadioButtons2</include>
+					</control>
+					
+					<control type="spincontrolex" id="9">
+					<description>Default SpinControlex</description>
+					<include>Spincontrolex_1</include>
+					</control>
+					
+					<control type="label" id="2">
+					<description>Fake Label so we can pass it value down to the one below</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>0</width>
+					<height>0</height>
+					<font>-</font>
+					<visible>false</visible>
+					</control>
+					
+					<control type="group">
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,1500" end="0,0" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,1500" time="400" tween="quadratic" easing="in" />
+					</animation>
+					<control type="grouplist" id="9000">
+					<posx>1480</posx>
+					<posy>317</posy>
+					<width>500</width>
+					<height>65</height>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>3</ondown>
+					<onback>3</onback>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					
+					<control type="button" id="20">
+					<description>Setting level button</description>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					<onclick>SettingsLevelChange</onclick>
+					</control>
+					
+					<control type="button" id="21">
+					<description>Reset button</description>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<pulseonselect>false</pulseonselect>
+					<label>10035</label>
+					<onclick>SettingsReset</onclick>
+					</control>
+					</control>
+					
+					<control type="label" id="200">
+					<posx>1450</posx>
+					<posy>330</posy>
+					<width>300</width>
+					<height>65</height>
+					<font>Medium5</font>
+					<align>right</align>
+					<textcolor>tiles</textcolor>
+					<label>31007</label>
+					</control>
+					</control>
+					<include>Time</include>
+					</controls>
+					</window>

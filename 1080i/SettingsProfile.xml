@@ -1,0 +1,251 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">2</defaultcontrol>
+					<allowoverlay>no</allowoverlay>
+					<controls>
+
+					<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<height>1080</height>
+					<width>1920</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</texture>
+					<fadetime>800</fadetime>
+					</control>
+
+					<include>Overlay_Home</include>
+					
+					<control type="group">
+					
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,1500" end="0,0" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,1500" time="400" tween="quadratic" easing="in" />
+					</animation>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>220</posy>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>180</posy>
+					<width>470</width>
+					<height>200</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>560</posx>
+					<posy>180</posy>
+					<width>1265</width>
+					<height>200</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>80</posy>
+					<width>1735</width>
+					<height>100</height>
+					<texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+
+					<control type="label">
+					<posx>455</posx>
+					<posy>200</posy>
+					<width>360</width>
+					<height>38</height>
+					<font>Title2</font>
+					<textcolor>selectedfocus</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>305</label>
+					<visible>System.HasLoginScreen</visible>
+					</control>
+
+					<control type="label">
+					<posx>455</posx>
+					<posy>200</posy>
+					<width>360</width>
+					<height>38</height>
+					<font>Title2</font>
+					<textcolor>selectednofocus</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>1223</label>
+					<visible>!System.HasLoginScreen</visible>
+					</control>
+
+					<control type="button" id="4">
+					<description>Enable Login screen</description>
+					<posx>100</posx>
+					<posy>200</posy>
+					<include>ListButtons</include>
+					<label>20096</label>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>5</ondown>
+					<enable>!Window.IsVisible(ProfileSettings)</enable>
+					</control>
+
+					<control type="button" id="5">
+					<description>Choose auto login user</description>
+					<posx>100</posx>
+					<posy>250</posy>
+					<include>ListButtons</include>
+					<label>33084</label>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>4</onup>
+					<ondown>2</ondown>
+					<visible>!System.HasLoginScreen</visible>
+					<enable>!Window.IsVisible(ProfileSettings) + !System.HasLoginScreen</enable>
+					</control>
+
+					<control type="button">
+					<description>Choose auto login user (grayed out)</description>
+					<posx>100</posx>
+					<posy>250</posy>
+					<include>ListButtons</include>
+					<label>33084</label>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>4</onup>
+					<ondown>2</ondown>
+					<visible>System.HasLoginScreen</visible>
+					<enable>false</enable>
+					</control>
+
+					<control type="image">
+					<posx>1645</posx>
+					<posy>200</posy>
+					<width>160</width>
+					<height>160</height>
+					<align>left</align>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="start.png">$INFO[Container(2).Listitem.Icon]</texture>
+					</control>
+					
+					<control type="label">
+					<description>header label</description>
+					<posx>122</posx>
+					<posy>110</posy>
+					<width>1110</width>
+					<height>45</height>
+					<font>Title</font>
+					<label>$LOCALIZE[10034]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>tiles</textcolor>
+					</control>
+
+					<control type="panel" id="2">
+					<posx>105</posx>
+					<posy>440</posy>
+					<width>1728</width>
+					<height>330</height>
+					<orientation>horizontal</orientation>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>5</onup>
+					<ondown>noop</ondown>
+					<scrolltime>200</scrolltime>
+					<include>widgets_animation</include>
+					<itemlayout width="576" height="110">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture fallback="start.png" background="true">$INFO[Listitem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>110</posx>
+					<posy>0</posy>
+					<width>456</width>
+					<height>100</height>
+					<texture background="true" colordiffuse="background2">white.png</texture>
+					</control>
+
+					<control type="label">
+					<posx>130</posx>
+					<posy>5</posy>
+					<width>400</width>
+					<height>30</height>
+					<label>$INFO[Listitem.Label]</label>
+					<align>left</align>
+					<font>Medium6</font>
+					<textcolor>label3</textcolor>
+					<selectedcolor>selectednofocus</selectedcolor>
+					</control>
+					
+					<control type="label">
+					<description>label</description>
+					<posx>130</posx>
+					<posy>45</posy>
+					<width>400</width>
+					<height>20</height>
+					<label>$LOCALIZE[31320]: $INFO[ListItem.Label2]</label>
+					<align>left</align>
+					<font>Title3</font>
+					<textcolor>label3</textcolor>
+					<selectedcolor>selectednofocus</selectedcolor>
+					</control>
+					</itemlayout>
+
+					<focusedlayout width="576" height="110">
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture fallback="start.png" background="true">$INFO[Listitem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>110</posx>
+					<posy>0</posy>
+					<width>456</width>
+					<height>100</height>
+					<texture background="true" colordiffuse="accent">white.png</texture>
+					</control>
+
+					<control type="label">
+					<posx>130</posx>
+					<posy>5</posy>
+					<width>400</width>
+					<height>30</height>
+					<label>$INFO[Listitem.Label]</label>
+					<align>left</align>
+					<font>Medium6</font>
+					<selectedcolor>label</selectedcolor>
+					<textcolor>label</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>label</description>
+					<posx>130</posx>
+					<posy>45</posy>
+					<width>400</width>
+					<height>20</height>
+					<label>$LOCALIZE[31320]: $INFO[ListItem.Label2]</label>
+					<align>left</align>
+					<font>Title3</font>
+					<textcolor>label2</textcolor>
+					<selectedcolor>label2</selectedcolor>
+					</control>
+					</focusedlayout>
+					</control>
+					</control>
+					</control>
+                    <include>Time</include>
+					</controls>
+					</window>

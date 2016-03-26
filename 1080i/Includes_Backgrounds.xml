@@ -1,0 +1,593 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+
+					<includes>
+					
+					<include name="Overlay_Home">
+					<control type="image">
+					<description>Overlay</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>1080</height>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<texture colordiffuse="background_diffuse">bg.jpg</texture>
+					</control>
+					</include>
+					
+					<!-- Home Backgrounds -->
+                    
+					<include name="HiddenHomeList">
+					<top>-10</top>
+					<width>10</width>
+					<height>1</height>
+					<viewtype label="">list</viewtype>
+					<orientation>horizontal</orientation>
+					<itemlayout height="1" width="1" />
+					<focusedlayout height="1" width="1" />
+					</include>
+
+					<!-- Background -->
+					
+					<include name="Backgrounds_Home_Static">
+					<control type="group">
+					<include>OpenClose4</include>
+					
+					<control type="grouplist">
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="400" tween="quadratic" easing="in" />
+					</animation>
+					<left>0</left>
+					<top>0</top>
+					<heigth>510</heigth>
+					<width>1920</width>
+					<orientation>horizontal</orientation>
+					<itemgap>10</itemgap>
+					<include>ScreensaverContentStatic</include>
+					</control>
+					</control>
+					</include>
+					
+					<include name="ScreensaverContentStatic">
+					<control type="group">
+					<height>510</height>		
+					<width>1920</width>
+					<posx>0</posx>
+					
+					<control type="image">
+					<left>10</left>
+					<top>120</top>
+					<height>378</height>
+					<width>265</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.AllTvShowsBackground.poster)]</texture>
+					<fadetime>600</fadetime>
+					</control>
+					
+					<control type="image">
+					<left>285</left>
+					<top>120</top>
+					<height>378</height>
+					<width>670</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(script.grab.fanart.Movie.FanArt)]</texture>
+					<fadetime>600</fadetime>
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					</control>
+					
+					<control type="image">
+					<left>965</left>
+					<top>120</top>
+					<height>378</height>
+					<width>265</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.RecentMoviesBackground.poster)]</texture>
+					<fadetime>600</fadetime>
+					</control>
+					
+					<control type="image">
+					<left>1240</left>
+					<top>120</top>
+					<height>378</height>
+					<width>670</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(script.grab.fanart.TV.FanArt)]</texture>
+					<fadetime>600</fadetime>
+					</control>
+					</control>
+					</include>
+					
+					<!-- -------------------------------------------------------------------------------------------------------------------------------------------- -->
+					
+					<include name="Backgrounds_Home_Static_Library">
+
+					<control type="group">
+					<include>OpenClose4</include>
+					
+					<!-- <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="in" delay="0" condition="substring(listitem.label,..,left)">Conditional</animation> -->
+					
+					<control type="grouplist">
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="400" tween="quadratic" easing="in" />
+					</animation>
+					<left>0</left>
+					<top>0</top>
+					<heigth>510</heigth>
+					<width>1920</width>
+					<orientation>horizontal</orientation>
+					<itemgap>10</itemgap>
+					<include>ScreensaverContentStaticLibrary</include>
+					</control>
+					</control>
+					</include>
+					
+					<include name="ScreensaverContentStaticLibrary">
+					<control type="group">
+					<height>510</height>		
+					<width>1920</width>
+					<posx>0</posx>
+					
+					<control type="image">
+					<left>10</left>
+					<top>120</top>
+					<height>378</height>
+					<width>265</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$VAR[global_poster]</texture>
+					<fadetime>400</fadetime>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) + IsEmpty(Container.PluginName) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)</visible>
+					</control>
+					
+					<control type="image">
+					<left>10</left>
+					<top>120</top>
+					<height>378</height>
+					<width>265</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$VAR[global_poster_view50]</texture>
+					<fadetime>400</fadetime>
+					<visible>Control.IsVisible(50)</visible>
+					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) + IsEmpty(Container.PluginName) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)</visible>
+					</control>
+					
+					<control type="image">
+					<left>10</left>
+					<top>120</top>
+					<height>378</height>
+					<width>265</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.RecentMoviesBackground.poster)]</texture>
+					<fadetime>1000</fadetime>
+					<visible>![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) + IsEmpty(Container.PluginName) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)]</visible>
+					</control>
+					
+					<control type="image">
+					<left>285</left>
+					<top>120</top>
+					<height>378</height>
+					<width>670</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(script.grab.fanart.Movie.FanArt)]</texture>
+					<fadetime>1000</fadetime>
+					<visible>![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) + IsEmpty(Container.PluginName) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)]</visible>
+					</control>
+					
+					<control type="image">
+					<left>965</left>
+					<top>120</top>
+					<height>378</height>
+					<width>265</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.AllTVShowsBackground.poster)]</texture>
+					<fadetime>1000</fadetime>
+					<visible>![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) + IsEmpty(Container.PluginName) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)]</visible>
+					</control>
+					
+					<control type="image">
+					<left>1240</left>
+					<top>120</top>
+					<height>378</height>
+					<width>670</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.AllVideosBackground)]</texture>
+					<fadetime>800</fadetime>
+					<visible>![Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) + IsEmpty(Container.PluginName) | Container.Content(Seasons) | Container.Content(Episodes)  + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)]</visible>
+					</control>
+					
+					<control type="image">
+					<left>285</left>
+					<top>120</top>
+					<height>378</height>
+					<width>945</width>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="400" tween="quadratic" easing="in" />
+					</animation>
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) + IsEmpty(Container.PluginName) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)</visible>
+					</control>
+					
+					<control type="image">
+					<left>1240</left>
+					<top>120</top>
+					<height>378</height>
+					<width>670</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Container(51).ListItem.Art(fanart)]</texture>
+					<fadetime>400</fadetime>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="800" tween="quadratic" easing="in" />
+					</animation>
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)</visible>
+					</control>
+					
+					<control type="image">
+					<left>1240</left>
+					<top>120</top>
+					<height>378</height>
+					<width>670</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.AllVideosBackground)]</texture>
+					<fadetime>800</fadetime>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="800" tween="quadratic" easing="in" />
+					</animation>
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.Content(Addons)</visible>
+					</control>
+					
+					<control type="image">
+					<left>1240</left>
+					<top>120</top>
+					<height>378</height>
+					<width>670</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Container(50).ListItem.Art(fanart)]</texture>
+					<fadetime>400</fadetime>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="800" tween="quadratic" easing="in" />
+					</animation>
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					<visible>Control.IsVisible(50)</visible>
+					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)</visible>
+					</control>
+					
+					<control type="image">
+					<left>1240</left>
+					<top>120</top>
+					<height>378</height>
+					<width>670</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.AllVideosBackground)]</texture>
+					<fadetime>800</fadetime>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="800" tween="quadratic" easing="in" />
+					</animation>
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					<visible>Control.IsVisible(50)</visible>
+					<visible>Container.Content(Addons)</visible>
+					</control>
+					
+					<control type="image">
+					<left>965</left>
+					<top>120</top>
+					<height>378</height>
+					<width>945</width>
+					<aspectratio aligny="top">scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Container(51).ListItem.Art(fanart)]</texture>
+					<fadetime>400</fadetime>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="800" tween="quadratic" easing="in" />
+					</animation>
+					<visible>Player.HasVideo | Player.HasAudio</visible>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(Addons) | Container.Content(MusicVideos)</visible>
+					</control>
+					
+					<control type="image">
+					<left>965</left>
+					<top>120</top>
+					<height>378</height>
+					<width>945</width>
+					<aspectratio aligny="top">scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Container(50).ListItem.Art(fanart)]</texture>
+					<fadetime>400</fadetime>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="800" tween="quadratic" easing="in" />
+					</animation>
+					<visible>Player.HasVideo | Player.HasAudio</visible>
+					<visible>Control.IsVisible(50)</visible>
+					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(Addons) | Container.Content(MusicVideos)</visible>
+					</control>
+					</control>
+					</include>
+					
+					
+	
+					<include name="Backgrounds_Home_Static_Library_Music">
+
+					<control type="group">
+					<include>OpenClose4</include>
+					
+					<control type="grouplist">
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="400" tween="quadratic" easing="in" />
+					</animation>
+					<left>0</left>
+					<top>0</top>
+					<heigth>510</heigth>
+					<width>1920</width>
+					<orientation>horizontal</orientation>
+					<itemgap>10</itemgap>
+					<include>ScreensaverContentStaticLibrary_Music</include>
+					</control>
+					</control>
+					</include>
+					
+					<include name="ScreensaverContentStaticLibrary_Music">
+					<control type="group">
+					<height>510</height>		
+					<width>1920</width>
+					<posx>0</posx>
+					
+					<control type="image">
+					<left>10</left>
+					<top>120</top>
+					<height>265</height>
+					<width>265</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$VAR[global_thumbs]</texture>
+					<fadetime>1000</fadetime>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.Content(Addons) | Container.Content(Albums)</visible>
+					</control>
+					
+					<control type="image">
+					<left>10</left>
+					<top>120</top>
+					<height>378</height>
+					<width>265</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$VAR[global_thumbs]</texture>
+					<fadetime>1000</fadetime>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.Content(Artists) | Container.Content(Songs)</visible>
+					</control>
+					
+					<control type="image">
+					<left>10</left>
+					<top>120</top>
+					<height>265</height>
+					<width>265</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$VAR[global_thumbs_view50]</texture>
+					<fadetime>1000</fadetime>
+					<visible>Control.IsVisible(50)</visible>
+					<visible>Container.Content(Addons) | Container.Content(Albums)</visible>
+					</control>
+					
+					<control type="image">
+					<left>10</left>
+					<top>120</top>
+					<height>378</height>
+					<width>265</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$VAR[global_thumbs_view50]</texture>
+					<fadetime>1000</fadetime>
+					<visible>Control.IsVisible(50)</visible>
+					<visible>Container.Content(Artists) | Container.Content(Songs)</visible>
+					</control>
+					
+					<control type="image">
+					<left>10</left>
+					<top>395</top>
+					<height>103</height>
+					<width>265</width>
+					<aspectratio>scale</aspectratio>
+					<texture background="true" colordiffuse="tiles">white.png</texture>
+					<fadetime>1000</fadetime>
+					<visible>Container.Content(Addons) | Container.Content(Albums)</visible>
+					</control>
+					
+					<control type="image">
+					<left>10</left>
+					<top>120</top>
+					<height>378</height>
+					<width>265</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.RecentMusicBackground)]</texture>
+					<fadetime>1000</fadetime>
+					<visible>![Container.Content(Addons) | Container.Content(Albums) | Container.Content(Artists) | Container.Content(Songs)]</visible>
+					</control>
+					
+					<control type="image">
+					<left>285</left>
+					<top>120</top>
+					<height>378</height>
+					<width>670</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.AllMusicBackground)]</texture>
+					<fadetime>1000</fadetime>
+					<visible>![Container.Content(Albums) | Container.Content(Artists) | Container.Content(Songs)]</visible>
+					</control>
+					
+					<control type="image">
+					<left>965</left>
+					<top>120</top>
+					<height>378</height>
+					<width>945</width>
+					<aspectratio>scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(script.grab.fanart.Music.FanArt)]</texture>
+					<fadetime>800</fadetime>
+					<visible>![Container.Content(Albums) | Container.Content(Artists) | Container.Content(Songs)]</visible>
+					</control>
+					
+					<control type="image">
+					<left>285</left>
+					<top>120</top>
+					<height>378</height>
+					<width>945</width>
+					<texture>white.png</texture>
+					<colordiffuse>tiles</colordiffuse>
+					<fadetime>800</fadetime>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="400" tween="quadratic" easing="in" />
+					</animation>
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					<visible>Container.Content(Albums) | Container.Content(Artists)</visible>
+					</control>
+					
+					<control type="image">
+					<left>285</left>
+					<top>120</top>
+					<height>378</height>
+					<width>945</width>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.AllMusicSongsBackground.Wall)]</texture>
+					<fadetime>800</fadetime>
+					<aspectratio>scale</aspectratio>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="400" tween="quadratic" easing="in" />
+					</animation>
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					<visible>Container.Content(Songs)</visible>
+					</control>
+					
+					<control type="image">
+					<left>1240</left>
+					<top>120</top>
+					<height>378</height>
+					<width>670</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Container(51).ListItem.Art(fanart)]</texture>
+					<fadetime>800</fadetime>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="800" tween="quadratic" easing="in" />
+					</animation>
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.Content(Albums) | Container.Content(Artists) | Container.Content(Songs)</visible>
+					</control>
+					
+					<control type="image">
+					<left>1240</left>
+					<top>120</top>
+					<height>378</height>
+					<width>670</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Container(50).ListItem.Art(fanart)]</texture>
+					<fadetime>800</fadetime>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="800" tween="quadratic" easing="in" />
+					</animation>
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					<visible>Control.IsVisible(50)</visible>
+					<visible>Container.Content(Albums) | Container.Content(Artists) | Container.Content(Songs)</visible>
+					</control>
+					
+					<control type="image">
+					<left>1240</left>
+					<top>120</top>
+					<height>378</height>
+					<width>670</width>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Window(Home).Property(SkinHelper.AllMusicBackground)]</texture>
+					<fadetime>800</fadetime>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="800" tween="quadratic" easing="in" />
+					</animation>
+					<visible>![Player.HasVideo | Player.HasAudio]</visible>
+					<visible>Control.IsVisible(50)</visible>
+					<visible>Container.Content(Addons)</visible>
+					</control>
+					
+					<control type="image">
+					<left>965</left>
+					<top>120</top>
+					<height>378</height>
+					<width>945</width>
+					<aspectratio aligny="top">scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Container(51).ListItem.Art(fanart)]</texture>
+					<fadetime>800</fadetime>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="800" tween="quadratic" easing="in" />
+					</animation>
+					<visible>Player.HasVideo | Player.HasAudio</visible>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.Content(Addons) | Container.Content(Albums) | Container.Content(Artists) | Container.Content(Songs)</visible>
+					</control>
+					
+					<control type="image">
+					<left>965</left>
+					<top>120</top>
+					<height>378</height>
+					<width>945</width>
+					<aspectratio aligny="top">scale</aspectratio>
+					<texture fallback="defaultback.png" background="true">$INFO[Container(50).ListItem.Art(fanart)]</texture>
+					<fadetime>800</fadetime>
+					<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="800" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="Hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="800" tween="quadratic" easing="in" />
+					</animation>
+					<visible>Player.HasVideo | Player.HasAudio</visible>
+					<visible>Control.IsVisible(50)</visible>
+					<visible>Container.Content(Addons) | Container.Content(Albums) | Container.Content(Artists) | Container.Content(Songs)</visible>
+					</control>
+					</control>
+					</include>
+
+					</includes>

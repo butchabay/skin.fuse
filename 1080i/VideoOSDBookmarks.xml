@@ -1,0 +1,172 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">2</defaultcontrol>
+					<controls>
+					
+					<control type="group">
+					<posx>140</posx>
+					<posy>-80</posy>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>690</posy>
+					<width>1460</width>
+					<height>390</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>690</posy>
+					<width>1460</width>
+					<height>100</height>
+					<texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+					
+					<control type="label">
+					<description>header label</description>
+					<posx>120</posx>
+					<posy>690</posy>
+					<width>1000</width>
+					<height>100</height>
+					<label>$LOCALIZE[298]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Title</font>
+					<textcolor>tiles</textcolor>
+					</control>
+					
+					<control type="panel" id="11">
+					<posx>110</posx>
+					<posy>790</posy>
+					<width>1080</width>
+					<height>645</height>
+					<onleft>2</onleft>
+					<onright>3</onright>
+					<ondown>2</ondown>
+					<onup>2</onup>
+					<scrolltime>200</scrolltime>
+					<viewtype label="536">icon</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<orientation>horizontal</orientation>
+					<itemlayout height="322" width="360">
+					
+					<control type="image">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>330</width>
+					<height>225</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					</control>
+					
+					<control type="label">
+					<posx>168</posx>
+					<posy>278</posy>
+					<width>338</width>
+					<height>22</height>
+					<font>font12</font>
+					<selectedcolor>selected</selectedcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout height="322" width="360">
+					
+					<control type="image">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>330</width>
+					<height>225</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					</control>
+					
+					<control type="label">
+					<posx>168</posx>
+					<posy>278</posy>
+					<width>338</width>
+					<height>22</height>
+					<font>font12</font>
+					<selectedcolor>selected</selectedcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					</control>
+					</focusedlayout>
+					</control>
+					
+					<control type="grouplist" id="9000">
+					<posx>755</posx>
+					<posy>710</posy>
+					<width>1140</width>
+					<height>100</height>
+					<itemgap>10</itemgap>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>noop</onup>
+					<ondown>11</ondown>
+					
+					<control type="button" id="2">
+					<description>Create Bookmark button</description>
+					<width>200</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>200</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<disabledcolor>home</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>294</label>
+					</control>
+					
+					<control type="button" id="3">
+					<description>Clear Bookmark button</description>
+					<width>200</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>200</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<disabledcolor>home</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>296</label>
+					</control>
+					
+					<!-- <control type="button" id="4">
+					<description>Clear Bookmark button</description>
+					<width>200</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>200</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<disabledcolor>home</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>20406</label>
+					<visible>videoplayer.content(episodes)</visible>
+					</control> -->
+					
+					</control>
+					</control>
+					</controls>
+					</window>

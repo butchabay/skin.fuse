@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="episodes">
+    <name>Kids TV Shows</name>
+    <match>all</match>
+    <rule field="genre" operator="is">
+        <value>Animation</value>
+    </rule>
+    <rule field="genre" operator="is">
+        <value>Children</value>
+    </rule>
+</smartplaylist>

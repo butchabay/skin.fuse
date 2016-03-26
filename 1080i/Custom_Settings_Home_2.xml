@@ -1,0 +1,499 @@
+					
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window type="dialog" id="3001">
+					<defaultcontrol always="true">9010</defaultcontrol>
+					<controls>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>220</posy>
+					
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,1500" end="0,0" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,1500" time="400" tween="quadratic" easing="in" />
+					</animation>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>180</posy>
+					<width>470</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>560</posx>
+					<posy>180</posy>
+					<width>1265</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>80</posy>
+					<width>1735</width>
+					<height>100</height>
+					<texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+					
+					<control type="label">
+					<description>header label</description>
+					<posx>122</posx>
+					<posy>90</posy>
+					<width>1200</width>
+					<height>84</height>
+					<font>Title</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>tiles</textcolor>
+					<label>$LOCALIZE[31955]: $LOCALIZE[32220]</label>
+					</control>
+					
+					<control type="group" id="9010">
+					<control type="grouplist" id="9001">
+					<posx>90</posx>
+					<posy>220</posy>
+					<width>1400</width>
+					<height>510</height>
+					<itemgap>15</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					
+					<!-- TV SUBMENU ITEM 1 -->
+					
+					<control type="radiobutton" id="300">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32136]    ($LOCALIZE[32219] $LOCALIZE[31328])</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_TVShows_Submenu_Item1)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item1)</selected>
+					</control>
+					
+					<control type="radiobutton" id="301">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide200)</onclick>
+					<onclick>Skin.Reset(custom200)</onclick>
+					<selected>Skin.HasSetting(hide200)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item1)</visible>
+					</control>
+					
+					<control type="radiobutton" id="302">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32153]</label>
+					<onclick>Skin.Reset(hide200)</onclick>
+					<onclick>Skin.ToggleSetting(custom200)</onclick>
+					<selected>Skin.HasSetting(custom200)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item1)</visible>
+					</control>
+					
+					<control type="radiobutton" id="303">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32149]</label>
+					<onclick>Skin.Reset(custom200TVShows)</onclick>
+					<onclick>Skin.ToggleSetting(custom200Episodes)</onclick>
+					<selected>Skin.HasSetting(custom200Episodes)</selected>
+					<visible>Skin.HasSetting(custom200)</visible>
+					</control>
+					
+					<control type="radiobutton" id="304">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32150]</label>
+					<onclick>Skin.Reset(custom200Episodes)</onclick>
+					<onclick>Skin.ToggleSetting(custom200TVShows)</onclick>
+					<selected>Skin.HasSetting(custom200TVShows)</selected>
+					<visible>Skin.HasSetting(custom200)</visible>
+					</control>
+					
+					<control type="button" id="305">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom200playlist,.xsp,special://profile/playlists/video/)</onclick>
+					<label2>$INFO[Skin.String(custom200playlist)]</label2>
+					<visible>Skin.HasSetting(custom200TVShows) | Skin.HasSetting(custom200Episodes)</visible>
+					</control>
+					
+					<control type="button" id="306">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32155]</label>
+					<onclick>Skin.SetString(custom200label)</onclick>
+					<label2>$INFO[Skin.String(custom200label)]</label2>
+					<visible>Skin.HasSetting(custom200TVShows) | Skin.HasSetting(custom200Episodes)</visible>
+					</control>
+					
+					<!-- TV SUBMENU ITEM 2 -->
+					
+					<control type="radiobutton" id="311">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32137]    ($LOCALIZE[32219] $LOCALIZE[32130])</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_TVShows_Submenu_Item2)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item2)</selected>
+					</control>
+					
+					<control type="radiobutton" id="312">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide201)</onclick>
+					<onclick>Skin.Reset(custom201)</onclick>
+					<selected>Skin.HasSetting(hide201)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item2)</visible>
+					</control>
+					
+					<control type="radiobutton" id="313">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32153]</label>
+					<onclick>Skin.Reset(hide201)</onclick>
+					<onclick>Skin.ToggleSetting(custom201)</onclick>
+					<selected>Skin.HasSetting(custom201)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item2)</visible>
+					</control>
+					
+					<control type="radiobutton" id="314">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32149]</label>
+					<onclick>Skin.Reset(custom201TVShows)</onclick>
+					<onclick>Skin.ToggleSetting(custom201Episodes)</onclick>
+					<selected>Skin.HasSetting(custom201Episodes)</selected>
+					<visible>Skin.HasSetting(custom201)</visible>
+					</control>
+					
+					<control type="radiobutton" id="315">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32150]</label>
+					<onclick>Skin.Reset(custom201Episodes)</onclick>
+					<onclick>Skin.ToggleSetting(custom201TVShows)</onclick>
+					<selected>Skin.HasSetting(custom201TVShows)</selected>
+					<visible>Skin.HasSetting(custom201)</visible>
+					</control>
+					
+					<control type="button" id="316">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom201playlist,.xsp,special://profile/playlists/video/)</onclick>
+					<label2>$INFO[Skin.String(custom201playlist)]</label2>
+					<visible>Skin.HasSetting(custom201TVShows) | Skin.HasSetting(custom201Episodes)</visible>
+					</control>
+					
+					<control type="button" id="317">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32155]</label>
+					<onclick>Skin.SetString(custom201label)</onclick>
+					<label2>$INFO[Skin.String(custom201label)]</label2>
+					<visible>Skin.HasSetting(custom201TVShows) | Skin.HasSetting(custom201Episodes)</visible>
+					</control>
+				
+					<!-- TV SUBMENU ITEM 3 -->
+					
+					<control type="radiobutton" id="321">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32138]    ($LOCALIZE[32219] $LOCALIZE[32094])</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_TVShows_Submenu_Item3)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item3)</selected>
+					</control>
+					
+					<control type="radiobutton" id="322">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide202)</onclick>
+					<onclick>Skin.Reset(custom202)</onclick>
+					<selected>Skin.HasSetting(hide202)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item3)</visible>
+					</control>
+					
+					<control type="radiobutton" id="323">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32153]</label>
+					<onclick>Skin.Reset(hide202)</onclick>
+					<onclick>Skin.ToggleSetting(custom202)</onclick>
+					<selected>Skin.HasSetting(custom202)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item3)</visible>
+					</control>
+					
+					<control type="radiobutton" id="324">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32149]</label>
+					<onclick>Skin.Reset(custom202TVShows)</onclick>
+					<onclick>Skin.ToggleSetting(custom202Episodes)</onclick>
+					<selected>Skin.HasSetting(custom202Episodes)</selected>
+					<visible>Skin.HasSetting(custom202)</visible>
+					</control>
+					
+					<control type="radiobutton" id="325">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32150]</label>
+					<onclick>Skin.Reset(custom202Episodes)</onclick>
+					<onclick>Skin.ToggleSetting(custom202TVShows)</onclick>
+					<selected>Skin.HasSetting(custom202TVShows)</selected>
+					<visible>Skin.HasSetting(custom202)</visible>
+					</control>
+					
+					<control type="button" id="326">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom202playlist,.xsp,special://profile/playlists/video/)</onclick>
+					<label2>$INFO[Skin.String(custom202playlist)]</label2>
+					<visible>Skin.HasSetting(custom202TVShows) | Skin.HasSetting(custom202Episodes)</visible>
+					</control>
+					
+					<control type="button" id="327">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32155]</label>
+					<onclick>Skin.SetString(custom202label)</onclick>
+					<label2>$INFO[Skin.String(custom202label)]</label2>
+					<visible>Skin.HasSetting(custom202TVShows) | Skin.HasSetting(custom202Episodes)</visible>
+					</control>
+					
+					<!-- TV SUBMENU ITEM 4 -->
+					
+					<control type="radiobutton" id="331">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32139]    ($LOCALIZE[32219] $LOCALIZE[32044])</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_TVShows_Submenu_Item4)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item4)</selected>
+					</control>
+					
+					<control type="radiobutton" id="332">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide203)</onclick>
+					<onclick>Skin.Reset(custom203)</onclick>
+					<selected>Skin.HasSetting(hide203)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item4)</visible>
+					</control>
+					
+					<control type="radiobutton" id="333">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32153]</label>
+					<onclick>Skin.Reset(hide203)</onclick>
+					<onclick>Skin.ToggleSetting(custom203)</onclick>
+					<selected>Skin.HasSetting(custom203)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item4)</visible>
+					</control>
+					
+					<control type="radiobutton" id="334">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32149]</label>
+					<onclick>Skin.Reset(custom203TVShows)</onclick>
+					<onclick>Skin.ToggleSetting(custom203Episodes)</onclick>
+					<selected>Skin.HasSetting(custom203Episodes)</selected>
+					<visible>Skin.HasSetting(custom203)</visible>
+					</control>
+					
+					<control type="radiobutton" id="335">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32150]</label>
+					<onclick>Skin.Reset(custom203Episodes)</onclick>
+					<onclick>Skin.ToggleSetting(custom203TVShows)</onclick>
+					<selected>Skin.HasSetting(custom203TVShows)</selected>
+					<visible>Skin.HasSetting(custom203)</visible>
+					</control>
+					
+					<control type="button" id="336">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom203playlist,.xsp,special://profile/playlists/video/)</onclick>
+					<label2>$INFO[Skin.String(custom203playlist)]</label2>
+					<visible>Skin.HasSetting(custom203TVShows) | Skin.HasSetting(custom203Episodes)</visible>
+					</control>
+					
+					<control type="button" id="337">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32155]</label>
+					<onclick>Skin.SetString(custom203label)</onclick>
+					<label2>$INFO[Skin.String(custom203label)]</label2>
+					<visible>Skin.HasSetting(custom203TVShows) | Skin.HasSetting(custom203Episodes)</visible>
+					</control>
+					
+					<!-- TV SUBMENU ITEM 5 -->
+					
+					<control type="radiobutton" id="341">
+				    <include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32140]    ($LOCALIZE[32219] $LOCALIZE[32194])</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_TVShows_Submenu_Item5)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item5)</selected>
+					</control>
+					
+					<control type="radiobutton" id="342">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide204)</onclick>
+					<onclick>Skin.Reset(custom204)</onclick>
+					<selected>Skin.HasSetting(hide204)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item5)</visible>
+					</control>
+					
+					<control type="radiobutton" id="343">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32153]</label>
+					<onclick>Skin.Reset(hide204)</onclick>
+					<onclick>Skin.ToggleSetting(custom204)</onclick>
+					<selected>Skin.HasSetting(custom204)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item5)</visible>
+					</control>
+					
+					<control type="radiobutton" id="344">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32149]</label>
+					<onclick>Skin.Reset(custom204TVShows)</onclick>
+					<onclick>Skin.ToggleSetting(custom204Episodes)</onclick>
+					<selected>Skin.HasSetting(custom204Episodes)</selected>
+					<visible>Skin.HasSetting(custom204)</visible>
+					</control>
+					
+					<control type="radiobutton" id="345">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32150]</label>
+					<onclick>Skin.Reset(custom204Episodes)</onclick>
+					<onclick>Skin.ToggleSetting(custom204TVShows)</onclick>
+					<selected>Skin.HasSetting(custom204TVShows)</selected>
+					<visible>Skin.HasSetting(custom204)</visible>
+					</control>
+					
+					<control type="button" id="346">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom204playlist,.xsp,special://profile/playlists/video/)</onclick>
+					<label2>$INFO[Skin.String(custom204playlist)]</label2>
+					<visible>Skin.HasSetting(custom204TVShows) | Skin.HasSetting(custom204Episodes)</visible>
+					</control>
+					
+					<control type="button" id="347">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32155]</label>
+					<onclick>Skin.SetString(custom204label)</onclick>
+					<label2>$INFO[Skin.String(custom204label)]</label2>
+					<visible>Skin.HasSetting(custom204TVShows) | Skin.HasSetting(custom204Episodes)</visible>
+					</control>
+					
+					<!-- TV SUBMENU ITEM 6 -->
+					
+					<control type="radiobutton" id="351">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32141]    ($LOCALIZE[32219] $LOCALIZE[32083])</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_TVShows_Submenu_Item6)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item6)</selected>
+					</control>
+					
+					<control type="radiobutton" id="352">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide205)</onclick>
+					<onclick>Skin.Reset(custom205)</onclick>
+					<selected>Skin.HasSetting(hide205)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item6)</visible>
+					</control>
+					
+					<control type="radiobutton" id="353">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32153]</label>
+					<onclick>Skin.Reset(hide205)</onclick>
+					<onclick>Skin.ToggleSetting(custom205)</onclick>
+					<selected>Skin.HasSetting(custom205)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item6)</visible>
+					</control>
+					
+					<control type="radiobutton" id="354">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32149]</label>
+					<onclick>Skin.Reset(custom205TVShows)</onclick>
+					<onclick>Skin.ToggleSetting(custom205Episodes)</onclick>
+					<selected>Skin.HasSetting(custom205Episodes)</selected>
+					<visible>Skin.HasSetting(custom205)</visible>
+					</control>
+					
+					<control type="radiobutton" id="355">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32150]</label>
+					<onclick>Skin.Reset(custom201Episodes)</onclick>
+					<onclick>Skin.ToggleSetting(custom205TVShows)</onclick>
+					<selected>Skin.HasSetting(custom205TVShows)</selected>
+					<visible>Skin.HasSetting(custom205)</visible>
+					</control>
+					
+					<control type="button" id="356">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom205playlist,.xsp,special://profile/playlists/video/)</onclick>
+					<label2>$INFO[Skin.String(custom205playlist)]</label2>
+					<visible>Skin.HasSetting(custom205TVShows) | Skin.HasSetting(custom205Episodes)</visible>
+					</control>
+					
+					<control type="button" id="357">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32155]</label>
+					<onclick>Skin.SetString(custom205label)</onclick>
+					<label2>$INFO[Skin.String(custom205label)]</label2>
+					<visible>Skin.HasSetting(custom205TVShows) | Skin.HasSetting(custom205Episodes)</visible>
+					</control>
+					
+					<!-- TV SUBMENU ITEM 7 -->
+					
+					<control type="radiobutton" id="361">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32157] $LOCALIZE[32142]    ($LOCALIZE[32219] $LOCALIZE[20388])</label>
+					<onclick>Skin.ToggleSetting(Activate_Settings_TVShows_Submenu_Item7)</onclick>
+					<selected>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item7)</selected>
+					</control>
+					
+					<control type="radiobutton" id="362">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32152]</label>
+					<onclick>Skin.ToggleSetting(hide206)</onclick>
+					<onclick>Skin.Reset(custom206)</onclick>
+					<selected>Skin.HasSetting(hide206)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item7)</visible>
+					</control>
+					
+					<control type="radiobutton" id="363">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32153]</label>
+					<onclick>Skin.Reset(hide206)</onclick>
+					<onclick>Skin.ToggleSetting(custom206)</onclick>
+					<selected>Skin.HasSetting(custom206)</selected>
+					<visible>Skin.HasSetting(Activate_Settings_TVShows_Submenu_Item7)</visible>
+					</control>
+					
+					<control type="radiobutton" id="364">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32149]</label>
+					<onclick>Skin.Reset(custom206TVShows)</onclick>
+					<onclick>Skin.ToggleSetting(custom206Episodes)</onclick>
+					<selected>Skin.HasSetting(custom206Episodes)</selected>
+					<visible>Skin.HasSetting(custom206)</visible>
+					</control>
+					
+					<control type="radiobutton" id="365">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32150]</label>
+					<onclick>Skin.Reset(custom206Episodes)</onclick>
+					<onclick>Skin.ToggleSetting(custom206TVShows)</onclick>
+					<selected>Skin.HasSetting(custom206TVShows)</selected>
+					<visible>Skin.HasSetting(custom206)</visible>
+					</control>
+					
+					<control type="button" id="366">
+					<include>ListButtons2</include>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom206playlist,.xsp,special://profile/playlists/video/)</onclick>
+					<label2>$INFO[Skin.String(custom206playlist)]</label2>
+					<visible>Skin.HasSetting(custom206TVShows) | Skin.HasSetting(custom206Episodes)</visible>
+					</control>
+					
+					<control type="button" id="367">
+					<include>ListRadioButtons2</include>
+					<label>$LOCALIZE[32155]</label>
+					<onclick>Skin.SetString(custom206label)</onclick>
+					<label2>$INFO[Skin.String(custom206label)]</label2>
+					<visible>Skin.HasSetting(custom206TVShows) | Skin.HasSetting(custom206Episodes)</visible>
+					</control>
+				
+					</control>
+					</control>
+					</control>
+					<include>Time</include>
+					</controls>
+					</window>

@@ -1,0 +1,256 @@
+					<?xml version="1.0" encoding="UTF-8"?>
+					<window>
+					<defaultcontrol always="true">9</defaultcontrol>
+					<controls>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>1080</height>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<texture fallback="kodiwallpaper.jpg" background="true">$INFO[ListItem.Art(fanart)]</texture>
+					<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="600" tween="quadratic" delay="800" easing="in" />
+					</animation>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>1080</height>
+					<aspectratio>stretch</aspectratio>
+					<texture colordiffuse="background_diffuse">bg.jpg</texture>
+					<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="0" time="600" tween="quadratic" delay="800" easing="in" />
+					</animation>
+					</control>
+					
+					<control type="group">
+					<posx>0</posx>
+					<posy>220</posy>
+					
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,1500" end="0,0" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,1500" time="400" tween="quadratic" easing="in" />
+					</animation>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>180</posy>
+					<width>470</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>560</posx>
+					<posy>180</posy>
+					<width>1265</width>
+					<height>600</height>
+					<texture colordiffuse="tiles" background="true">white.png</texture>
+					</control>
+					
+					<control type="image">
+					<posx>90</posx>
+					<posy>80</posy>
+					<width>1735</width>
+					<height>100</height>
+					<texture colordiffuse="background_full" background="true">white.png</texture>
+					</control>
+					
+					<control type="label" id="20">
+					<posx>122</posx>
+					<posy>90</posy>
+					<width>1200</width>
+					<height>84</height>
+					<font>Medium5</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>tiles</textcolor>
+					<label>-</label>
+					</control>
+					
+					<!-- GROUP OF BUTTONS ON THE LEFT -->
+					
+					<control type="grouplist" id="9">
+					<!-- <animation effect="fade" start="100" end="80" time="100" tween="cubic" easing="in" delay="0" condition="ControlGroup(2).HasFocus">Conditional</animation> -->
+					<description>Button area</description>
+					<posx>90</posx>
+					<posy>220</posy>
+					<width>455</width>
+					<height>510</height>
+					<itemgap>15</itemgap>
+					<scrolltime>200</scrolltime>
+					<pagecontrol>-</pagecontrol>
+					<onup>noop</onup>
+					<ondown>9</ondown>
+					<onleft>noop</onleft>
+					<onright>2</onright>
+					<orientation>vertical</orientation>
+					</control>
+					
+					<control type="button" id="13">
+					<include>ListButtons2</include>
+					</control>
+					
+					
+					<!-- GROUP OF BUTTONS ON THE RIGHT -->
+					
+					<control type="grouplist" id="2">
+					<description>control area</description>
+					<posx>560</posx>
+					<posy>220</posy>
+					<width>1268</width>
+					<height>515</height>
+					<itemgap>15</itemgap>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<onup>noop</onup>
+					<ondown>2</ondown>
+					<onleft>9</onleft>
+					<onright>9001</onright>
+					</control>
+					
+					<control type="button" id="13">
+					<description>Default Category Button</description>
+					<include>ListButtons2</include>
+					</control>
+					
+					<control type="button" id="3">
+					<description>Default Button</description>
+					<include>ListButtons2</include>
+					</control>
+					
+					<control type="radiobutton" id="4">
+					<description>Default RadioButton</description>
+					<include>ListRadioButtons2</include>
+					</control>
+					
+					<control type="spincontrolex" id="5">
+					<description>Default spincontrolex</description>
+					<include>Spincontrolex_1</include>
+					<reverse>yes</reverse>
+					</control>
+					
+					<control type="label" id="7">
+					<height>50</height>
+					<width>1240</width>
+					<font>Title2</font>
+					<textcolor>selectedfocus</textcolor>
+					<label>-</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>25</textoffsetx>
+					</control>
+					
+					<control type="image" id="6">
+					<description>Default Seperator</description>
+					<height>1</height>
+					<texture>-</texture>
+					</control>
+					
+					<control type="sliderex" id="8">
+					<description>Default Slider</description>
+					<include>Sliderex1</include>
+					</control>
+					</control>
+					
+					<!-- BUTTONS OK, CANCEL and DEFAULT -->
+					
+					<control type="group" id="9001">
+					<posx>314</posx>
+					<posy>228</posy>
+					
+					<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="0,1500" end="0,0" time="400" tween="quadratic" easing="out" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="0,1500" time="400" tween="quadratic" easing="in" />
+					</animation>
+					
+					<control type="button" id="10">
+					<description>OK Button</description>
+					<posx>1000</posx>
+					<posy>90</posy>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<pulseonselect>false</pulseonselect>
+					<label>186</label>
+					<onup>noop</onup>
+					<onleft>2</onleft>
+					<onright>11</onright>
+					<ondown>noop</ondown>
+					</control>
+					
+					<control type="button" id="11">
+					<description>Cancel Button</description>
+					<posx>1168</posx>
+					<posy>90</posy>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<pulseonselect>false</pulseonselect>
+					<label>222</label>
+					<onup>noop</onup>
+					<onleft>10</onleft>
+					<onright>12</onright>
+					<ondown>noop</ondown>
+					</control>
+					
+					<control type="button" id="12">
+					<description>Defaults Button</description>
+					<posx>1336</posx>
+					<posy>90</posy>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<pulseonselect>false</pulseonselect>
+					<label>409</label>
+					<posy>318</posy>
+					<onup>noop</onup>
+					<onleft>11</onleft>
+					<onright>noop</onright>
+					<ondown>noop</ondown>
+					</control>
+					</control>
+					</controls>
+					</window>

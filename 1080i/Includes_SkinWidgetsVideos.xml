@@ -1,0 +1,276 @@
+					<includes>
+
+					<include name="SkinWidgetsVideos">
+
+					<control type="group" id="8000">
+					<posx>295</posx>
+					<posy>430</posy>
+					
+					<!-- VIDEOS -->
+
+					
+					<control type="fixedlist" id="8061">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(312)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Videos</include>
+					<content>
+					
+					<!-- VIDEO ITEM 1 -->
+					
+					<item id="1">
+					<description>Custom Item 1</description>
+					<label>32104</label>
+					<onclick>ActivateWindow(3003)</onclick>
+					<visible>![Skin.HasSetting(hide300) | Skin.HasSetting(custom300)]</visible>
+					</item>
+					
+					<item id="1">
+					<description>Custom Item 1</description>
+					<label>$INFO[Skin.String(Video.1.Label)]</label>
+					<thumb>$INFO[Skin.String(Video.1.Icon)]</thumb>
+					<onclick>$INFO[Skin.String(Video.1.Path)]</onclick>
+					<visible>Skin.HasSetting(custom300)</visible>
+					</item>
+					
+					<!-- VIDEO ITEM 2 -->
+					
+					<item id="2">
+					<description>Custom Item 2</description>
+					<label>32104</label>
+					<onclick>ActivateWindow(3003)</onclick>
+					<visible>![Skin.HasSetting(hide301) | Skin.HasSetting(custom301)]</visible>
+					</item>
+					
+					<item id="2">
+					<description>Custom Item 2</description>
+					<label>$INFO[Skin.String(Video.2.Label)]</label>
+					<thumb>$INFO[Skin.String(Video.2.Icon)]</thumb>
+					<onclick>$INFO[Skin.String(Video.2.Path)]</onclick>
+					<visible>Skin.HasSetting(custom301)</visible>
+					</item>
+					
+					<!-- VIDEO ITEM 3 -->
+					
+					<item id="3">
+					<description>Custom Item 3</description>
+					<label>32104</label>
+					<onclick>ActivateWindow(3003)</onclick>
+					<visible>![Skin.HasSetting(hide302) | Skin.HasSetting(custom302)]</visible>
+					</item>
+					
+					<item id="3">
+					<description>Custom Item 3</description>
+					<label>$INFO[Skin.String(Video.3.Label)]</label>
+					<thumb>$INFO[Skin.String(Video.3.Icon)]</thumb>
+					<onclick>$INFO[Skin.String(Video.3.Path)]</onclick>
+					<visible>Skin.HasSetting(custom302)</visible>
+					</item>
+					
+					<!-- VIDEO ITEM 4 -->
+					
+					<item id="4">
+					<description>Custom Item 4</description>
+					<label>32104</label>
+					<onclick>ActivateWindow(3003)</onclick>
+					<visible>![Skin.HasSetting(hide303) | Skin.HasSetting(custom303)]</visible>
+					</item>
+					
+					<item id="4">
+					<description>Custom Item 4</description>
+					<label>$INFO[Skin.String(Video.4.Label)]</label>
+					<thumb>$INFO[Skin.String(Video.4.Icon)]</thumb>
+					<onclick>$INFO[Skin.String(Video.4.Path)]</onclick>
+					<visible>Skin.HasSetting(custom303)</visible>
+					</item>
+					
+					<!-- VIDEO ITEM 5 -->
+					
+					<item id="5">
+					<description>Custom Item 5</description>
+					<label>32104</label>
+					<onclick>ActivateWindow(3003)</onclick>
+					<visible>![Skin.HasSetting(hide304) | Skin.HasSetting(custom304)]</visible>
+					</item>
+					
+					<item id="5">
+					<description>Custom Item 5</description>
+					<label>$INFO[Skin.String(Video.5.Label)]</label>
+					<thumb>$INFO[Skin.String(Video.5.Icon)]</thumb>
+					<onclick>$INFO[Skin.String(Video.5.Path)]</onclick>
+					<visible>Skin.HasSetting(custom304)</visible>
+					</item>
+					
+					<!-- VIDEO ITEM 6 -->
+					
+					<item id="6">
+					<description>Custom Item 6</description>
+					<label>32104</label>
+					<onclick>ActivateWindow(3003)</onclick>
+					<visible>![Skin.HasSetting(hide305) | Skin.HasSetting(custom305)]</visible>
+					</item>
+					
+					<item id="6">
+					<description>Custom Item 6</description>
+					<label>$INFO[Skin.String(Video.6.Label)]</label>
+					<thumb>$INFO[Skin.String(Video.6.Icon)]</thumb>
+					<onclick>$INFO[Skin.String(Video.6.Path)]</onclick>
+					<visible>Skin.HasSetting(custom305)</visible>
+					</item>
+					
+					<!-- VIDEO ITEM 7 -->
+					
+					<item id="7">
+					<description>Custom Item 7</description>
+					<label>32104</label>
+					<onclick>ActivateWindow(3003)</onclick>
+					<visible>![Skin.HasSetting(hide306) | Skin.HasSetting(custom306)]</visible>
+					</item>
+					
+					<item id="7">
+					<description>Custom Item 7</description>
+					<label>$INFO[Skin.String(Video.7.Label)]</label>
+					<thumb>$INFO[Skin.String(Video.7.Icon)]</thumb>
+					<onclick>$INFO[Skin.String(Video.7.Path)]</onclick>
+					<visible>Skin.HasSetting(custom306)</visible>
+					</item>
+					
+					<!-- VIDEO ITEM 8 -->
+					
+					<item id="8">
+					<description>Custom Item 8</description>
+					<label>32104</label>
+					<onclick>ActivateWindow(3003)</onclick>
+					<visible>![Skin.HasSetting(hide307) | Skin.HasSetting(custom307)]</visible>
+					</item>
+					
+					<item id="8">
+					<description>Custom Item 8</description>
+					<label>$INFO[Skin.String(Video.8.Label)]</label>
+					<thumb>$INFO[Skin.String(Video.8.Icon)]</thumb>
+					<onclick>$INFO[Skin.String(Video.8.Path)]</onclick>
+					<visible>Skin.HasSetting(custom307)</visible>
+					</item>
+					
+					<!-- VIDEO ITEM 9 -->
+					
+					<item id="9">
+					<description>Custom Item 9</description>
+					<label>32104</label>
+					<onclick>ActivateWindow(3003)</onclick>
+					<visible>![Skin.HasSetting(hide308) | Skin.HasSetting(custom308)]</visible>
+					</item>
+					
+					<item id="9">
+					<description>Custom Item 9</description>
+					<label>$INFO[Skin.String(Video.9.Label)]</label>
+					<thumb>$INFO[Skin.String(Video.9.Icon)]</thumb>
+					<onclick>$INFO[Skin.String(Video.9.Path)]</onclick>
+					<visible>Skin.HasSetting(custom308)</visible>
+					</item>
+					
+					<!-- VIDEO ITEM 10 -->
+					
+					<item id="10">
+					<description>Custom Item 10</description>
+					<label>32104</label>
+					<onclick>ActivateWindow(3003)</onclick>
+					<visible>![Skin.HasSetting(hide309) | Skin.HasSetting(custom309)]</visible>
+					</item>
+					
+					<item id="10">
+					<description>Custom Item 10</description>
+					<label>$INFO[Skin.String(Video.10.Label)]</label>
+					<thumb>$INFO[Skin.String(Video.10.Icon)]</thumb>
+					<onclick>$INFO[Skin.String(Video.10.Path)]</onclick>
+					<visible>Skin.HasSetting(custom309)</visible>
+					</item>
+					
+					</content>
+					</control>
+					
+					<control type="fixedlist" id="8061">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(310)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Videos</include>
+					<content target="videos">addons://sources/video</content>
+					</control>
+					
+					<control type="fixedlist" id="8061">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(311)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Videos</include>
+					<content target="videos" sortby="date">plugin://plugin.video.itunes_podcasts/video/podcasts/by-genre/26/</content>
+					</control>
+					
+					<control type="fixedlist" id="8061">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(313)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Videos</include>
+					<content target="videos" sortby="date" sortorder="descending">plugin://plugin.video.youtube/special/popular_right_now/</content>
+					</control>
+					
+					<control type="fixedlist" id="8061">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(314)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Videos</include>
+					<content target="videos" sortby="date" sortorder="descending">plugin://plugin.video.itunes_trailers/</content>
+					</control>
+					
+					<control type="fixedlist" id="8061">
+					<posx>50</posx>
+					<posy>220</posy>
+					<width>1480</width>
+					<height>260</height>
+					<onup>9010</onup>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<visible>Container(9010).Hasfocus(315)</visible>
+					<include>widgets_animation</include>
+					<include>Items_Widgets_Videos</include>
+					<content target="videos">plugin://plugin.video.youtube/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ/playlist/PLFgquLnL59alCl_2TQvOiD5Vgm1hCaGSI/</content>
+					</control>
+					</control>
+					<include>TitleWidgetsVideos</include>
+					</include>
+					</includes>

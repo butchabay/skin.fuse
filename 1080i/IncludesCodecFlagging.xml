@@ -1,0 +1,335 @@
+				<?xml version="1.0" encoding="UTF-8"?>
+				<includes>
+				
+				<include name="VideoInfo">
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[ListItem.VideoResolution]p</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label"> <!-- fake -->
+				<width>164</width>
+				<height>72</height>
+				<label></label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[ListItem.VideoAspect]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[ListItem.VideoCodec]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				<visible>![substring(ListItem.VideoCodec,divx) | substring(ListItem.VideoCodec,div3) | substring(ListItem.VideoCodec,mpeg2video) | substring(ListItem.VideoCodec,mpeg1video) | substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5) | substring(ListItem.VideoCodec,dx50)]</visible>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">32073</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				<visible>substring(ListItem.VideoCodec,divx) | substring(ListItem.VideoCodec,div3) | substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5) | substring(ListItem.VideoCodec,dx50)</visible>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">32092</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				<visible>substring(ListItem.VideoCodec,mpeg2video) | substring(ListItem.VideoCodec,mpeg1video)</visible>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[ListItem.AudioCodec]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label">
+				<width>162</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[ListItem.MPAA]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				<visible>![substring(ListItem.MPAA,Rated PG-13)]</visible>
+				</control>
+				
+				<control type="label">
+				<width>162</width>
+				<height>72</height>
+				<label fallback="32072">32079</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				<visible>[substring(ListItem.MPAA,Rated PG-13)]</visible>
+				</control>
+				
+				<control type="label">
+				<width>162</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[ListItem.Duration] $LOCALIZE[32086]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				</include>
+				
+				<include name="VideoInfoTVEpisodes">
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$LOCALIZE[33054] $INFO[ListItem.Property(TotalSeasons)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-32</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$LOCALIZE[32090] $INFO[ListItem.Property(TotalEpisodes)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-32</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[ListItem.Property(WatchedEpisodes)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				</include>
+				
+				<include name="VideoInfoTV3">
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$LOCALIZE[20373] $INFO[ListItem.Season]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-35</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$LOCALIZE[32091] $INFO[ListItem.Episode]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-35</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[ListItem.Premiered]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Title</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[ListItem.Duration] $LOCALIZE[32086]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				
+				
+				</include>
+				
+				<include name="VideoInfoTV">
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[ListItem.MPAA]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				</include>
+				
+				
+				<include name="RatingInfo">
+				<control type="label">
+				<width>162</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[ListItem.Rating]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				</include>
+				
+				<include name="VideoInfoPlayer">
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[VideoPlayer.VideoResolution]p</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label"> <!-- fake -->
+				<width>164</width>
+				<height>72</height>
+				<label></label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[VideoPlayer.VideoAspect]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[VideoPlayer.VideoCodec]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				<visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,mpeg2video) | substring(VideoPlayer.VideoCodec,mpeg1video) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)]</visible>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">32073</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)</visible>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">32092</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				<visible>substring(VideoPlayer.VideoCodec,mpeg2video) | substring(VideoPlayer.VideoCodec,mpeg1video)</visible>
+				</control>
+				
+				<control type="label">
+				<width>164</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[VideoPlayer.AudioCodec]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				
+				<control type="label">
+				<width>162</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[VideoPlayer.MPAA]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				<visible>![substring(VideoPlayer.MPAA,Rated PG-13)]</visible>
+				</control>
+				
+				<control type="label">
+				<width>162</width>
+				<height>72</height>
+				<label fallback="32072">32079</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				<visible>[substring(VideoPlayer.MPAA,Rated PG-13)]</visible>
+				</control>
+				
+				<control type="label">
+				<width>192</width>
+				<height>72</height>
+				<label fallback="32072">$INFO[VideoPlayer.Rating]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Condensed-38</font>
+				<textcolor>home</textcolor>
+				</control>
+				</include>
+				
+				</includes>

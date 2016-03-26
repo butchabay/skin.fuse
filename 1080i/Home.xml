@@ -1,0 +1,194 @@
+					<window>
+					<defaultcontrol always="false">300</defaultcontrol>
+					<backgroundcolor>0</backgroundcolor>
+					<controls>
+					
+					<!-- <control type="image">
+					<left>0</left>
+					<top>0</top>
+					<height>1080</height>
+					<width>1920</width>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</texture>
+					<fadetime>800</fadetime>
+					</control> -->
+					
+					<include>Overlay_Home</include>
+					<include>Backgrounds_Home_Static</include>
+					<include>NowPlaying</include>
+					
+					<control type="group">
+					<include>OpenClose</include>
+					<visible>![Window.IsVisible(filebrowser) | Window.IsVisible(favourites)]</visible>
+					
+					<control type="image">
+					<posx>408</posx>
+					<posy>880</posy>
+					<height>50</height>
+					<width>50</width>
+					<texture>arrowup.png</texture>
+					<colordiffuse>accent</colordiffuse>
+					<visible>ControlGroup(8000).HasFocus</visible>
+					<animation effect="fade" start="0" end="100" time="100" tween="cubic" easing="in" delay="250" condition="ControlGroup(8000).HasFocus">Conditional</animation>
+					</control>
+					
+					<control type="image">
+					<posx>345</posx>
+					<posy>902</posy>
+					<height>100</height>
+					<width>1480</width>
+					<texture>white.png</texture>
+					<colordiffuse>accent</colordiffuse>
+					<visible>ControlGroup(8000).HasFocus</visible>
+					<animation effect="fade" start="0" end="100" time="100" tween="cubic" easing="in" delay="0" condition="ControlGroup(8000).HasFocus">Conditional</animation>
+					</control>
+					
+					<include>SkinWidgetsVideos</include>
+					<include>SkinWidgetsMusic</include>
+					<include>SkinWidgetsApps</include>
+					<include>SkinWidgetsMovies</include>
+					<include>SkinWidgetsTVShows</include>
+					<include>Time</include>
+					<!-- <include>SkinWidgetsLiveTV</include> -->
+
+					<!-- RSS -->
+
+					<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					
+					<control type="rss">
+					<description>RSS Feed</description>
+					<posx>0</posx>
+					<posy>1035</posy>
+					<width>1920</width>
+					<height>35</height>
+					<font>Title2</font>
+					<urlset>1</urlset>
+					<titlecolor>accent</titlecolor>
+					<headlinecolor>weathericon</headlinecolor>
+					<textcolor>accent</textcolor>
+					</control>
+					</control>
+				
+					<control type="group">
+					
+					<!-- MAIN MENU -->
+					
+					<control type="list" id="300">
+					<description>Home list</description>
+					
+					<posx>20</posx>
+					<posy>572</posy>
+					<width>400</width>
+					<height>1080</height>
+					<onup>300</onup>
+					<onright condition="Container(300).Hasfocus(13)">8051</onright>
+					<onright condition="Container(300).Hasfocus(7)">8091</onright>
+					<onright condition="Container(300).Hasfocus(11)">8201</onright>
+					<onright condition="Container(300).Hasfocus(9)">301</onright>
+					<onright condition="![Container(300).Hasfocus(13) | Container(300).Hasfocus(9) | Container(300).Hasfocus(7) | Container(300).Hasfocus(11)]">9010</onright>
+					<onleft>noop</onleft>
+					<onright>301</onright>
+					<orientation>vertical</orientation>
+					<scrolltime>200</scrolltime>
+					
+					<itemlayout width="400" height="67">
+					
+					<control type="label">
+					<posx>8</posx>
+					<posy>10</posy>
+					<width>220</width>
+					<height>40</height>
+					<font>Medium4</font>
+					<textcolor>home</textcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					</control>
+					</itemlayout>
+					<focusedlayout width="400" height="67">
+					
+					<control type="label">
+					<posx>8</posx>
+					<posy>10</posy>
+					<width>220</width>
+					<height>40</height>
+					<font>Medium4</font>
+					<textcolor>accent</textcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<animation effect="fade" start="100" end="45" time="100" tween="cubic" easing="in" delay="0" condition="ControlGroup(8000).HasFocus | ControlGroup(9001).HasFocus | ControlGroup(8200).HasFocus | ControlGroup(8070).HasFocus | ControlGroup(8060).HasFocus">Conditional</animation>
+				    </control>
+					</focusedlayout>
+					
+					<content>
+					
+					<!-- <item id="13">
+					<description>Live TV</description>
+					<label>$LOCALIZE[32042]</label>
+					<onclick>ActivateWindow(TVChannels)</onclick>
+					<visible>System.GetBool(pvrmanager.enabled)</visible>
+					</item> -->
+					
+					<item id="5">
+					<description>Movies</description>
+					<label>$LOCALIZE[342]</label>
+					<onclick>ActivateWindow(video,movietitles,return)</onclick>
+					<visible>Library.HasContent(Movies)</visible>
+					</item>
+					
+					<item id="6">
+					<description>TV Shows</description>
+					<label>$LOCALIZE[20343]</label>
+					<onclick>ActivateWindow(video,tvshowtitles,return)</onclick>
+					<visible>Library.HasContent(TVShows)</visible>
+					</item>
+					
+					<item id="2">
+					<description>Videos</description>
+					<label>$LOCALIZE[10025]</label>
+					<onclick>ActivateWindow(Videos,root)</onclick>
+					</item>
+					
+					<item id="3">
+					<description>Music</description>
+					<label>$LOCALIZE[10005]</label>
+					<onclick>ActivateWindow(music)</onclick>
+					</item>
+					
+					<item id="1">
+					<description>APPS</description>
+					<label>$LOCALIZE[32041]</label>
+					<onclick>ActivateWindow(programs,addons,return)</onclick>
+					</item>
+					
+					</content>
+					</control>
+					</control>
+					</control>
+					
+					<include>HomeSubmenu</include>
+					
+					<control type="group">
+					<visible>Window.Previous(startup)</visible>
+					<animation effect="fade" start="100" end="0" time="600" delay="40000" condition="Window.Previous(startup)">Conditional</animation>
+					
+					<include>Overlay_Home</include>
+					
+					<control type="label">
+					<description>Busy label</description>
+					<posx>0</posx>
+					<posy>530</posy>
+					<width>1920</width>
+					<height>60</height>
+					<font>Medium</font>
+					<textcolor>weathericon</textcolor>
+					<align>center</align>
+					<label>$LOCALIZE[32244]</label>
+					</control>
+					</control>
+					
+					</controls>
+					</window>
