@@ -662,17 +662,37 @@
 					<visible>Control.IsVisible(50)</visible>
 					</control>
 					
+					<control type="image">
+					<description>right arrow</description>
+					<posx>1790</posx>
+					<posy>220</posy>
+					<width>20</width>
+					<height>20</height>
+					<fadetime>400</fadetime>
+					<texture colordiffuse="tiles">right.png</texture>
+					</control>
+					
+					<control type="image">
+					<description>left arrow</description>
+					<posx>890</posx>
+					<posy>220</posy>
+					<width>20</width>
+					<height>20</height>
+					<fadetime>400</fadetime>
+					<texture colordiffuse="tiles">left.png</texture>
+					</control>
+					
 					<control type="grouplist" id="9000">
-					<posx>970</posx>
+					<posx>930</posx>
 					<posy>197</posy>
-					<width>850</width>
+					<width>840</width>
 					<height>65</height>
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
-					<onleft>49</onleft>
-					<onright>9000</onright>
-					<onup>50</onup>
-					<ondown>50</ondown>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>49</ondown>
 					<visible>Container.Content(Movies)</visible>
 					
 					<control type="togglebutton" id="8">
@@ -791,20 +811,41 @@
 					<label>38023</label>
 					<visible>Control.IsEnabled(7)</visible>
 					</control>
+					
+					<control type="button" id="100">
+					<description>CinemaVision</description>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<disabledcolor>home</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>32245</label>
+					<onclick>Dialog.Close(MovieInformation)</onclick>
+					<onclick>RunScript(script.cinemavision,experience)</onclick>
+					<visible>System.HasAddon(script.cinemavision) + Stringcompare(ListItem.DBType,movie)</visible>
+					</control>
 					</control>
 					
 					
 					<control type="grouplist" id="9000">
-					<posx>970</posx>
+					<posx>930</posx>
 					<posy>197</posy>
-					<width>auto</width>
+					<width>840</width>
 					<height>65</height>
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
-					<onleft>49</onleft>
-					<onright>9000</onright>
-					<onup>50</onup>
-					<ondown>50</ondown>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>noop</onup>
+					<ondown>49</ondown>
 					<visible>!Container.Content(Movies)</visible>
 					
 					<control type="togglebutton" id="8">
@@ -899,6 +940,27 @@
 					<pulseonselect>false</pulseonselect>
 					<label>38023</label>
 					<visible>Control.IsEnabled(7)</visible>
+					</control>
+					
+					<control type="button" id="100">
+					<description>CinemaVision</description>
+					<width>160</width>
+					<height>65</height>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>160</textwidth>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>buttons</font>
+					<texturefocus colordiffuse="tiles">white.png</texturefocus>
+					<texturenofocus colordiffuse="buttons">white.png</texturenofocus>
+					<textcolor>tiles</textcolor>
+					<focusedcolor>label</focusedcolor>
+					<disabledcolor>home</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>32245</label>
+					<onclick>Dialog.Close(MovieInformation)</onclick>
+					<onclick>RunScript(script.cinemavision,experience)</onclick>
+					<visible>System.HasAddon(script.cinemavision) + [Stringcompare(ListItem.DBType,tvshow) | Stringcompare(ListItem.DBType,season) | Stringcompare(ListItem.DBType,episode)]</visible>
 					</control>
 					</control>
 					</control>

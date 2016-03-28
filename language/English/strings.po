@@ -1502,4 +1502,8 @@ msgctxt "#32244"
 msgid "Please wait while loading"
 msgstr ""
 
+msgctxt "#32245"
+msgid "CinemaVision"
+msgstr ""
+
 #Fuse
