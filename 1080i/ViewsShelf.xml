@@ -443,7 +443,7 @@
 					<posx>320</posx>
 					<posy>200</posy>
 					<width>870</width>
-					<height>185</height>
+					<height>160</height>
 					<font>Plot</font>
 					<textcolor>plot</textcolor>
 					<align>justify</align>
