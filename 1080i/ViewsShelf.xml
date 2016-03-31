@@ -91,6 +91,16 @@
 					<posy>0</posy>
 					<width>155</width>
 					<height>230</height>
+					<texture fallback="DefaultPosterBack.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>[Container.Content(Movies) + !Window.IsMedia]</visible>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>155</width>
+					<height>230</height>
 					<texture fallback="DefaultPosterBack.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 					<aspectratio>stretch</aspectratio>
 					</control>
@@ -171,6 +181,16 @@
 					<posy>0</posy>
 					<width>155</width>
 					<height>230</height>
+					<texture fallback="DefaultPosterBack.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>[Container.Content(Movies) + !Window.IsMedia]</visible>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>155</width>
+					<height>230</height>
 					<texture fallback="DefaultPosterBack.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 					<aspectratio>stretch</aspectratio>
 					</control>
@@ -192,6 +212,7 @@
 					<width>50</width>
 					<texture>arrowup.png</texture>
 					<colordiffuse>accent</colordiffuse>
+					<animation effect="fade" start="100" end="0" time="100" tween="cubic" easing="in" delay="0" condition="Control.HasFocus(8098)">Conditional</animation>
 					</control>
 					
 					<control type="image">
@@ -206,7 +227,7 @@
 					<control type="group">
 					<posx>95</posx>
 					<posy>0</posy>
-					<animation effect="fade" start="100" end="65" time="100" tween="cubic" easing="in" delay="0" condition="ControlGroup(9000).HasFocus  | Control.HasFocus(60)">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="100" tween="cubic" easing="in" delay="0" condition="ControlGroup(9000).HasFocus  | Control.HasFocus(60) | Control.HasFocus(8098)">Conditional</animation>
 					
 					<visible>!substring(listitem.label,..,left)</visible>
 					
@@ -396,6 +417,7 @@
 					<visible>![Player.HasVideo | Player.HasAudio]</visible>
 					<include>OpenClose4</include>
 					<visible>Control.IsVisible(51)</visible>
+					<visible>!ControlGroup(9000).HasFocus(510)</visible>
 					
 					<control type="label">
 					<description>genre</description>
@@ -475,5 +497,8 @@
 					<visible>Container.Content(Albums) + !IsEmpty(ListItem.Year)</visible>
 					</control>
 					</control>
+					
+					<include>SimilarMovies</include>
 					</include>
+					
 					</includes>

@@ -33,6 +33,146 @@
 					<value condition="Player.HasAudio">ActivateWindow(musicplaylist)</value>
 					</variable>
 					
+					<!-- SIMILAR MOVIES -->
+					
+					<!-- <include name="SimilarMoviesHeader">
+					<control type="label">
+					<description>Title label</description>
+					<width>1000</width>
+					<height>30</height>
+					<posx>95</posx>
+					<posy>130</posy>
+					<label>Similar Movies to $INFO[Container(51).ListItem.Label]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>clock</textcolor>
+					<visible>ControlGroup(9000).HasFocus(510)</visible>
+					</control>
+					</include>
+					
+					<include name="SimilarMovies">
+					<control type="fixedlist" id="8098">
+					<posx>95</posx>
+					<posy>188</posy>
+					<width>1730</width>
+					<height>260</height>
+					<ondown>510</ondown>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime tween="sine" easing="inout">200</scrolltime>
+					<include>widgets_animation</include>
+					<include>Items_Similar_Movies</include>
+					<content>plugin://script.skin.helper.service/?action=similarmovies&amp;imdbid=$INFO[ListItem.IMDBNumber]&amp;limit=50</content>
+					<visible>ControlGroup(9000).HasFocus(510)</visible>
+					</control>
+					<include>SimilarMoviesHeader</include>
+					<include>TitleSimilarMovies</include>
+					</include>
+					
+					<include name="Items_Similar_Movies">
+					<itemlayout width="175" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>155</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultPosterMovies.png">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>120</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</itemlayout>
+					
+					<focusedlayout width="175" height="250">
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>155</width>
+					<height>230</height>
+					<texture background="true" fallback="DefaultPosterMovies.png">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio>stretch</aspectratio>
+					</control>
+					
+					<control type="image">
+					<posx>120</posx>
+					<posy>180</posy>
+					<width>40</width>
+					<height>40</height>
+					<info>ListItem.Overlay</info>
+					</control>
+					</focusedlayout>
+					</include>
+					
+					<include name="TitleSimilarMovies">
+					<control type="group">
+					<posx>95</posx>
+					<posy>-100</posy>
+					<visible>Control.HasFocus(8098)</visible>
+					
+					<control type="image">
+					<posx>55</posx>
+					<posy>518</posy>880
+					<height>50</height>
+					<width>50</width>
+					<texture>arrowup.png</texture>
+					<colordiffuse>accent</colordiffuse>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>540</posy>902
+					<height>100</height>
+					<width>1730</width>
+					<texture>white.png</texture>
+					<colordiffuse>accent</colordiffuse>
+					</control>
+					
+					<control type="label">
+					<description>Title label</description>
+					<width>1000</width>
+					<height>30</height>
+					<posx>45</posx>
+					<posy>570</posy>
+					<label>$INFO[Container(8098).ListItem.Label]</label>
+					<align>left</align>
+					<font>Medium4</font>
+					<textcolor>label</textcolor>
+					</control>
+					
+					<control type="label">
+					<description>rating/duration/mpaa</description>
+					<posx>1646</posx>
+					<posy>570</posy>
+					<width>800</width>
+					<height>30</height>
+					<label>$VAR[similarmovies_years,,  •  ]$VAR[similarmovies_resolution,,  •  ]$VAR[similarmovies_mpaa,,  •  ]$VAR[similarmovies_duration,,  •  ]$VAR[similarmovies_rating]</label>
+					<align>right</align>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					</control>
+					
+					<control type="image">
+					<description>star</description>
+					<posx>1660</posx>
+					<posy>574</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>star.png</texture>
+					<colordiffuse>label</colordiffuse>
+					<fadetime>400</fadetime>
+					<visible>Control.HasFocus(8098)</visible>
+					</control>
+					</control>
+					</include> -->
+					
 					<!-- TIME and DATE -->
 					
 					<include name="Time">
@@ -828,7 +968,7 @@
 					<control type="group">
 					<include>OpenClose4</include>
 					<visible>Player.HasVideo | Player.HasAudio</visible>
-					
+					<visible>![ControlGroup(9000).HasFocus(510) | Control.HasFocus(8098)]</visible>
 					<posx>10</posx>
 					<posy>0</posy>
 					
@@ -871,6 +1011,7 @@
 					<posx>286</posx>
 					<posy>376</posy>
 					<visible>Player.HasVideo | Player.HasAudio</visible>
+					<visible>![ControlGroup(9000).HasFocus(510) | Control.HasFocus(8098)]</visible>
 					<animation type="WindowOpen" reversible="false">
 					<effect type="fade" start="0" end="100" time="300" delay="500" tween="sine" easing="in" />
 					</animation>

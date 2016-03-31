@@ -1,14 +1,13 @@
 # XBMC Media Center language file
-# Addon Name: Confluence
-# Addon id: skin.confluence
-# Addon version: 2.1.0
-# Addon Provider: Jezz_X, Team XBMC
+# Addon Name: Fuse
+# Addon id: skin.fuse
+# Addon Provider: butchabay
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main Translation Project (Frodo)\n"
+"Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
-"POT-Creation-Date: 2012-05-04 12:52+0000\n"
-"PO-Revision-Date: 2012-10-28 23:31+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
 "Language-Team: English (United States) (http://www.transifex.com/projects/p/XBMC-Main-Frodo/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -17,9 +16,13 @@ msgstr ""
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#Misc labels
+
 msgctxt "#31000"
 msgid "Change Your"
 msgstr ""
+
+#empty strings from id 31001 to 31002
 
 msgctxt "#31003"
 msgid "Power Options"
@@ -37,6 +40,10 @@ msgctxt "#31006"
 msgid "View Options"
 msgstr ""
 
+msgctxt "#31007"
+msgid "Settings Level"
+msgstr ""
+
 msgctxt "#31008"
 msgid "Fullscreen"
 msgstr ""
@@ -44,6 +51,8 @@ msgstr ""
 msgctxt "#31009"
 msgid "Total Duration"
 msgstr ""
+
+#empty strings from id 31010 to 31021
 
 msgctxt "#31022"
 msgid "Music - Files"
@@ -69,6 +78,8 @@ msgctxt "#31027"
 msgid "Location"
 msgstr ""
 
+#View Type labels
+
 msgctxt "#31028"
 msgid "Poster Wrap"
 msgstr ""
@@ -76,6 +87,8 @@ msgstr ""
 msgctxt "#31029"
 msgid "Fanart"
 msgstr ""
+
+#empty string with id 31030
 
 msgctxt "#31031"
 msgid "Pic Thumbs"
@@ -89,9 +102,19 @@ msgctxt "#31033"
 msgid "Info"
 msgstr ""
 
+#empty strings from id 31034 to 31038
+
+msgctxt "#31039"
+msgid "Actions"
+msgstr ""
+
+#Extra labels
+
 msgctxt "#31040"
 msgid "Now Playing"
 msgstr ""
+
+#empty string with id 31041
 
 msgctxt "#31042"
 msgid "PLAYING"
@@ -109,6 +132,12 @@ msgctxt "#31045"
 msgid "REWIND"
 msgstr ""
 
+msgctxt "#31046"
+msgid "SEEKING"
+msgstr ""
+
+#empty string with id 31047
+
 msgctxt "#31048"
 msgid "Visualization Presets"
 msgstr ""
@@ -124,6 +153,9 @@ msgstr ""
 msgctxt "#31051"
 msgid "Sort: Descending"
 msgstr ""
+
+#empty strings from id 31052 to 31054
+#Playlist Editor labels
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -153,6 +185,9 @@ msgctxt "#31061"
 msgid "Current Selected"
 msgstr ""
 
+#empty strings from id 31062 to 31100
+#Skin Settings labels
+
 msgctxt "#31101"
 msgid "Home screen options"
 msgstr ""
@@ -168,6 +203,8 @@ msgstr ""
 msgctxt "#31104"
 msgid "Play Trailers in a window [COLOR=grey3](Video Information Dialog Only)[/COLOR]"
 msgstr ""
+
+#empty string with id 31105
 
 msgctxt "#31106"
 msgid "Miscellaneous options"
@@ -197,6 +234,8 @@ msgctxt "#31112"
 msgid "Options"
 msgstr ""
 
+#empty strings from id 31113 to 31115
+
 msgctxt "#31116"
 msgid "Show Recently added Albums"
 msgstr ""
@@ -213,9 +252,7 @@ msgctxt "#31119"
 msgid "Hide Background Fanart"
 msgstr ""
 
-msgctxt "#31122"
-msgid "Weather Page"
-msgstr ""
+#empty strings from id 31120 to 31123
 
 msgctxt "#31124"
 msgid "Show Background \"Now Playing\" Video"
@@ -241,6 +278,8 @@ msgctxt "#31129"
 msgid "Hide Fanart in full screen visualization"
 msgstr ""
 
+#empty strings from id 31130 to 31131
+
 msgctxt "#31132"
 msgid "Lyrics Add-on"
 msgstr ""
@@ -261,6 +300,8 @@ msgctxt "#31136"
 msgid "Home Page Pictures Submenu"
 msgstr ""
 
+#empty strings from id 31137 to 31139
+
 msgctxt "#31140"
 msgid "Music OSD"
 msgstr ""
@@ -269,13 +310,20 @@ msgctxt "#31141"
 msgid "Video OSD"
 msgstr ""
 
+#empty strings from id 31142 to 31199
+#Script labels
+
 msgctxt "#31200"
 msgid "Shortcuts"
 msgstr ""
 
+#empty strings from id 31201 to 31202
+
 msgctxt "#31203"
 msgid "Choose Your Song"
 msgstr ""
+
+#empty string with id 31204
 
 msgctxt "#31205"
 msgid "Lyrics Source"
@@ -293,6 +341,9 @@ msgctxt "#31208"
 msgid "Upcoming Episodes"
 msgstr ""
 
+#empty strings from id 31209 to 31299
+#Extra labels
+
 msgctxt "#31300"
 msgid "Current Temp"
 msgstr ""
@@ -301,9 +352,13 @@ msgctxt "#31301"
 msgid "Last Updated"
 msgstr ""
 
+#empty string with id 31302
+
 msgctxt "#31303"
 msgid "Data provider"
 msgstr ""
+
+#empty strings from id 31304 to 31306
 
 msgctxt "#31307"
 msgid "Hide Fanart"
@@ -337,9 +392,13 @@ msgctxt "#31314"
 msgid "Content Scanning Options"
 msgstr ""
 
+#empty strings from id 31315 to 31316
+
 msgctxt "#31317"
 msgid "Set Fanart Path"
 msgstr ""
+
+#empty string with id 31318
 
 msgctxt "#31319"
 msgid "Selected Profile"
@@ -356,6 +415,8 @@ msgstr ""
 msgctxt "#31322"
 msgid "Aired"
 msgstr ""
+
+#empty strings from id 31323 to 31324
 
 msgctxt "#31325"
 msgid "Playlist Options"
@@ -385,6 +446,9 @@ msgctxt "#31331"
 msgid "Album Details"
 msgstr ""
 
+#empty strings from id 31332 to 31350
+#Video and Music OSD Labels
+
 msgctxt "#31351"
 msgid "Pause"
 msgstr ""
@@ -409,6 +473,22 @@ msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr ""
 
+#empty strings from id 31357 to 31358
+# Stereoscopic labels
+msgctxt "#31360"
+msgid "Watch as 2D"
+msgstr ""
+
+msgctxt "#31361"
+msgid "Change mode"
+msgstr ""
+
+msgctxt "#31362"
+msgid "Enabled"
+msgstr ""
+
+#empty strings from id 3136 to 31389
+
 msgctxt "#31390"
 msgid "Skin default"
 msgstr ""
@@ -421,40 +501,49 @@ msgctxt "#31392"
 msgid "Arial based"
 msgstr ""
 
+#empty strings from id 31393 to 31399
+#Description Labels
+
 msgctxt "#31400"
-msgid "[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language and region · Change file listing options[CR]Set up a screensaver"
+msgid "CONFIGURE APPEARANCE SETTINGS[CR][CR]Change the skin · Set language and region · Change file listing options[CR]Set up a screensaver"
 msgstr ""
 
 msgctxt "#31401"
-msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts"
+msgid "CONFIGURE VIDEO SETTINGS[CR][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts"
 msgstr ""
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "CONFIGURE MUSIC SETTINGS[CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr ""
 
 msgctxt "#31403"
-msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshows"
+msgid "CONFIGURE PICTURE SETTINGS[CR][CR]Set picture listing options · Configure slideshows"
 msgstr ""
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set three cities to collect weather information"
+msgid "CONFIGURE WEATHER SETTINGS[CR][CR]Set three cities to collect weather information"
 msgstr ""
 
+#empty string with id 31405
+
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "CONFIGURE SYSTEM SETTINGS[CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgstr ""
+
+msgctxt "#31407"
+msgid "CONFIGURE SKIN SETTINGS[CR][CR]Customize Home Menu · Choose your options · Global View Settings"
 msgstr ""
 
 msgctxt "#31408"
-msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
+msgid "CONFIGURE ADD-ONS[CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
 msgstr ""
 
 msgctxt "#31409"
-msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change fullscreen info · Manage EPG data settings"
+msgid "CONFIGURE TV SETTINGS[CR][CR]Change fullscreen info · Manage EPG data settings"
 msgstr ""
 
 msgctxt "#31410"
-msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
+msgid "CONFIGURE SERVICE SETTINGS[CR][CR]Setup control of XBMC via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
 msgstr ""
 
 msgctxt "#31411"
@@ -465,13 +554,16 @@ msgctxt "#31412"
 msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section.  To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"Ok\" to close this dialog. It will not appear again."
 msgstr ""
 
+#empty strings from id 31413 to 31420
+
 msgctxt "#31421"
-msgid "Select your XBMC user Profile[CR]to login and continue"
+msgid "Select your XBMC user Profile to login and continue"
 msgstr ""
 
-msgctxt "#31500"
-msgid "Recording Timers"
-msgstr ""
+#empty strings from id 31422 to 31499
+#PVR labels
+
+#empty string id #31500
 
 msgctxt "#31501"
 msgid "Scheduled Time"
@@ -497,6 +589,8 @@ msgctxt "#31506"
 msgid "Available[CR]Groups"
 msgstr ""
 
+#empty strings from id 31507 to 31508
+
 msgctxt "#31509"
 msgid "Channel Group"
 msgstr ""
@@ -508,6 +602,9 @@ msgstr ""
 msgctxt "#31511"
 msgid "Channel Options"
 msgstr ""
+
+#empty strings from id 31512 to 31900
+#Weather plugin
 
 msgctxt "#31901"
 msgid "36 Hour Forecast"
@@ -529,9 +626,7 @@ msgctxt "#31905"
 msgid "Forecast"
 msgstr ""
 
-msgctxt "#31906"
-msgid "Maps & Video"
-msgstr ""
+#empty strings from id 31906 to 31907
 
 msgctxt "#31908"
 msgid "Chance of Precipitation"
@@ -540,3 +635,875 @@ msgstr ""
 msgctxt "#31909"
 msgid "Fetching forecast info..."
 msgstr ""
+
+msgctxt "#31910"
+msgid "Map & Alerts"
+msgstr ""
+
+#empty strings from id 31911 to 31949
+
+msgctxt "#31950"
+msgid "Weather"
+msgstr ""
+
+msgctxt "#31951"
+msgid "Pictures"
+msgstr ""
+
+msgctxt "#31952"
+msgid "Live TV"
+msgstr ""
+
+msgctxt "#31953"
+msgid "Videos"
+msgstr ""
+
+msgctxt "#31954"
+msgid "Movies"
+msgstr ""
+
+msgctxt "#31955"
+msgid "Tv shows"
+msgstr ""
+
+msgctxt "#31956"
+msgid "Music"
+msgstr ""
+
+msgctxt "#31957"
+msgid "Programms"
+msgstr ""
+
+msgctxt "#31958"
+msgid "Play Disc"
+msgstr ""
+
+msgctxt "#31959"
+msgid "System"
+msgstr ""
+
+#Fuse Strings
+
+msgctxt "#32041"
+msgid "Apps & More"
+msgstr ""
+
+msgctxt "#32042"
+msgid "Live TV"
+msgstr ""
+
+msgctxt "#32043"
+msgid "Now Playing"
+msgstr ""
+
+msgctxt "#32044"
+msgid "Spotlight"
+msgstr ""
+
+msgctxt "#32045"
+msgid "Recommended"
+msgstr ""
+
+msgctxt "#32046"
+msgid "High Definition"
+msgstr ""
+
+msgctxt "#32047"
+msgid "Documentary"
+msgstr ""
+
+msgctxt "#32048"
+msgid "Trailers"
+msgstr ""
+
+msgctxt "#32049"
+msgid "Collections"
+msgstr ""
+
+msgctxt "#32050"
+msgid "Online"
+msgstr ""
+
+msgctxt "#32051"
+msgid "Sorted by:"
+msgstr ""
+
+msgctxt "#32052"
+msgid "Addons"
+msgstr ""
+
+msgctxt "#32053"
+msgid "Home Menu"
+msgstr ""
+
+msgctxt "#32054"
+msgid "Customise Movies"
+msgstr ""
+
+msgctxt "#32055"
+msgid "Customise TV Shows"
+msgstr ""
+
+msgctxt "#32056"
+msgid "Customise Live TV"
+msgstr ""
+
+msgctxt "#32057"
+msgid "Customise Videos"
+msgstr ""
+
+msgctxt "#32058"
+msgid "Customise Music"
+msgstr ""
+
+msgctxt "#32059"
+msgid "Customise Weather"
+msgstr ""
+
+msgctxt "#32060"
+msgid "Customise Apps"
+msgstr ""
+
+msgctxt "#32061"
+msgid "Customise System"
+msgstr ""
+
+msgctxt "#32062"
+msgid "Submenus"
+msgstr ""
+
+msgctxt "#32063"
+msgid "Youtube"
+msgstr ""
+
+msgctxt "#32064"
+msgid "Widgets Bottom"
+msgstr ""
+
+msgctxt "#32065"
+msgid "Directed by"
+msgstr ""
+
+msgctxt "#32066"
+msgid "Rew"
+msgstr ""
+
+msgctxt "#32067"
+msgid "Fwd"
+msgstr ""
+
+msgctxt "#32068"
+msgid "2x"
+msgstr ""
+
+msgctxt "#32069"
+msgid "4x"
+msgstr ""
+
+msgctxt "#32070"
+msgid "8x"
+msgstr ""
+
+msgctxt "#32071"
+msgid "16x"
+msgstr ""
+
+msgctxt "#32072"
+msgid "n/a"
+msgstr ""
+
+msgctxt "#32073"
+msgid "divx"
+msgstr ""
+
+msgctxt "#32074"
+msgid "Top Rated"
+msgstr ""
+
+msgctxt "#32075"
+msgid "Family"
+msgstr ""
+
+msgctxt "#32076"
+msgid "Specials"
+msgstr ""
+
+msgctxt "#32077"
+msgid "Skin Settings"
+msgstr ""
+
+msgctxt "#32078"
+msgid "Home"
+msgstr ""
+
+msgctxt "#32079"
+msgid "PG-13"
+msgstr ""
+
+msgctxt "#32080"
+msgid "Video Files"
+msgstr ""
+
+msgctxt "#32081"
+msgid "My Videos"
+msgstr ""
+
+msgctxt "#32082"
+msgid "New Released"
+msgstr ""
+
+msgctxt "#32083"
+msgid "Broadcast"
+msgstr ""
+
+msgctxt "#32084"
+msgid "Favourites"
+msgstr ""
+
+msgctxt "#32085"
+msgid "New Releases"
+msgstr ""
+
+msgctxt "#32086"
+msgid "min."
+msgstr ""
+
+msgctxt "#32087"
+msgid "• Set Favourite"
+msgstr ""
+
+msgctxt "#32088"
+msgid "Watch next Episode"
+msgstr ""
+
+msgctxt "#32089"
+msgid "Music Clips"
+msgstr ""
+
+msgctxt "#32090"
+msgid "Episodes"
+msgstr ""
+
+msgctxt "#32091"
+msgid "Episode"
+msgstr ""
+
+msgctxt "#32092"
+msgid "mpeg"
+msgstr ""
+
+msgctxt "#32093"
+msgid "TV Guide"
+msgstr ""
+
+msgctxt "#32094"
+msgid "Next Up"
+msgstr ""
+
+msgctxt "#32095"
+msgid "Recently Recorded"
+msgstr ""
+
+msgctxt "#32096"
+msgid "Search for results"
+msgstr ""
+
+msgctxt "#32097"
+msgid "Set Timer"
+msgstr ""
+
+msgctxt "#32098"
+msgid "EPG Timeline"
+msgstr ""
+
+msgctxt "#32099"
+msgid "TV"
+msgstr ""
+
+msgctxt "#32100"
+msgid "Radio"
+msgstr ""
+
+msgctxt "#32101"
+msgid "My Channels"
+msgstr ""
+
+msgctxt "#32102"
+msgid "Featured"
+msgstr ""
+
+msgctxt "#32103"
+msgid "Last Played"
+msgstr ""
+
+msgctxt "#32104"
+msgid "New Item"
+msgstr ""
+
+msgctxt "#32105"
+msgid "Addon 1"
+msgstr ""
+
+msgctxt "#32106"
+msgid "Addon 2"
+msgstr ""
+
+msgctxt "#32107"
+msgid "Addon 3"
+msgstr ""
+
+msgctxt "#32108"
+msgid "• Configure Item"
+msgstr ""
+
+msgctxt "#32109"
+msgid "• Set Addon"
+msgstr ""
+
+msgctxt "#32110"
+msgid "Pressure"
+msgstr ""
+
+msgctxt "#32111"
+msgid "Weather Conditions"
+msgstr ""
+
+msgctxt "#32112"
+msgid "Data Provider"
+msgstr ""
+
+msgctxt "#32113"
+msgid "Weather Now"
+msgstr ""
+
+msgctxt "#32114"
+msgid "Settings"
+msgstr ""
+
+msgctxt "#32115"
+msgid "Update"
+msgstr ""
+
+msgctxt "#32116"
+msgid "Root"
+msgstr ""
+
+msgctxt "#32117"
+msgid "You Tube"
+msgstr ""
+
+msgctxt "#32118"
+msgid "TV Channels"
+msgstr ""
+
+msgctxt "#32119"
+msgid "Radio Channels"
+msgstr ""
+
+msgctxt "#32120"
+msgid "TV Guide"
+msgstr ""
+
+msgctxt "#32121"
+msgid "Recordings"
+msgstr ""
+
+msgctxt "#32122"
+msgid "Timer"
+msgstr ""
+
+msgctxt "#32123"
+msgid "Results"
+msgstr ""
+
+msgctxt "#32124"
+msgid "Favourites"
+msgstr ""
+
+msgctxt "#32125"
+msgid "Recommended"
+msgstr ""
+
+msgctxt "#32126"
+msgid "Top 100 Songs"
+msgstr ""
+
+msgctxt "#32127"
+msgid "Shutdown"
+msgstr ""
+
+msgctxt "#32128"
+msgid "Recent Albums"
+msgstr ""
+
+msgctxt "#32129"
+msgid "Last Played"
+msgstr ""
+
+msgctxt "#32130"
+msgid "Unwatched"
+msgstr ""
+
+msgctxt "#32131"
+msgid "Top Rated"
+msgstr ""
+
+msgctxt "#32132"
+msgid "Albums"
+msgstr ""
+
+msgctxt "#32133"
+msgid "On Demand"
+msgstr ""
+
+msgctxt "#32134"
+msgid "Stream"
+msgstr ""
+
+msgctxt "#32135"
+msgid "Last Played"
+msgstr ""
+
+
+
+msgctxt "#32136"
+msgid "Item 01"
+msgstr ""
+
+msgctxt "#32137"
+msgid "Item 02"
+msgstr ""
+
+msgctxt "#32138"
+msgid "Item 03"
+msgstr ""
+
+msgctxt "#32139"
+msgid "Item 04"
+msgstr ""
+
+msgctxt "#32140"
+msgid "Item 05"
+msgstr ""
+
+msgctxt "#32141"
+msgid "Item 06"
+msgstr ""
+
+msgctxt "#32142"
+msgid "Item 07"
+msgstr ""
+
+msgctxt "#32143"
+msgid "Item 08"
+msgstr ""
+
+msgctxt "#32144"
+msgid "Item 09"
+msgstr ""
+
+msgctxt "#32145"
+msgid "Item 10"
+msgstr ""
+
+msgctxt "#32146"
+msgid "Item 11"
+msgstr ""
+
+msgctxt "#32147"
+msgid "Item 12"
+msgstr ""
+
+msgctxt "#32148"
+msgid "Item 13"
+msgstr ""
+
+msgctxt "#32149"
+msgid "Playlist Content Episodes"
+msgstr ""
+
+msgctxt "#32150"
+msgid "Playlist Content TV Shows"
+msgstr ""
+
+msgctxt "#32151"
+msgid "• Set Playlist"
+msgstr ""
+
+msgctxt "#32152"
+msgid "• Hide Item"
+msgstr ""
+
+msgctxt "#32153"
+msgid "• Replace Item"
+msgstr ""
+
+msgctxt "#32154"
+msgid "• Set Path"
+msgstr ""
+
+msgctxt "#32155"
+msgid "• Set Label"
+msgstr ""
+
+msgctxt "#32156"
+msgid "• Set Icon"
+msgstr ""
+
+msgctxt "#32157"
+msgid "Configure"
+msgstr ""
+
+msgctxt "#32158"
+msgid "Items Bottom"
+msgstr ""
+
+msgctxt "#32159"
+msgid "Item 1"
+msgstr ""
+
+msgctxt "#32160"
+msgid "Item 2"
+msgstr ""
+
+msgctxt "#32161"
+msgid "Item 3"
+msgstr ""
+
+msgctxt "#32162"
+msgid "Item 4"
+msgstr ""
+
+msgctxt "#32163"
+msgid "Item 5"
+msgstr ""
+
+msgctxt "#32164"
+msgid "32x"
+msgstr ""
+
+msgctxt "#32165"
+msgid "Refresh"
+msgstr ""
+
+msgctxt "#32166"
+msgid "Items"
+msgstr ""
+
+msgctxt "#32167"
+msgid "Sorry, no info avaiable"
+msgstr ""
+
+msgctxt "#32168"
+msgid "Customise Pictures"
+msgstr ""
+
+msgctxt "#32169"
+msgid "Pictures"
+msgstr ""
+
+msgctxt "#32170"
+msgid "System"
+msgstr ""
+
+msgctxt "#32171"
+msgid "Performance"
+msgstr ""
+
+msgctxt "#32172"
+msgid "Logged In"
+msgstr ""
+
+msgctxt "#32173"
+msgid "IP:"
+msgstr ""
+
+msgctxt "#32174"
+msgid "MAC:"
+msgstr ""
+
+msgctxt "#32175"
+msgid "Gate:"
+msgstr ""
+
+msgctxt "#32176"
+msgid "Sub:"
+msgstr ""
+
+msgctxt "#32177"
+msgid "Addon Browser"
+msgstr ""
+
+msgctxt "#32178"
+msgid "Status"
+msgstr ""
+
+msgctxt "#32179"
+msgid "Artist Information"
+msgstr ""
+
+msgctxt "#32180"
+msgid "Album Information"
+msgstr ""
+
+msgctxt "#32181"
+msgid "Artist on YouTube"
+msgstr ""
+
+msgctxt "#32182"
+msgid "Albums on YouTube"
+msgstr ""
+
+msgctxt "#32183"
+msgid "by"
+msgstr ""
+
+msgctxt "#32184"
+msgid "Contextual Menu"
+msgstr ""
+
+msgctxt "#32185"
+msgid "Videos on YouTube"
+msgstr ""
+
+msgctxt "#32186"
+msgid "Total Seasons"
+msgstr ""
+
+msgctxt "#32187"
+msgid "Next Episode"
+msgstr ""
+
+msgctxt "#32188"
+msgid "Season"
+msgstr ""
+
+msgctxt "#32189"
+msgid " • "
+msgstr ""
+
+msgctxt "#32190"
+msgid "Directed by"
+msgstr ""
+
+msgctxt "#32191"
+msgid "p"
+msgstr ""
+
+msgctxt "#32192"
+msgid "Minutes"
+msgstr ""
+
+msgctxt "#32193"
+msgid "Explore"
+msgstr ""
+
+msgctxt "#32194"
+msgid "Last Watched"
+msgstr ""
+
+msgctxt "#32195"
+msgid "Watched"
+msgstr ""
+
+msgctxt "#32196"
+msgid "Custom PL"
+msgstr ""
+
+msgctxt "#32197"
+msgid "Empty"
+msgstr ""
+
+msgctxt "#32198"
+msgid "Humidity"
+msgstr ""
+
+msgctxt "#32199"
+msgid "hPa"
+msgstr ""
+
+msgctxt "#32200"
+msgid "TV Shows"
+msgstr ""
+
+msgctxt "#32201"
+msgid "Songs"
+msgstr ""
+
+msgctxt "#32202"
+msgid "Artists"
+msgstr ""
+
+msgctxt "#32203"
+msgid "Loading ..."
+msgstr ""
+
+msgctxt "#32204"
+msgid "Released"
+msgstr ""
+
+msgctxt "#32205"
+msgid "Audio"
+msgstr ""
+
+msgctxt "#32206"
+msgid "S"
+msgstr ""
+
+msgctxt "#32207"
+msgid "E"
+msgstr ""
+
+msgctxt "#32208"
+msgid "Podcast"
+msgstr ""
+
+msgctxt "#32209"
+msgid "Files"
+msgstr ""
+
+msgctxt "#32210"
+msgid "Programs"
+msgstr ""
+
+msgctxt "#32211"
+msgid "Games"
+msgstr ""
+
+msgctxt "#32212"
+msgid "My Apps"
+msgstr ""
+
+msgctxt "#32213"
+msgid "Information"
+msgstr ""
+
+msgctxt "#32214"
+msgid "Play Trailer"
+msgstr ""
+
+msgctxt "#32215"
+msgid "Close"
+msgstr ""
+
+msgctxt "#32216"
+msgid "Seasons"
+msgstr ""
+
+msgctxt "#32217"
+msgid "Music Library"
+msgstr ""
+
+msgctxt "#32218"
+msgid "Please Wait"
+msgstr ""
+
+msgctxt "#32219"
+msgid "Default:"
+msgstr ""
+
+msgctxt "#32220"
+msgid "Replace or Hide Items"
+msgstr ""
+
+msgctxt "#32221"
+msgid "Smart Playlist Editor"
+msgstr ""
+
+msgctxt "#32222"
+msgid "Smart Playlist Rule"
+msgstr ""
+
+msgctxt "#32223"
+msgid "Music Addons"
+msgstr ""
+
+msgctxt "#32224"
+msgid "Video Addons"
+msgstr ""
+
+msgctxt "#32225"
+msgid "Picture Addons"
+msgstr ""
+
+msgctxt "#32226"
+msgid "Program Addons"
+msgstr ""
+
+msgctxt "#32227"
+msgid "Profile Settings"
+msgstr ""
+
+msgctxt "#32228"
+msgid "Rated"
+msgstr ""
+
+msgctxt "#32229"
+msgid "Rating"
+msgstr ""
+
+msgctxt "#32230"
+msgid "Writer"
+msgstr ""
+
+msgctxt "#32231"
+msgid "Country"
+msgstr ""
+
+msgctxt "#32232"
+msgid "Duration"
+msgstr ""
+
+msgctxt "#32233"
+msgid "Video"
+msgstr ""
+
+msgctxt "#32234"
+msgid "Audio"
+msgstr ""
+
+msgctxt "#32235"
+msgid "Language"
+msgstr ""
+
+msgctxt "#32236"
+msgid "Role"
+msgstr ""
+
+msgctxt "#32237"
+msgid "Version"
+msgstr ""
+
+msgctxt "#32238"
+msgid "Addon Description"
+msgstr ""
+
+msgctxt "#32239"
+msgid "Disclaimer"
+msgstr ""
+
+msgctxt "#32240"
+msgid "No Rating"
+msgstr ""
+
+msgctxt "#32241"
+msgid "HD"
+msgstr ""
+
+msgctxt "#32242"
+msgid "SD"
+msgstr ""
+
+msgctxt "#32243"
+msgid "Next Tracks:"
+msgstr ""
+
+msgctxt "#32244"
+msgid "Please wait while loading"
+msgstr ""
+
+msgctxt "#32245"
+msgid "CinemaVision"
+msgstr ""
+
+#Fuse

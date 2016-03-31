@@ -107,15 +107,18 @@
 					<control type="group">
 					<include>OpenClose4</include>
 					
-					<!-- <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="in" delay="0" condition="substring(listitem.label,..,left)">Conditional</animation> -->
+					<!-- <visible>!ControlGroup(9000).HasFocus(510)</visible> -->
 					
 					<control type="grouplist">
 					<animation type="Visible" reversible="false">
-					<effect type="fade" start="0" end="100" time="400" tween="quadratic" easing="out" />
+					<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+					<effect type="zoom" start="85" end="100" time="300" center="auto" tween="sine" easing="out" />
 					</animation>
 					<animation type="Hidden" reversible="false">
-					<effect type="fade" start="100" end="0" time="400" tween="quadratic" easing="in" />
+					<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+					<effect type="zoom" start="100" end="115" time="200" center="auto" tween="sine" easing="out" />
 					</animation>
+					
 					<left>0</left>
 					<top>0</top>
 					<heigth>510</heigth>

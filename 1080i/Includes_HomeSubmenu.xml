@@ -1369,7 +1369,7 @@
 					<!-- MUSIC SUBMENU -->
 					
 					<control type="grouplist">
-					<description>TV</description>
+					<description>Music</description>
 					<usecontrolcoords>true</usecontrolcoords> 
 					<posx>116</posx>
 					<posy>11</posy>

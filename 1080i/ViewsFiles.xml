@@ -43,6 +43,16 @@
 					<posy>0</posy>
 					<width>100</width>
 					<height>100</height>
+					<texture fallback="DefaultAddonNone.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>[Container.Content(Movies) + !Window.IsMedia]</visible>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
 					<texture background="true">$INFO[Listitem.Label,special://skin/extras/moviegenrethumb/,.jpg]</texture>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<visible>Container.Content(Genres)</visible>
@@ -63,7 +73,7 @@
 					<posy>0</posy>
 					<width>100</width>
 					<height>100</height>
-					<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
+					<texture>resource://resource.images.studios.white/$INFO[ListItem.Label,,.png]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>Container.Content(Studios)</visible>
 					</control>
@@ -127,6 +137,16 @@
 					<posy>0</posy>
 					<width>100</width>
 					<height>100</height>
+					<texture fallback="DefaultAddonNone.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<visible>[Container.Content(Movies) + !Window.IsMedia]</visible>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
 					<texture background="true">$INFO[Listitem.Label,special://skin/extras/moviegenrethumb/,.jpg]</texture>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<visible>Container.Content(Genres)</visible>
@@ -147,7 +167,7 @@
 					<posy>0</posy>
 					<width>100</width>
 					<height>100</height>
-					<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
+					<texture>resource://resource.images.studios.white/$INFO[ListItem.Label,,.png]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>Container.Content(Studios)</visible>
 					</control>

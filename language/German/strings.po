@@ -1,11 +1,10 @@
 # XBMC Media Center language file
-# Addon Name: Confluence
-# Addon id: skin.confluence
-# Addon version: 2.1.3
-# Addon Provider: Jezz_X, Team XBMC
+# Addon Name: Fuse
+# Addon id: skin.fuse
+# Addon Provider: butchabay
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main Translation Project (Frodo)\n"
+"Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -371,7 +370,7 @@ msgstr "Auflösung"
 
 msgctxt "#31328"
 msgid "Recently Added"
-msgstr "Kürzlich Hinzugefügt"
+msgstr "Neu Hinzugefügt"
 
 msgctxt "#31329"
 msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
@@ -540,3 +539,871 @@ msgstr "Lade Wetterbericht..."
 msgctxt "#31910"
 msgid "Map & Alerts"
 msgstr "Karte & Alarme"
+
+#empty strings from id 31911 to 31949
+
+msgctxt "#31950"
+msgid "Weather"
+msgstr "Wetter"
+
+msgctxt "#31951"
+msgid "Pictures"
+msgstr "Bilder"
+
+msgctxt "#31952"
+msgid "Live TV"
+msgstr "Live TV"
+
+msgctxt "#31953"
+msgid "Videos"
+msgstr "Videos"
+
+msgctxt "#31954"
+msgid "Movies"
+msgstr "Filme"
+
+msgctxt "#31955"
+msgid "Tv shows"
+msgstr "Serien"
+
+msgctxt "#31956"
+msgid "Music"
+msgstr "Musik"
+
+msgctxt "#31957"
+msgid "Programms"
+msgstr "Programme"
+
+msgctxt "#31958"
+msgid "Play Disc"
+msgstr "Disc Abspielen"
+
+msgctxt "#31959"
+msgid "System"
+msgstr "System"
+
+#Fuse Strings
+
+msgctxt "#32041"
+msgid "Apps & More"
+msgstr "Apps & Mehr"
+
+msgctxt "#32042"
+msgid "Live TV"
+msgstr "Live TV"
+
+msgctxt "#32043"
+msgid "Now Playing"
+msgstr "Aktuelle Wiedergabe"
+
+msgctxt "#32044"
+msgid "Spotlight"
+msgstr "Empfohlen"
+
+msgctxt "#32045"
+msgid "Recommended"
+msgstr "Empfohlen"
+
+msgctxt "#32046"
+msgid "High Definition"
+msgstr "HD"
+
+msgctxt "#32047"
+msgid "Documentary"
+msgstr "Dokus"
+
+msgctxt "#32048"
+msgid "Trailers"
+msgstr "Trailers"
+
+msgctxt "#32049"
+msgid "Collections"
+msgstr "Sets"
+
+msgctxt "#32050"
+msgid "Online"
+msgstr "Online"
+
+msgctxt "#32051"
+msgid "Sorted by:"
+msgstr "Sortiert nach:"
+
+msgctxt "#32052"
+msgid "Addons"
+msgstr "Addons"
+
+msgctxt "#32053"
+msgid "Home Menu"
+msgstr "Home-Menü"
+
+msgctxt "#32054"
+msgid "Customise Movies"
+msgstr "Kategorie Filme anpassen"
+
+msgctxt "#32055"
+msgid "Customise TV Shows"
+msgstr "Kategorie Serien anpassen"
+
+msgctxt "#32056"
+msgid "Customise Live TV"
+msgstr "Kategorie Live TV anpassen"
+
+msgctxt "#32057"
+msgid "Customise Videos"
+msgstr "Kategorie Videos anpassen"
+
+msgctxt "#32058"
+msgid "Customise Music"
+msgstr "Kategorie Music anpassen"
+
+msgctxt "#32059"
+msgid "Customise Weather"
+msgstr "Kategorie Wetter anpassen"
+
+msgctxt "#32060"
+msgid "Customise Apps"
+msgstr "Kategorie Apps anpassen"
+
+msgctxt "#32061"
+msgid "Customise System"
+msgstr "Kategorie System anpassen"
+
+msgctxt "#32062"
+msgid "Submenus"
+msgstr "Unter-Menü"
+
+msgctxt "#32063"
+msgid "Youtube"
+msgstr "Youtube"
+
+msgctxt "#32064"
+msgid "Widgets Bottom"
+msgstr "Untere Widgets"
+
+msgctxt "#32065"
+msgid "Directed by"
+msgstr "Regisseur:"
+
+msgctxt "#32066"
+msgid "Rew"
+msgstr ""
+
+msgctxt "#32067"
+msgid "Fwd"
+msgstr ""
+
+msgctxt "#32068"
+msgid "2x"
+msgstr ""
+
+msgctxt "#32069"
+msgid "4x"
+msgstr ""
+
+msgctxt "#32070"
+msgid "8x"
+msgstr ""
+
+msgctxt "#32071"
+msgid "16x"
+msgstr ""
+
+msgctxt "#32072"
+msgid "n/a"
+msgstr ""
+
+msgctxt "#32073"
+msgid "divx"
+msgstr ""
+
+msgctxt "#32074"
+msgid "Top Rated"
+msgstr "Bestbewertet"
+
+msgctxt "#32075"
+msgid "Family"
+msgstr "Familie"
+
+msgctxt "#32076"
+msgid "Specials"
+msgstr ""
+
+msgctxt "#32077"
+msgid "Skin Settings"
+msgstr "Skin Einstellungen"
+
+msgctxt "#32078"
+msgid "Home"
+msgstr "Home"
+
+msgctxt "#32079"
+msgid "PG-13"
+msgstr ""
+
+msgctxt "#32080"
+msgid "Video Files"
+msgstr "Video Dateien"
+
+msgctxt "#32081"
+msgid "My Videos"
+msgstr "Meine Videos"
+
+msgctxt "#32082"
+msgid "New Released"
+msgstr "Neu"
+
+msgctxt "#32083"
+msgid "Broadcast"
+msgstr "Dokus"
+
+msgctxt "#32084"
+msgid "Favourites"
+msgstr "Favoriten"
+
+msgctxt "#32085"
+msgid "New Releases"
+msgstr "Neu"
+
+msgctxt "#32086"
+msgid "min."
+msgstr "Min."
+
+msgctxt "#32087"
+msgid "• Set Favourite"
+msgstr "• Setze Favorit"
+
+msgctxt "#32088"
+msgid "Watch next Episode"
+msgstr "Nächste Episode"
+
+msgctxt "#32089"
+msgid "Music Clips"
+msgstr ""
+
+msgctxt "#32090"
+msgid "Episodes"
+msgstr "Episoden"
+
+msgctxt "#32091"
+msgid "Episode"
+msgstr "Episode"
+
+msgctxt "#32092"
+msgid "mpeg"
+msgstr ""
+
+msgctxt "#32093"
+msgid "TV Guide"
+msgstr ""
+
+msgctxt "#32094"
+msgid "Next Up"
+msgstr "Als Nächstes"
+
+msgctxt "#32095"
+msgid "Recently Recorded"
+msgstr "Kürzlich aufgenommen"
+
+msgctxt "#32096"
+msgid "Search for results"
+msgstr "Resultate suchen"
+
+msgctxt "#32097"
+msgid "Set Timer"
+msgstr "Setze Timer"
+
+msgctxt "#32098"
+msgid "EPG Timeline"
+msgstr "EPG Zeitlinie"
+
+msgctxt "#32099"
+msgid "TV"
+msgstr "TV"
+
+msgctxt "#32100"
+msgid "Radio"
+msgstr "Radio"
+
+msgctxt "#32101"
+msgid "My Channels"
+msgstr "Meine Kanäle"
+
+msgctxt "#32102"
+msgid "Featured"
+msgstr "Empfohlen"
+
+msgctxt "#32103"
+msgid "Last Played"
+msgstr "Zuletzt gespielt"
+
+msgctxt "#32104"
+msgid "New Item"
+msgstr "Neues Element"
+
+msgctxt "#32105"
+msgid "Addon 1"
+msgstr ""
+
+msgctxt "#32106"
+msgid "Addon 2"
+msgstr ""
+
+msgctxt "#32107"
+msgid "Addon 3"
+msgstr ""
+
+msgctxt "#32108"
+msgid "• Configure Item"
+msgstr "Konfiguriere Element"
+
+msgctxt "#32109"
+msgid "• Set Addon"
+msgstr "• Setze Addon"
+
+msgctxt "#32110"
+msgid "Pressure"
+msgstr ""
+
+msgctxt "#32111"
+msgid "Weather Conditions"
+msgstr ""
+
+msgctxt "#32112"
+msgid "Data Provider"
+msgstr "Datenanbieter"
+
+msgctxt "#32113"
+msgid "Weather Now"
+msgstr "Wetter aktuell"
+
+msgctxt "#32114"
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgctxt "#32115"
+msgid "Update"
+msgstr ""
+
+msgctxt "#32116"
+msgid "Root"
+msgstr ""
+
+msgctxt "#32117"
+msgid "You Tube"
+msgstr ""
+
+msgctxt "#32118"
+msgid "TV Channels"
+msgstr "TV Kanäle"
+
+msgctxt "#32119"
+msgid "Radio Channels"
+msgstr "Radio Kanäle"
+
+msgctxt "#32120"
+msgid "TV Guide"
+msgstr ""
+
+msgctxt "#32121"
+msgid "Recordings"
+msgstr "Aufnahmen"
+
+msgctxt "#32122"
+msgid "Timer"
+msgstr ""
+
+msgctxt "#32123"
+msgid "Results"
+msgstr "Ergebnisse"
+
+msgctxt "#32124"
+msgid "Favourites"
+msgstr "Favoriten"
+
+msgctxt "#32125"
+msgid "Recommended"
+msgstr "Empfohlen"
+
+msgctxt "#32126"
+msgid "Top 100 Songs"
+msgstr ""
+
+msgctxt "#32127"
+msgid "Shutdown"
+msgstr "Herunterfahren"
+
+msgctxt "#32128"
+msgid "Recent Albums"
+msgstr "Neue Alben"
+
+msgctxt "#32129"
+msgid "Last Played"
+msgstr "Zuletzt gespielt"
+
+msgctxt "#32130"
+msgid "Unwatched"
+msgstr "Ungesehen"
+
+msgctxt "#32131"
+msgid "Top Rated"
+msgstr "Bestbewertet"
+
+msgctxt "#32132"
+msgid "Albums"
+msgstr "Alben"
+
+msgctxt "#32133"
+msgid "On Demand"
+msgstr ""
+
+msgctxt "#32134"
+msgid "Stream"
+msgstr ""
+
+msgctxt "#32135"
+msgid "Last Played"
+msgstr "Zuletzt gespielt"
+
+
+
+msgctxt "#32136"
+msgid "Item 01"
+msgstr "Element 01"
+
+msgctxt "#32137"
+msgid "Item 02"
+msgstr "Element 02"
+
+msgctxt "#32138"
+msgid "Item 03"
+msgstr "Element 03"
+
+msgctxt "#32139"
+msgid "Item 04"
+msgstr "Element 04"
+
+msgctxt "#32140"
+msgid "Item 05"
+msgstr "Element 05"
+
+msgctxt "#32141"
+msgid "Item 06"
+msgstr "Element 06"
+
+msgctxt "#32142"
+msgid "Item 07"
+msgstr "Element 07"
+
+msgctxt "#32143"
+msgid "Item 08"
+msgstr "Element 08"
+
+msgctxt "#32144"
+msgid "Item 09"
+msgstr "Element 09"
+
+msgctxt "#32145"
+msgid "Item 10"
+msgstr "Element 10"
+
+msgctxt "#32146"
+msgid "Item 11"
+msgstr "Element 11"
+
+msgctxt "#32147"
+msgid "Item 12"
+msgstr "Element 12"
+
+msgctxt "#32148"
+msgid "Item 13"
+msgstr "Element 13"
+
+msgctxt "#32149"
+msgid "Playlist Content Episodes"
+msgstr "Wiedergabeliste enthält Episoden"
+
+msgctxt "#32150"
+msgid "Playlist Content TV Shows"
+msgstr "Wiedergabeliste enthält Serien"
+
+msgctxt "#32151"
+msgid "• Set Playlist"
+msgstr "• Setze Playlist"
+
+msgctxt "#32152"
+msgid "• Hide Item"
+msgstr "• Deaktiviere Element"
+
+msgctxt "#32153"
+msgid "• Replace Item"
+msgstr "• Ersetze Element"
+
+msgctxt "#32154"
+msgid "• Set Path"
+msgstr "• Setze Pfad"
+
+msgctxt "#32155"
+msgid "• Set Label"
+msgstr "• Setze Titel"
+
+msgctxt "#32156"
+msgid "• Set Icon"
+msgstr "• Setze Icon"
+
+msgctxt "#32157"
+msgid "Configure"
+msgstr "Konfiguriere"
+
+msgctxt "#32158"
+msgid "Items Bottom"
+msgstr ""
+
+msgctxt "#32159"
+msgid "Item 1"
+msgstr ""
+
+msgctxt "#32160"
+msgid "Item 2"
+msgstr ""
+
+msgctxt "#32161"
+msgid "Item 3"
+msgstr ""
+
+msgctxt "#32162"
+msgid "Item 4"
+msgstr ""
+
+msgctxt "#32163"
+msgid "Item 5"
+msgstr ""
+
+msgctxt "#32164"
+msgid "32x"
+msgstr ""
+
+msgctxt "#32165"
+msgid "Refresh"
+msgstr "Aktualisiere"
+
+msgctxt "#32166"
+msgid "Items"
+msgstr "Elemente"
+
+msgctxt "#32167"
+msgid "Sorry, no info avaiable"
+msgstr "Sorry, keine Info erhalten"
+
+msgctxt "#32168"
+msgid "Customise Pictures"
+msgstr "Kategorie Bilder anpassen"
+
+msgctxt "#32169"
+msgid "Pictures"
+msgstr "Bilder"
+
+msgctxt "#32170"
+msgid "System"
+msgstr "System"
+
+msgctxt "#32171"
+msgid "Performance"
+msgstr "Leistung"
+
+msgctxt "#32172"
+msgid "Logged In"
+msgstr "Eingeloggt"
+
+msgctxt "#32173"
+msgid "IP:"
+msgstr ""
+
+msgctxt "#32174"
+msgid "MAC:"
+msgstr ""
+
+msgctxt "#32175"
+msgid "Gate:"
+msgstr ""
+
+msgctxt "#32176"
+msgid "Sub:"
+msgstr ""
+
+msgctxt "#32177"
+msgid "Addon Browser"
+msgstr ""
+
+msgctxt "#32178"
+msgid "Status"
+msgstr ""
+
+msgctxt "#32179"
+msgid "Artist Information"
+msgstr "Künstler Information"
+
+msgctxt "#32180"
+msgid "Album Information"
+msgstr ""
+
+msgctxt "#32181"
+msgid "Artist on YouTube"
+msgstr "Künstler auf Youtube"
+
+msgctxt "#32182"
+msgid "Albums on YouTube"
+msgstr "Alben auf Youtube"
+
+msgctxt "#32183"
+msgid "by"
+msgstr "von"
+
+msgctxt "#32184"
+msgid "Contextual Menu"
+msgstr "Context Menü"
+
+msgctxt "#32185"
+msgid "Videos on YouTube"
+msgstr "Videos auf Youtube"
+
+msgctxt "#32186"
+msgid "Total Seasons"
+msgstr "Anzahl Staffeln"
+
+msgctxt "#32187"
+msgid "Next Episode"
+msgstr "Nächste Episode"
+
+msgctxt "#32188"
+msgid "Season"
+msgstr "Staffel"
+
+msgctxt "#32189"
+msgid " • "
+msgstr ""
+
+msgctxt "#32190"
+msgid "Directed by"
+msgstr "Regisseur:"
+
+msgctxt "#32191"
+msgid "p"
+msgstr ""
+
+msgctxt "#32192"
+msgid "Minutes"
+msgstr "Minuten"
+
+msgctxt "#32193"
+msgid "Explore"
+msgstr ""
+
+msgctxt "#32194"
+msgid "Last Watched"
+msgstr "Zuletzt gesehen"
+
+msgctxt "#32195"
+msgid "Watched"
+msgstr "Gesehen"
+
+msgctxt "#32196"
+msgid "Custom PL"
+msgstr ""
+
+msgctxt "#32197"
+msgid "Empty"
+msgstr "Leer"
+
+msgctxt "#32198"
+msgid "Humidity"
+msgstr "Feuchte"
+
+msgctxt "#32199"
+msgid "hPa"
+msgstr ""
+
+msgctxt "#32200"
+msgid "TV Shows"
+msgstr "Serien"
+
+msgctxt "#32201"
+msgid "Songs"
+msgstr ""
+
+msgctxt "#32202"
+msgid "Artists"
+msgstr "Künstler"
+
+msgctxt "#32203"
+msgid "Loading ..."
+msgstr "Lädt ..."
+
+msgctxt "#32204"
+msgid "Released"
+msgstr "Veröffentlicht"
+
+msgctxt "#32205"
+msgid "Audio"
+msgstr ""
+
+msgctxt "#32206"
+msgid "S"
+msgstr ""
+
+msgctxt "#32207"
+msgid "E"
+msgstr ""
+
+msgctxt "#32208"
+msgid "Podcast"
+msgstr ""
+
+msgctxt "#32209"
+msgid "Files"
+msgstr "Dateien"
+
+msgctxt "#32210"
+msgid "Programs"
+msgstr "Programme"
+
+msgctxt "#32211"
+msgid "Games"
+msgstr "Spiele"
+
+msgctxt "#32212"
+msgid "My Apps"
+msgstr "Meine Apps"
+
+msgctxt "#32213"
+msgid "Information"
+msgstr ""
+
+msgctxt "#32214"
+msgid "Play Trailer"
+msgstr "Spiele Trailer ab"
+
+msgctxt "#32215"
+msgid "Close"
+msgstr "Schliesse"
+
+msgctxt "#32216"
+msgid "Seasons"
+msgstr "Staffeln"
+
+msgctxt "#32217"
+msgid "Music Library"
+msgstr "Music Datenbank"
+
+msgctxt "#32218"
+msgid "Please Wait"
+msgstr "Bitte warten"
+
+msgctxt "#32219"
+msgid "Default:"
+msgstr ""
+
+msgctxt "#32220"
+msgid "Replace or Hide Items"
+msgstr "Ersetze oder deaktiviere Elemente"
+
+msgctxt "#32221"
+msgid "Smart Playlist Editor"
+msgstr ""
+
+msgctxt "#32222"
+msgid "Smart Playlist Rule"
+msgstr ""
+
+msgctxt "#32223"
+msgid "Music Addons"
+msgstr "Musik Addons"
+
+msgctxt "#32224"
+msgid "Video Addons"
+msgstr ""
+
+msgctxt "#32225"
+msgid "Picture Addons"
+msgstr "Bilder Addons"
+
+msgctxt "#32226"
+msgid "Program Addons"
+msgstr "Programme"
+
+msgctxt "#32227"
+msgid "Profile Settings"
+msgstr "Einstllungen Profile"
+
+msgctxt "#32228"
+msgid "Rated"
+msgstr "Altersfreigabe"
+
+msgctxt "#32229"
+msgid "Rating"
+msgstr "Bewertung"
+
+msgctxt "#32230"
+msgid "Writer"
+msgstr "Autor"
+
+msgctxt "#32231"
+msgid "Country"
+msgstr "Land"
+
+msgctxt "#32232"
+msgid "Duration"
+msgstr "Dauer"
+
+msgctxt "#32233"
+msgid "Video"
+msgstr ""
+
+msgctxt "#32234"
+msgid "Audio"
+msgstr ""
+
+msgctxt "#32235"
+msgid "Language"
+msgstr "Sprache"
+
+msgctxt "#32236"
+msgid "Role"
+msgstr "Rolle"
+
+msgctxt "#32237"
+msgid "Version"
+msgstr ""
+
+msgctxt "#32238"
+msgid "Addon Description"
+msgstr "Addon Beschreibung"
+
+msgctxt "#32239"
+msgid "Disclaimer"
+msgstr ""
+
+msgctxt "#32240"
+msgid "No Rating"
+msgstr "Nicht bewertet"
+
+msgctxt "#32241"
+msgid "HD"
+msgstr ""
+
+msgctxt "#32242"
+msgid "SD"
+msgstr ""
+
+msgctxt "#32243"
+msgid "Next Tracks:"
+msgstr "Nächste Tracks:"
+
+msgctxt "#32244"
+msgid "Please wait while loading"
+msgstr "Lädt, bitte warten"
+
+msgctxt "#32245"
+msgid "CinemaVision"
+msgstr ""
+
+#Fuse

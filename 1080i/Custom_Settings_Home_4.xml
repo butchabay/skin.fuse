@@ -93,8 +93,8 @@
 					
 					<control type="button" id="503">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom500playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom500playlist,.xsp,special://profile/playlists/music/)</onclick>
 					<label2>$INFO[Skin.String(custom500playlist)]</label2>
 					<visible>Skin.HasSetting(custom500)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Music_Submenu_Item1)</visible>
@@ -138,8 +138,8 @@
 					
 					<control type="button" id="514">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom501playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom501playlist,.xsp,special://profile/playlists/music/)</onclick>
 					<label2>$INFO[Skin.String(custom501playlist)]</label2>
 					<visible>Skin.HasSetting(custom501)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Music_Submenu_Item2)</visible>
@@ -183,8 +183,8 @@
 					
 					<control type="button" id="524">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom502playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom502playlist,.xsp,special://profile/playlists/music/)</onclick>
 					<label2>$INFO[Skin.String(custom502playlist)]</label2>
 					<visible>Skin.HasSetting(custom502)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Music_Submenu_Item3)</visible>
@@ -228,8 +228,8 @@
 					
 					<control type="button" id="534">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom503playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom503playlist,.xsp,special://profile/playlists/music/)</onclick>
 					<label2>$INFO[Skin.String(custom503playlist)]</label2>
 					<visible>Skin.HasSetting(custom503)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Music_Submenu_Item4)</visible>
@@ -273,8 +273,8 @@
 					
 					<control type="button" id="544">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom504playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom504playlist,.xsp,special://profile/playlists/music/)</onclick>
 					<label2>$INFO[Skin.String(custom504playlist)]</label2>
 					<visible>Skin.HasSetting(custom504)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Music_Submenu_Item5)</visible>
@@ -318,8 +318,8 @@
 					
 					<control type="button" id="554">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom505playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom505playlist,.xsp,special://profile/playlists/music/)</onclick>
 					<label2>$INFO[Skin.String(custom505playlist)]</label2>
 					<visible>Skin.HasSetting(custom505)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Music_Submenu_Item6)</visible>
@@ -363,8 +363,8 @@
 					
 					<control type="button" id="564">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom506playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom506playlist,.xsp,special://profile/playlists/music/)</onclick>
 					<label2>$INFO[Skin.String(custom506playlist)]</label2>
 					<visible>Skin.HasSetting(custom506)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Music_Submenu_Item7)</visible>

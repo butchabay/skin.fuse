@@ -41,7 +41,7 @@
 					<onleft>noop</onleft>
 					<onright>noop</onright>
 					<onup>noop</onup>
-					<ondown>50</ondown>
+					<ondown>51</ondown>
 					<itemgap>85</itemgap>
 					<orientation>horizontal</orientation>
 					<include>OpenClose</include>
@@ -88,6 +88,38 @@
 					<visible>Container.Content(Movies)</visible>
 					<visible>Control.IsVisible(51)</visible>
 					</control>
+					
+					<!-- <control type="button" id="510">
+					<description>Similar Movies</description>
+					<allowhiddenfocus>false</allowhiddenfocus>
+					<posy>2</posy>
+					<width>auto</width>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>Title2</font>
+					<textcolor>home</textcolor>
+					<focusedcolor>accent</focusedcolor>
+					<label>Similar</label>
+					<onup>8098</onup>
+					<visible>Container.Content(Movies)</visible>
+					<visible>Control.IsVisible(51)</visible>
+					</control> -->
+					
+					<!-- <control type="button" id="510">
+					<description>Similar TVShows</description>
+					<posy>2</posy>
+					<width>auto</width>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>Title2</font>
+					<textcolor>home</textcolor>
+					<focusedcolor>accent</focusedcolor>
+					<label>Similar</label>
+					<onclick>SetFocus(51)</onclick>
+					<onclick>XBMC.ActivateWindow(10025,plugin://script.skin.helper.service/?action=similarshows&amp;imdbid=$INFO[ListItem.IMDBNumber]&amp;limit=50,return)</onclick> 
+					<visible>Container.Content(TVShows)</visible>
+					<visible>Control.IsVisible(51)</visible>
+					</control> -->
 
 					<control type="button" id="8">
 					<description>Search</description>
@@ -113,7 +145,6 @@
 					<textcolor>home</textcolor>
 					<focusedcolor>accent</focusedcolor>
 					<label>31112</label>
-					<!-- <onfocus>SetFocus(503)</onfocus> -->
 					<onclick>SetFocus(9001)</onclick>
 					</control>
 					</control>

@@ -5,12 +5,14 @@
 					</variable>
 					
 					<variable name="global_poster">
+					<value condition="[Container.Content(Movies) + !Window.IsMedia]">$INFO[Container(51).ListItem.Art(poster)]</value>
 					<value condition="Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets) | Container.Content(MusicVideos)">$INFO[Container(51).ListItem.Art(thumb)]</value>
 					<value condition="Container.Content(Episodes)">$INFO[Container(51).ListItem.Art(season.poster)]</value>
 					<value condition="Container.Content(Genres)">$INFO[Container(51).Listitem.Label,special://skin/extras/moviegenreposter/,.jpg]</value>
 					</variable>
 					
 					<variable name="global_poster_view50">
+					<value condition="[Container.Content(Movies) + !Window.IsMedia]">$INFO[Container(50).ListItem.Art(poster)]</value>
 					<value condition="Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets) | Container.Content(MusicVideos)">$INFO[Container(50).ListItem.Art(thumb)]</value>
 					<value condition="Container.Content(Episodes) + !Container.Content(Addons)">$INFO[Container(50).ListItem.Art(tvshow.poster)]</value>
 					<value condition="Container.Content(Genres)">$INFO[Container(50).Listitem.Label,special://skin/extras/moviegenreposter/,.jpg]</value>
@@ -151,10 +153,6 @@
 					<value condition="Control.HasFocus(8081)">$INFO[Window(Home).Property(SkinHelper.RecentMoviesBackground.poster)]</value>
 					<value condition="Control.HasFocus(8061)">$INFO[Window(Home).Property(SkinHelper.RecentMoviesBackground.poster)]</value>
 					
-					<!-- APPS -->
-					
-					<value condition="Control.HasFocus(8081)">$INFO[Window(Home).Property(SkinHelper.RecentMoviesBackground.poster)]</value>
-					<value condition="Control.HasFocus(8061)">$INFO[Window(Home).Property(SkinHelper.RecentMoviesBackground.poster)]</value>
 					
 					<!-- Music -->
 					
@@ -250,6 +248,30 @@
 					<value condition="Control.HasFocus(8101) + !IsEmpty(Container(8101).ListItem.VideoResolution) + IntegerGreaterThan(Container(8001).ListItem.videoresolution,719)">$LOCALIZE[32241] $INFO[Container(8101).ListItem.VideoResolution]$LOCALIZE[32191]</value>
 					<value condition="Control.HasFocus(8101) + !IsEmpty(Container(8101).ListItem.VideoResolution) + !IntegerGreaterThan(Container(8001).ListItem.videoresolution,719)">$LOCALIZE[32242] $INFO[Container(8101).ListItem.VideoResolution]$LOCALIZE[32191]</value>
 					</variable>
+					
+					<!-- SIMILAR MOVIES LABELS -->
+					
+					<variable name="similarmovies_years">
+					<value condition="Control.HasFocus(8098)">$INFO[Container(8098).ListItem.Year]</value>
+					</variable>
+					
+					<variable name="similarmovies_resolution">
+					<value condition="Control.HasFocus(8098) + !IsEmpty(Container(8098).ListItem.VideoResolution) + IntegerGreaterThan(Container(8098).ListItem.videoresolution,719)">$LOCALIZE[32241] $INFO[Container(8098).ListItem.VideoResolution]$LOCALIZE[32191]</value>
+					<value condition="Control.HasFocus(8098) + !IsEmpty(Container(8098).ListItem.VideoResolution) + !IntegerGreaterThan(Container(8098).ListItem.videoresolution,719)">$LOCALIZE[32242] $INFO[Container(8098).ListItem.VideoResolution]$LOCALIZE[32191]</value>
+					</variable>
+					
+					<variable name="similarmovies_duration">
+					<value condition="Control.HasFocus(8098) + !IsEmpty(Container(8098).ListItem.Duration)">$INFO[Container(8098).ListItem.Duration] $LOCALIZE[32192]</value>
+					</variable>
+					
+					<variable name="similarmovies_mpaa">
+					<value condition="Control.HasFocus(8098) + !IsEmpty(Container(8098).ListItem.mpaa)">$INFO[Container(8098).ListItem.mpaa]</value>
+					</variable>
+					
+					<variable name="similarmovies_rating">
+					<value condition="Control.HasFocus(8098) + !IsEmpty(Container(8098).ListItem.Rating)">$INFO[Container(8098).ListItem.Rating]</value>
+					</variable>
+					
 					
 					<!-- PLAYER LABELS -->
 					

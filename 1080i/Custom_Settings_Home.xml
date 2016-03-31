@@ -93,8 +93,8 @@
 					
 					<control type="button" id="103">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom100playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom100playlist,.xsp,special://profile/playlists/video/)</onclick>
 					<label2>$INFO[Skin.String(custom100playlist)]</label2>
 					<visible>Skin.HasSetting(custom100)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Movies_Submenu_Item1)</visible>
@@ -138,8 +138,8 @@
 					
 					<control type="button" id="114">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom101playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom101playlist,.xsp,special://profile/playlists/video/)</onclick>
 					<label2>$INFO[Skin.String(custom101playlist)]</label2>
 					<visible>Skin.HasSetting(custom101)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Movies_Submenu_Item2)</visible>
@@ -184,8 +184,8 @@
 					
 					<control type="button" id="124">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom102playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom102playlist,.xsp,special://profile/playlists/video/)</onclick>
 					<label2>$INFO[Skin.String(custom102playlist)]</label2>
 					<visible>Skin.HasSetting(custom102)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Movies_Submenu_Item3)</visible>
@@ -229,8 +229,8 @@
 					
 					<control type="button" id="134">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom103playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom103playlist,.xsp,special://profile/playlists/video/)</onclick>
 					<label2>$INFO[Skin.String(custom103playlist)]</label2>
 					<visible>Skin.HasSetting(custom103)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Movies_Submenu_Item4)</visible>
@@ -283,8 +283,8 @@
 					
 					<control type="button" id="144">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom104playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom104playlist,.xsp,special://profile/playlists/video/)</onclick>
 					<label2>$INFO[Skin.String(custom104playlist)]</label2>
 					<visible>Skin.HasSetting(custom104)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Movies_Submenu_Item5)</visible>
@@ -328,8 +328,8 @@
 					
 					<control type="button" id="154">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom105playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom105playlist,.xsp,special://profile/playlists/video/)</onclick>
 					<label2>$INFO[Skin.String(custom105playlist)]</label2>
 					<visible>Skin.HasSetting(custom105)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Movies_Submenu_Item6)</visible>
@@ -373,8 +373,8 @@
 					
 					<control type="button" id="164">
 					<include>ListButtons2</include>
-					<label>$LOCALIZE[32154]</label>
-					<onclick>Skin.SetFile(custom106playlist)</onclick>
+					<label>$LOCALIZE[32151]</label>
+					<onclick>Skin.SetFile(custom106playlist,.xsp,special://profile/playlists/video/)</onclick>
 					<label2>$INFO[Skin.String(custom106playlist)]</label2>
 					<visible>Skin.HasSetting(custom106)</visible>
 					<visible>Skin.HasSetting(Activate_Settings_Movies_Submenu_Item7)</visible>
