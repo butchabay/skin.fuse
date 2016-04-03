@@ -61,7 +61,7 @@
 					<width>auto</width>
 					<aligny>center</aligny>
 					<align>center</align>
-					<font>Title2</font>
+					<font>Medium5</font>
 					<textcolor>home</textcolor>
 					<focusedcolor>accent</focusedcolor>
 					<label>32213</label>
@@ -76,7 +76,7 @@
 					<width>auto</width>
 					<aligny>center</aligny>
 					<align>center</align>
-					<font>Title2</font>
+					<font>Medium5</font>
 					<textcolor>home</textcolor>
 					<focusedcolor>accent</focusedcolor>
 					<label>31112</label>
@@ -191,16 +191,7 @@
 
 					<control type="button" id="504">
 					<description>Back</description>
-					<height>50</height>
-					<width>600</width>
-					<textoffsetx>30</textoffsetx>
-					<textwidth>340</textwidth>
-					<aligny>left</aligny>
-					<font>Title2</font>
-					<textcolor>home</textcolor>
-					<focusedcolor>accent</focusedcolor>
-					<pulseonselect>false</pulseonselect>
-					<disabledcolor>label2</disabledcolor>
+					<include>ListButtons</include>
 					<label>32215</label>
 					<onclick>Back</onclick>
 					</control>

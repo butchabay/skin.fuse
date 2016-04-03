@@ -1,3 +1,14 @@
 0.0.1
 
 - first alpha test release
+
+0.0.2
+
+- Added German Strings (Request)
+- Added IMDB TOP250 (Request)
+- Added Audio Language (Request)
+- Added Air Date (Request)
+- Import of resources in addon.xml (Studio Logos White and Language Flags Colored)
+- Fixed Some Bugs
+- Changed Fonts in some areas
+

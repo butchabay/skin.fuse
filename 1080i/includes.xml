@@ -1098,7 +1098,7 @@
 					<posy>10</posy>
 					<width min="0" max="1800">auto</width>
 					<height>50</height>
-					<font>Medium5</font>
+					<font>Medium3</font>
 					<textcolor>home</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
@@ -1110,7 +1110,7 @@
 					<posy>20</posy>
 					<width min="0" max="1800">auto</width>
 					<height>50</height>
-					<font>Title2</font>
+					<font>Medium5</font>
 					<textcolor>home</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>

@@ -474,20 +474,81 @@
 					<visible>Container.Content(Albums) | Container.Content(Artists) | Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) + IsEmpty(Container.PluginName) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)</visible>
 					</control>
 					
-					<control type="image">
-					<posx>220</posx>
+					<control type="grouplist">
+					<posx>310</posx>
 					<posy>400</posy>
-					<width>300</width>
-					<height>80</height>
+					<width>1000</width>
+					<height>100</height>
+					<itemgap>20</itemgap>
+					<orientation>horizontal</orientation>
+					<usecontrolcoords>true</usecontrolcoords>
+					<align>left</align>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
 					<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) + IsEmpty(Container.PluginName) | Container.Content(Seasons) | Container.Content(Episodes) + IsEmpty(Container.PluginName) | Container.Content(MusicVideos)</visible>
+					<visible>!IsEmpty(Container(51).ListItem.Studio)</visible>
 					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>100</height>
+					<texture>imdb.png</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container.Content(Movies) + !IsEmpty(Container(51).ListItem.Top250)</visible>
+					</control>
+					
+					<control type="label">
+					<description>Top 250</description>
+					<posx>-50</posx>
+					<posy>2</posy>
+					<width>200</width>
+					<height>100</height>
+					<label>Top250 / $INFO[Container(51).ListItem.Top250]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Medium5</font>
+					<textcolor>label</textcolor>
+					<visible>Container.Content(Movies) + !IsEmpty(Container(51).ListItem.Top250)</visible>
+					</control>
+					
+					<control type="image">
+					<posx>0</posx>
+					<posy>20</posy>
+					<width>60</width>
+					<height>60</height>
+					<texture>resource://resource.images.languageflags.colour/$INFO[ListItem.AudioLanguage,,.png]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>!IsEmpty(Container(51).ListItem.AudioLanguage)</visible>
+					</control>
+					</control>
+					
+					<control type="label">
+					<description>Air Date</description>
+					<posx>1190</posx>
+					<posy>400</posy>
+					<width>300</width>
+					<height>100</height>
+					<label>$INFO[Container(51).ListItem.Premiered]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Title2</font>
+					<textcolor>label</textcolor>
+					<visible>Container.Content(Episodes) + !IsEmpty(Container(51).ListItem.Premiered)</visible>
+					</control>
+					
 					
 					<control type="label">
 					<description>album year</description>
 					<posx>0</posx>
-					<posy>410</posy>
+					<posy>425</posy>
 					<width>285</width>
 					<height>30</height>
 					<label>$VAR[global_labels_album_year]</label>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 id="skin.fuse"
-version="0.0.1"
+version="0.0.2"
 name="Fuse"
 provider-name="Butchabay">
 <requires>
@@ -11,12 +11,15 @@ provider-name="Butchabay">
 <import addon="script.grab.fanart" version="0.14.1"/>
 <import addon="script.favourites" version="6.0.3"/>
 <import addon="script.artistslideshow" version="1.8.7"/>
+<import addon="resource.images.languageflags.colour" version="0.0.3"/>
+<import addon="resource.images.studios.white" version="0.0.6"/>
 </requires>
 <extension
 point="xbmc.gui.skin"
 debugging="false"
 effectslowdown="0.75">
 <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+<res width="1920" height="1200" aspect="16:10" default="false" folder="1080i" />
 </extension>
 <extension point="xbmc.addon.metadata">
 <summary lang="en_GB">Skin Fuse for Kodi Jarvis by Butchabay</summary>
